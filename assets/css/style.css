@@ -4,6 +4,7 @@
 * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
+  background: #e3febb;
 */
 
 /*--------------------------------------------------------------
@@ -12,7 +13,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
-  background: #e3febb;
+  background: #eee1fa;
 }
 
 a {
