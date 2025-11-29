@@ -631,10 +631,16 @@ section {
 
 .core-tech-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   column-gap: 16px;
   row-gap: 12px;
   margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+  .core-tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
@@ -2584,7 +2590,7 @@ section {
 
 .skills-grid.core-tech-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .skill-category {
