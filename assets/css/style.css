@@ -514,6 +514,7 @@ section {
   border: 1px solid rgba(20, 157, 221, 0.2);
   border-radius: 12px;
   backdrop-filter: blur(10px);
+  margin-bottom: 24px;
 }
 
 .role-title {
@@ -621,6 +622,158 @@ section {
   height: 24px;
   background: linear-gradient(135deg, #149ddd, #37b3ed);
   border-radius: 2px;
+}
+
+.research-section-subsection {
+  background: rgba(20, 157, 221, 0.05);
+  border: 1px solid rgba(20, 157, 221, 0.2);
+  border-radius: 16px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  margin-top: 24px;
+}
+
+.image-section .research-section-subsection {
+  margin-top: 0;
+}
+
+.research-card-subsection {
+  background: rgba(20, 157, 221, 0.08);
+  border: 2px solid rgba(20, 157, 221, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.research-card-subsection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #149ddd, #37b3ed);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.research-card-subsection:hover {
+  border-color: rgba(20, 157, 221, 0.5);
+  background: rgba(20, 157, 221, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(20, 157, 221, 0.3);
+}
+
+.research-card-subsection:hover::before {
+  transform: scaleX(1);
+}
+
+.research-header-subsection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.research-icon-subsection {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #149ddd, #37b3ed);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(20, 157, 221, 0.4);
+}
+
+.research-icon-subsection i {
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.research-badge-subsection {
+  background: rgba(20, 157, 221, 0.2);
+  border: 1px solid rgba(20, 157, 221, 0.4);
+  border-radius: 20px;
+  padding: 6px 14px;
+}
+
+.badge-text-subsection {
+  font-size: 13px;
+  font-weight: 600;
+  color: #149ddd;
+}
+
+.research-content-subsection {
+  margin-bottom: 20px;
+}
+
+.research-title-subsection {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.research-description-subsection {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.research-meta-subsection {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.meta-item-subsection {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.meta-item-subsection i {
+  font-size: 16px;
+  color: #149ddd;
+}
+
+.research-footer-subsection {
+  padding-top: 16px;
+  border-top: 1px solid rgba(20, 157, 221, 0.2);
+}
+
+.read-more-subsection {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #149ddd;
+  transition: all 0.3s ease;
+}
+
+.research-card-subsection:hover .read-more-subsection {
+  color: #37b3ed;
+  transform: translateX(5px);
+}
+
+.read-more-subsection i {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.research-card-subsection:hover .read-more-subsection i {
+  transform: translateX(5px);
 }
 
 .skills-grid {
@@ -812,6 +965,10 @@ section {
     position: static;
     max-width: 400px;
     margin: 0 auto;
+  }
+
+  .image-section .research-section-subsection {
+    margin-top: 24px;
   }
 
   .highlights-grid {
@@ -2126,6 +2283,11 @@ section {
   gap: 12px;
 }
 
+.subsection-title i {
+  font-size: 28px;
+  color: #149ddd;
+}
+
 .subsection-title::before {
   content: '';
   width: 4px;
@@ -2191,9 +2353,14 @@ section {
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  font-weight: 700;
   color: #ffffff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+}
+
+.platform-icon i {
+  font-size: 24px;
+  color: #ffffff;
 }
 
 .platform-name {
