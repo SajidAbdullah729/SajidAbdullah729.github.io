@@ -135,6 +135,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Portfolio links now point directly to GitHub repositories
+  // No additional JavaScript handling needed - links will open in new tab
+
   // Skills progress bar animation
   const skillsGrid = document.getElementById('skillsGrid');
   if (skillsGrid) {

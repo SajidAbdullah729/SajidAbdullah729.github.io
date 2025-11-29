@@ -811,13 +811,21 @@ section {
 
 /* Experience Section */
 .experience-section {
-  background: #13193D;
+  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
+              url('../img/imageback.jpg') top center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
 }
 
 /* Resume Section */
 .resume-section {
   padding: 80px 0;
-  background: #13193D;
+  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
+              url('../img/imageback.jpg') top center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
   position: relative;
 }
 
@@ -938,7 +946,11 @@ section {
 /* Education & Experience */
 .education-experience {
   padding: 80px 0;
-  background: #13193D;
+  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
+              url('../img/imageback.jpg') top center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
   position: relative;
 }
 
@@ -1104,7 +1116,11 @@ section {
 /* Certifications Section */
 .certifications-section {
   padding: 80px 0;
-  background: #13193D;
+  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
+              url('../img/imageback.jpg') top center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
   position: relative;
 }
 
@@ -1233,7 +1249,11 @@ section {
 /* Research Section */
 .research-section {
   padding: 80px 0;
-  background: #13193D;
+  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
+              url('../img/imageback.jpg') top center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
   position: relative;
 }
 
@@ -1433,7 +1453,11 @@ section {
 /* Resume Section */
 .resume-section {
   padding: 80px 0;
-  background: #13193D;
+  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
+              url('../img/imageback.jpg') top center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
   position: relative;
 }
 
@@ -1554,7 +1578,11 @@ section {
 /* Education & Experience Timeline */
 .resume {
   padding: 80px 0;
-  background: #13193D;
+  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
+              url('../img/imageback.jpg') top center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
   position: relative;
 }
 
@@ -1720,7 +1748,11 @@ section {
 /* Certifications Section */
 .certifications {
   padding: 80px 0;
-  background: #13193D;
+  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
+              url('../img/imageback.jpg') top center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
   position: relative;
 }
 
@@ -1849,7 +1881,11 @@ section {
 /* Research Section */
 .research {
   padding: 80px 0;
-  background: #13193D;
+  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
+              url('../img/imageback.jpg') top center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
   position: relative;
 }
 
@@ -2051,7 +2087,11 @@ section {
    ============================================ */
 .cp {
   padding: 80px 0;
-  background: #13193D;
+  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
+              url('../img/imageback.jpg') top center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
   position: relative;
 }
 
@@ -2410,7 +2450,11 @@ section {
    ============================================ */
 .portfolio {
   padding: 60px 0;
-  background: #13193D;
+  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
+              url('../img/imageback.jpg') top center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
 }
 
 .filters {
@@ -2515,7 +2559,11 @@ section {
    ============================================ */
 .skills {
   padding: 80px 0;
-  background: #13193D;
+  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
+              url('../img/imageback.jpg') top center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
   position: relative;
 }
 
