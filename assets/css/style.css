@@ -2565,6 +2565,11 @@ section {
   transition: all 0.3s ease;
 }
 
+.web-tech-category {
+  max-width: 300px;
+  justify-self: start;
+}
+
 .skill-category:hover {
   border-color: rgba(20, 157, 221, 0.4);
   background: rgba(20, 157, 221, 0.12);
