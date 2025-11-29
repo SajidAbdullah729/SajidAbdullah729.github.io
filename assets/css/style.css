@@ -2852,11 +2852,7 @@ section {
 }
 
 .skill-percentage {
-  font-size: 16px;
-  font-weight: 700;
-  color: #149ddd;
-  min-width: 45px;
-  text-align: right;
+  display: none;
 }
 
 .progress-bar-wrap {
