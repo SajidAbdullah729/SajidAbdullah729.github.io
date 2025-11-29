@@ -140,27 +140,61 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Skills progress bar animation
   const skillsGrid = document.getElementById('skillsGrid');
+  const skillsSection = document.getElementById('skills');
+  
+  function animateProgressBars() {
+    if (skillsGrid) {
+      const progressBars = skillsGrid.querySelectorAll('[data-value]');
+      progressBars.forEach((bar) => {
+        const value = bar.getAttribute('data-value');
+        if (value && (bar.style.width === '0%' || !bar.style.width || bar.style.width === '')) {
+          setTimeout(() => {
+            bar.style.width = value + '%';
+          }, 100);
+        }
+      });
+    }
+  }
+  
   if (skillsGrid) {
+    // Use IntersectionObserver for scroll-based animation
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const progressBars = entry.target.querySelectorAll('[data-value]');
-            progressBars.forEach((bar) => {
-              const value = bar.getAttribute('data-value');
-              if (value) {
-                setTimeout(() => {
-                  bar.style.width = value + '%';
-                }, 100);
-              }
-            });
+            animateProgressBars();
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.1, rootMargin: '50px' }
     );
 
     observer.observe(skillsGrid);
+    
+    // Also trigger animation when skills section is shown via tab switching
+    if (skillsSection) {
+      const sectionObserver = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+            if (skillsSection.classList.contains('active')) {
+              // Reset and animate when section becomes active
+              const progressBars = skillsGrid.querySelectorAll('[data-value]');
+              progressBars.forEach((bar) => {
+                bar.style.width = '0%';
+              });
+              setTimeout(() => {
+                animateProgressBars();
+              }, 200);
+            }
+          }
+        });
+      });
+      
+      sectionObserver.observe(skillsSection, {
+        attributes: true,
+        attributeFilter: ['class']
+      });
+    }
   }
 
   // Image Modal functionality
