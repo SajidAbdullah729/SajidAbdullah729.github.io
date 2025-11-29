@@ -633,6 +633,20 @@ section {
   gap: 12px;
 }
 
+.core-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 24px;
+  row-gap: 16px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .core-tech-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .skill-tag {
   padding: 8px 16px;
   border-radius: 20px;
@@ -650,7 +664,7 @@ section {
 }
 
 .bio-section {
-  background: rgba(255, 255, 255, 0.03);
+  background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   padding: 30px;
@@ -669,7 +683,7 @@ section {
 }
 
 .contact-section {
-  background: rgba(20, 157, 221, 0.05);
+  background: transparent;
   border: 1px solid rgba(20, 157, 221, 0.2);
   border-radius: 16px;
   padding: 40px;
@@ -2582,6 +2596,11 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   margin-top: 40px;
+}
+
+.skills-grid.core-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .skill-category {
