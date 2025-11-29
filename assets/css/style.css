@@ -18,7 +18,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   color: #ffffff;
-  background: #13193D;
+  background: #020617;
   min-height: 100vh;
 }
 
@@ -55,7 +55,7 @@ section {
 }
 
 .section-bg {
-  background: rgba(19, 25, 61, 0.5);
+  background: rgba(2, 6, 23, 0.5);
 }
 
 .section-title {
@@ -91,7 +91,7 @@ section {
   left: 0;
   right: 0;
   z-index: 9997;
-  background: rgba(19, 25, 61, 0.95);
+  background: rgba(2, 6, 23, 0.95);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   padding: 12px 0;
@@ -237,7 +237,7 @@ section {
     top: 70px;
     left: 0;
     right: 0;
-    background: rgba(19, 25, 61, 0.98);
+    background: rgba(2, 6, 23, 0.98);
     backdrop-filter: blur(10px);
     max-height: 0;
     overflow: hidden;
@@ -318,7 +318,7 @@ section {
 
 .hero::before {
   content: "";
-  background: rgba(19, 25, 61, 0.4);
+  background: rgba(2, 6, 23, 0.4);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -414,11 +414,7 @@ section {
 /* About Section */
 .about {
   padding: 80px 0;
-  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
-              url('../img/imageback.jpg') top center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
+  background: #020617;
   position: relative;
 }
 
@@ -825,21 +821,13 @@ section {
 
 /* Experience Section */
 .experience-section {
-  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
-              url('../img/imageback.jpg') top center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
+  background: #020617;
 }
 
 /* Resume Section */
 .resume-section {
   padding: 80px 0;
-  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
-              url('../img/imageback.jpg') top center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
+  background: #020617;
   position: relative;
 }
 
@@ -960,11 +948,7 @@ section {
 /* Education & Experience */
 .education-experience {
   padding: 80px 0;
-  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
-              url('../img/imageback.jpg') top center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
+  background: #020617;
   position: relative;
 }
 
@@ -1130,11 +1114,7 @@ section {
 /* Certifications Section */
 .certifications-section {
   padding: 80px 0;
-  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
-              url('../img/imageback.jpg') top center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
+  background: #020617;
   position: relative;
 }
 
@@ -1263,11 +1243,7 @@ section {
 /* Research Section */
 .research-section {
   padding: 80px 0;
-  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
-              url('../img/imageback.jpg') top center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
+  background: #020617;
   position: relative;
 }
 
@@ -1467,11 +1443,7 @@ section {
 /* Resume Section */
 .resume-section {
   padding: 80px 0;
-  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
-              url('../img/imageback.jpg') top center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
+  background: #020617;
   position: relative;
 }
 
@@ -1592,11 +1564,7 @@ section {
 /* Education & Experience Timeline */
 .resume {
   padding: 80px 0;
-  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
-              url('../img/imageback.jpg') top center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
+  background: #020617;
   position: relative;
 }
 
@@ -1762,11 +1730,7 @@ section {
 /* Certifications Section */
 .certifications {
   padding: 80px 0;
-  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
-              url('../img/imageback.jpg') top center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
+  background: #020617;
   position: relative;
 }
 
@@ -1895,11 +1859,7 @@ section {
 /* Research Section */
 .research {
   padding: 80px 0;
-  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
-              url('../img/imageback.jpg') top center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
+  background: #020617;
   position: relative;
 }
 
@@ -2101,11 +2061,7 @@ section {
    ============================================ */
 .cp {
   padding: 80px 0;
-  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
-              url('../img/imageback.jpg') top center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
+  background: #020617;
   position: relative;
 }
 
@@ -2249,17 +2205,18 @@ section {
 
 .platform-arrow {
   position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 32px;
-  height: 32px;
+  bottom: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
   background: rgba(20, 157, 221, 0.2);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  z-index: 1;
+  z-index: 10;
+  flex-shrink: 0;
 }
 
 .platform-card:hover .platform-arrow {
@@ -2268,7 +2225,7 @@ section {
 }
 
 .platform-arrow i {
-  font-size: 18px;
+  font-size: 16px;
   color: #149ddd;
   transition: color 0.3s ease;
 }
@@ -2464,11 +2421,7 @@ section {
    ============================================ */
 .portfolio {
   padding: 60px 0;
-  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
-              url('../img/imageback.jpg') top center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
+  background: #020617;
 }
 
 .filters {
@@ -2573,12 +2526,12 @@ section {
    ============================================ */
 .skills {
   padding: 80px 0;
-  background: linear-gradient(135deg, #13193D 0%, #1a2347 50%, #13193D 100%),
-              url('../img/imageback.jpg') top center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
+  background: #020617;
   position: relative;
+}
+
+.skills .container {
+  padding: 0 15px;
 }
 
 .skills::before {
@@ -2593,8 +2546,8 @@ section {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
   margin-top: 40px;
 }
 
@@ -2626,9 +2579,11 @@ section {
   margin-bottom: 24px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 12px;
   padding-bottom: 16px;
   border-bottom: 2px solid rgba(20, 157, 221, 0.3);
+  line-height: 1.4;
 }
 
 .category-icon {
@@ -2642,6 +2597,7 @@ section {
   font-size: 20px;
   font-weight: 700;
   color: #ffffff;
+  flex-shrink: 0;
   box-shadow: 0 4px 15px rgba(20, 157, 221, 0.3);
 }
 
@@ -2731,6 +2687,12 @@ section {
 }
 
 /* Responsive Styles for CP, Portfolio, Skills */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .section-title {
     font-size: 32px;
