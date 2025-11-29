@@ -1,0 +1,70 @@
+.contact {
+  padding: 60px 0 130px 0;
+  background: #13193D;
+}
+
+.contactContent {
+  display: flex;
+  justify-content: center;
+}
+
+.info {
+  padding: 30px;
+  background: rgba(20, 157, 221, 0.1);
+  border: 1px solid rgba(20, 157, 221, 0.3);
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 24px 0 rgba(20, 157, 221, 0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.infoItem i {
+  font-size: 20px;
+  color: #149ddd;
+  width: 44px;
+  height: 44px;
+  background: rgba(20, 157, 221, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  flex-shrink: 0;
+}
+
+.infoItem h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.infoItem p {
+  padding: 0 0 10px 60px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.infoItem a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.infoItem a:hover {
+  color: #149ddd;
+}
+
+.infoItem:hover i {
+  background: #149ddd;
+  color: #ffffff;
+  transform: scale(1.1);
+}

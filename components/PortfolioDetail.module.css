@@ -1,0 +1,133 @@
+.breadcrumbs {
+  padding: 20px 0;
+  background: #f9f9f9;
+  margin-top: 80px;
+}
+
+.breadcrumbContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.breadcrumbContent h2 {
+  font-size: 26px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.breadcrumbContent ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  gap: 10px;
+}
+
+.breadcrumbContent ol li + li::before {
+  content: '/';
+  padding-right: 10px;
+  color: #0e2442;
+}
+
+.portfolioDetails {
+  padding: 40px 0;
+}
+
+.portfolioGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.portfolioSlider {
+  width: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: auto;
+}
+
+.slideImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.portfolioInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.infoBox {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(5, 13, 24, 0.08);
+  border-radius: 8px;
+  background: white;
+}
+
+.infoBox h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.infoBox ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.infoBox ul li {
+  margin-top: 10px;
+}
+
+.infoBox ul li:first-child {
+  margin-top: 0;
+}
+
+.infoBox a {
+  color: #149ddd;
+  text-decoration: none;
+}
+
+.infoBox a:hover {
+  color: #37b3ed;
+}
+
+.descriptionBox {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(5, 13, 24, 0.08);
+  border-radius: 8px;
+  background: white;
+}
+
+.descriptionBox h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.descriptionBox p {
+  padding: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .portfolioGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .breadcrumbContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+

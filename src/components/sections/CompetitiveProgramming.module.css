@@ -1,0 +1,412 @@
+.cp {
+  padding: 80px 0;
+  background: #13193D;
+  position: relative;
+}
+
+.cp::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(20, 157, 221, 0.5), transparent);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionTitle {
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #ffffff 0%, #149ddd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sectionSubtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.platformsSection {
+  margin-bottom: 80px;
+}
+
+.subsectionTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.subsectionTitle::before {
+  content: '';
+  width: 4px;
+  height: 28px;
+  background: linear-gradient(135deg, #149ddd, #37b3ed);
+  border-radius: 2px;
+}
+
+.platformsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.platformCard {
+  background: rgba(20, 157, 221, 0.1);
+  border: 2px solid rgba(20, 157, 221, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  padding-right: 60px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.platformCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #149ddd, #37b3ed);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.platformCard:hover {
+  border-color: rgba(20, 157, 221, 0.5);
+  background: rgba(20, 157, 221, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(20, 157, 221, 0.3);
+}
+
+.platformCard:hover::before {
+  transform: scaleX(1);
+}
+
+.platformHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.platformIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.platformName {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  flex: 1;
+}
+
+.platformInfo {
+  margin-bottom: 12px;
+}
+
+.platformHandle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 8px;
+}
+
+.platformStats {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statItem {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.statItem strong {
+  color: #149ddd;
+  font-weight: 700;
+}
+
+.platformTitle {
+  display: inline-block;
+  font-size: 12px;
+  color: #149ddd;
+  background: rgba(20, 157, 221, 0.2);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.platformArrow {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 32px;
+  height: 32px;
+  background: rgba(20, 157, 221, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.platformCard:hover .platformArrow {
+  background: #149ddd;
+  transform: scale(1.1);
+}
+
+.platformArrow i {
+  font-size: 18px;
+  color: #149ddd;
+  transition: color 0.3s ease;
+}
+
+.platformCard:hover .platformArrow i {
+  color: #ffffff;
+}
+
+.contestsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.contestGroup {
+  position: relative;
+}
+
+.contestGroupHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(20, 157, 221, 0.3);
+}
+
+.contestIcon {
+  font-size: 32px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 157, 221, 0.2);
+  border-radius: 12px;
+}
+
+.contestGroupTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.contestsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.contestCard {
+  background: rgba(20, 157, 221, 0.08);
+  border: 2px solid rgba(20, 157, 221, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  padding-bottom: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: visible;
+}
+
+.contestCard.highlight {
+  border-color: rgba(255, 215, 0, 0.4);
+  background: rgba(255, 215, 0, 0.05);
+}
+
+.contestCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #149ddd, #37b3ed);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.contestCard.highlight::before {
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+}
+
+.contestCard:hover {
+  border-color: rgba(20, 157, 221, 0.5);
+  background: rgba(20, 157, 221, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(20, 157, 221, 0.3);
+}
+
+.contestCard.highlight:hover {
+  border-color: rgba(255, 215, 0, 0.6);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+}
+
+.contestCard:hover::before {
+  transform: scaleX(1);
+}
+
+.contestHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding-right: 0;
+  position: relative;
+  z-index: 0;
+}
+
+.contestName {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  flex: 1;
+  line-height: 1.4;
+  min-width: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.contestRank {
+  font-size: 13px;
+  font-weight: 700;
+  color: #149ddd;
+  background: rgba(20, 157, 221, 0.2);
+  padding: 4px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.contestCard.highlight .contestRank {
+  color: #FFD700;
+  background: rgba(255, 215, 0, 0.2);
+}
+
+.contestMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 0;
+  padding-right: 0;
+  position: relative;
+  z-index: 0;
+}
+
+.contestTeam,
+.contestCountry {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
+.contestArrow {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  background: rgba(20, 157, 221, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.contestCard:hover .contestArrow {
+  background: #149ddd;
+  transform: scale(1.1);
+}
+
+.contestArrow i {
+  font-size: 16px;
+  color: #149ddd;
+  transition: color 0.3s ease;
+}
+
+.contestCard:hover .contestArrow i {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 32px;
+  }
+
+  .sectionSubtitle {
+    font-size: 16px;
+  }
+
+  .platformsGrid,
+  .contestsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .contestCard {
+    padding-bottom: 50px;
+  }
+
+  .contestHeader {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .contestName {
+    max-width: 100%;
+  }
+
+  .contestRank {
+    margin-left: 0;
+    align-self: flex-start;
+  }
+}
