@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = nav.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
       link.addEventListener('click', function() {
-        nav.classList.remove('navOpen');
+        nav.classList.remove('open');
         const icon = mobileToggle.querySelector('i');
         if (icon) {
           icon.classList.add('bi-list');
@@ -77,6 +77,16 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
       const sectionId = this.getAttribute('data-section');
       switchSection(sectionId);
+      
+      // Close mobile menu after selecting an option
+      if (nav && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        const icon = mobileToggle?.querySelector('i');
+        if (icon) {
+          icon.classList.add('bi-list');
+          icon.classList.remove('bi-x');
+        }
+      }
     });
   });
 
