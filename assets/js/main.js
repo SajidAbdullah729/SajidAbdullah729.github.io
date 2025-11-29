@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = nav.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
       link.addEventListener('click', function() {
-        nav.classList.remove('open');
+        nav.classList.remove('navOpen');
         const icon = mobileToggle.querySelector('i');
         if (icon) {
           icon.classList.add('bi-list');
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize: Show hero section by default
   switchSection('hero');
 
-  // Back to top button
+  // Back to top button visibility
   const backToTop = document.getElementById('backToTop');
   if (backToTop) {
     window.addEventListener('scroll', function() {
@@ -109,5 +109,54 @@ document.addEventListener('DOMContentLoaded', function() {
         backToTop.classList.remove('active');
       }
     });
+  }
+
+  // Portfolio filter functionality
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Remove active class from all buttons
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      // Add active class to clicked button
+      this.classList.add('active');
+      
+      const filterValue = this.getAttribute('data-filter');
+      
+      portfolioItems.forEach(item => {
+        if (filterValue === '*' || item.classList.contains(filterValue.replace('.', ''))) {
+          item.style.display = 'block';
+          item.style.animation = 'fadeIn 0.5s ease-in';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Skills progress bar animation
+  const skillsGrid = document.getElementById('skillsGrid');
+  if (skillsGrid) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const progressBars = entry.target.querySelectorAll('[data-value]');
+            progressBars.forEach((bar) => {
+              const value = bar.getAttribute('data-value');
+              if (value) {
+                setTimeout(() => {
+                  bar.style.width = value + '%';
+                }, 100);
+              }
+            });
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(skillsGrid);
   }
 });

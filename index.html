@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/assets/img/image2.jpg" />
-    <link rel="apple-touch-icon" href="/assets/img/image2.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Software Engineer Portfolio" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abdullah-Al-Sajid - Portfolio</title>
+  <meta name="description" content="Software Engineer Portfolio">
+  <link rel="icon" href="assets/img/image2.jpg">
+  <link rel="apple-touch-icon" href="assets/img/image2.jpg">
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,9 +17,1077 @@
   
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="header-container">
+      <div class="profile">
+        <img src="assets/img/image2.jpg" alt="Abdullah-Al-Sajid" class="profile-img">
+        <a href="#" class="name" data-section="hero">Abdullah-Al-Sajid</a>
+      </div>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="#" class="nav-link active" data-section="hero"><i class="bx bx-home"></i><span>Home</span></a></li>
+          <li><a href="#" class="nav-link" data-section="about"><i class="bx bx-user"></i><span>About</span></a></li>
+          <li><a href="#" class="nav-link" data-section="experience"><i class="bx bx-briefcase"></i><span>Experience</span></a></li>
+          <li><a href="#" class="nav-link" data-section="competitive-programming"><i class="bx bx-trophy"></i><span>Programming</span></a></li>
+          <li><a href="#" class="nav-link" data-section="portfolio"><i class="bx bx-book-content"></i><span>Projects</span></a></li>
+          <li><a href="#" class="nav-link" data-section="skills"><i class="bx bx-code-alt"></i><span>Skills</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="social-links">
+        <a href="https://github.com/SajidAbdullah729" class="social-link" target="_blank" rel="noopener noreferrer">
+          <i class="bx bxl-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/mohammad-abdullah-al-sajid-chowdhury-software-engineer/" class="social-link" target="_blank" rel="noopener noreferrer">
+          <i class="bx bxl-linkedin"></i>
+        </a>
+      </div>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="content-section active">
+      <div class="hero">
+        <div class="hero-container">
+          <h1>Abdullah-Al-Sajid</h1>
+          <p>I'm a <span id="typed"></span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content-section">
+      <div class="about">
+        <div class="container" style="padding-top: 100px;">
+          <div class="section-header">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">
+              Passionate Software Engineer with a strong foundation in computer science and a track record of excellence in competitive programming and software development.
+            </p>
+          </div>
+
+          <div class="main-content">
+            <div class="image-section" data-aos="fade-right">
+              <div class="image-wrapper">
+                <div class="image-border"></div>
+                <img src="assets/img/image.jpg" alt="Abdullah-Al-Sajid" class="image">
+                <div class="image-overlay"></div>
+              </div>
+              <div class="image-info">
+                <h3 class="role-title">Software Engineer</h3>
+                <div class="organization">
+                  <span class="org-label">Organization:</span>
+                  <a href="https://pioneeralpha.com/" class="org-link" target="_blank" rel="noopener noreferrer">
+                    Pioneer Alpha
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-content-wrapper" data-aos="fade-left">
+              <div class="highlights-grid">
+                <div class="highlight-card">
+                  <div class="highlight-icon">🎓</div>
+                  <h4 class="highlight-title">Education</h4>
+                  <p class="highlight-description">BSc in Computer Science and Engineering from Ahsanullah University of Science and Technology</p>
+                </div>
+                <div class="highlight-card">
+                  <div class="highlight-icon">🏆</div>
+                  <h4 class="highlight-title">Achievements</h4>
+                  <p class="highlight-description">Finalist at ACM ICPC Asia-West Continent. Selected for national rounds of Mathematical and Informatics Olympiads</p>
+                </div>
+                <div class="highlight-card">
+                  <div class="highlight-icon">💼</div>
+                  <h4 class="highlight-title">Current Role</h4>
+                  <p class="highlight-description">Software Engineer at Pioneer Alpha, specializing in full-stack development and modern web technologies</p>
+                </div>
+                <div class="highlight-card">
+                  <div class="highlight-icon">🚀</div>
+                  <h4 class="highlight-title">Interests</h4>
+                  <p class="highlight-description">Artificial Intelligence, Software Engineering Fundamentals, and Competitive Programming</p>
+                </div>
+              </div>
+
+              <div class="skills-section">
+                <h3 class="skills-title">Core Technologies</h3>
+                <div class="skills-grid">
+                  <span class="skill-tag" style="background-color: #4CAF50; color: white;">Full-Stack Development</span>
+                  <span class="skill-tag" style="background-color: #007acc; color: white;">TypeScript</span>
+                  <span class="skill-tag" style="background-color: #3776AB; color: white;">Python</span>
+                  <span class="skill-tag" style="background-color: #f7df1e; color: black;">JavaScript</span>
+                  <span class="skill-tag" style="background-color: #ff5733; color: white;">Generative AI</span>
+                  <span class="skill-tag" style="background-color: #000000; color: white;">Next.js</span>
+                  <span class="skill-tag" style="background-color: #61dafb; color: black;">React</span>
+                  <span class="skill-tag" style="background-color: #003545; color: white;">Flask</span>
+                  <span class="skill-tag" style="background-color: #092e20; color: white;">Django</span>
+                  <span class="skill-tag" style="background-color: #f06529; color: white;">REST API</span>
+                  <span class="skill-tag" style="background-color: #232f3e; color: white;">AWS</span>
+                  <span class="skill-tag" style="background-color: #336791; color: white;">PostgreSQL</span>
+                  <span class="skill-tag" style="background-color: #f34f29; color: white;">Git</span>
+                  <span class="skill-tag" style="background-color: #ff6f61; color: white;">Drizzle ORM</span>
+                  <span class="skill-tag" style="background-color: #005f73; color: white;">Node.js</span>
+                  <span class="skill-tag" style="background-color: #2496ED; color: white;">Docker</span>
+                  <span class="skill-tag" style="background-color: #DC382D; color: white;">Redis</span>
+                  <span class="skill-tag" style="background-color: #FF6B6B; color: white;">Large Language Model</span>
+                </div>
+              </div>
+
+              <div class="bio-section">
+                <p class="bio-text">
+                  I am a dedicated software engineer with a passion for solving complex problems and building innovative solutions. 
+                  My journey in computer science has been marked by excellence in competitive programming, where I've represented 
+                  my university in several national and international contests.
+                </p>
+                <p class="bio-text">
+                  Beyond coding, I actively contribute to the programming community by judging, organizing, and testing 
+                  various programming contests. My experience spans from machine learning research to full-stack web development, 
+                  always staying current with the latest technologies and best practices.
+                </p>
+              </div>
+
+              <div class="contact-section">
+                <h3 class="contact-title">Get In Touch</h3>
+                <p class="contact-subtitle">
+                  I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+                </p>
+                <div class="contact-grid">
+                  <a href="mailto:sajidabdullah729@gmail.com" class="contact-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="contact-icon">
+                      <i class="bi bi-envelope-fill"></i>
+                    </div>
+                    <h4 class="contact-label">Email</h4>
+                    <p class="contact-value">sajidabdullah729@gmail.com</p>
+                  </a>
+                  <a href="https://github.com/SajidAbdullah729" target="_blank" rel="noopener noreferrer" class="contact-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-icon">
+                      <i class="bi bi-github"></i>
+                    </div>
+                    <h4 class="contact-label">GitHub</h4>
+                    <p class="contact-value">SajidAbdullah729</p>
+                  </a>
+                  <a href="https://linkedin.com/in/mohammad-abdullah-al-sajid-chowdhury-software-engineer/" target="_blank" rel="noopener noreferrer" class="contact-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-icon">
+                      <i class="bi bi-linkedin"></i>
+                    </div>
+                    <h4 class="contact-label">LinkedIn</h4>
+                    <p class="contact-value">Mohammad Abdullah-Al-Sajid</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="content-section">
+      <div class="resume">
+        <div class="container" style="padding-top: 100px;">
+          <div class="section-header">
+            <h2 class="section-title">Education & Experience</h2>
+            <p class="section-subtitle">
+              My academic journey and professional experiences that have shaped my career.
+            </p>
+          </div>
+
+          <div class="timeline-container">
+            <div class="timeline-column">
+              <div class="category-header">
+                <div class="category-icon">🎓</div>
+                <h3 class="category-title">Education</h3>
+              </div>
+              <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="0">
+                  <div class="timeline-marker">
+                    <span class="marker-icon">🎓</span>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4 class="timeline-title">Bachelor of Science in Computer Science and Engineering</h4>
+                      <span class="timeline-period">2019 - 2023</span>
+                    </div>
+                    <p class="timeline-institution">Ahsanullah University of Science and Technology</p>
+                    <p class="timeline-details">CGPA: 3.316/4.000</p>
+                  </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                  <div class="timeline-marker">
+                    <span class="marker-icon">📚</span>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4 class="timeline-title">Higher Secondary Certificate</h4>
+                      <span class="timeline-period">2016 - 2018</span>
+                    </div>
+                    <p class="timeline-institution">Chittagong College</p>
+                    <p class="timeline-details">GPA: 5.00/5.00</p>
+                  </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                  <div class="timeline-marker">
+                    <span class="marker-icon">📖</span>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4 class="timeline-title">Secondary School Certificate</h4>
+                      <span class="timeline-period">2014 - 2016</span>
+                    </div>
+                    <p class="timeline-institution">Chittagong Collegiate School</p>
+                    <p class="timeline-details">GPA: 5.00/5.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-column">
+              <div class="category-header">
+                <div class="category-icon">💼</div>
+                <h3 class="category-title">Professional Experience</h3>
+              </div>
+              <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="0">
+                  <div class="timeline-marker">
+                    <span class="marker-icon">🔍</span>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4 class="timeline-title">
+                        <a href="https://codeforces.com/blog/entry/131368" target="_blank" rel="noopener noreferrer" class="timeline-link">Codeforces Contest Testing</a>
+                      </h4>
+                      <span class="timeline-period">2023</span>
+                    </div>
+                    <p class="timeline-role">Problem Tester • Codeforces</p>
+                    <p class="timeline-description">Tested problems for Codeforces Round #957 (Div.3)</p>
+                  </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                  <div class="timeline-marker">
+                    <span class="marker-icon">🏆</span>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4 class="timeline-title">
+                        <a href="https://toph.co/contests/training/rfbblek" target="_blank" rel="noopener noreferrer" class="timeline-link">Programming Contest Organization</a>
+                      </h4>
+                      <span class="timeline-period">2020 - 2023</span>
+                    </div>
+                    <p class="timeline-role">Problem Setter, Tester, Judge, Organizer • AUST CSE Society & AUST Programming Club</p>
+                    <p class="timeline-description">Organized and managed multiple programming contests for university students</p>
+                  </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                  <div class="timeline-marker">
+                    <span class="marker-icon">🤖</span>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4 class="timeline-title">Machine Learning Research</h4>
+                      <span class="timeline-period">2023</span>
+                    </div>
+                    <p class="timeline-role">Thesis Research • AUST</p>
+                    <p class="timeline-description">Conducted research on Machine Learning Models for thesis project</p>
+                  </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                  <div class="timeline-marker">
+                    <span class="marker-icon">💻</span>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4 class="timeline-title">
+                        <a href="https://github.com/SajidAbdullah729?tab=repositories" target="_blank" rel="noopener noreferrer" class="timeline-link">Project Development</a>
+                      </h4>
+                      <span class="timeline-period">2020 - 2023</span>
+                    </div>
+                    <p class="timeline-role">Full-Stack Developer • Personal & Team Projects</p>
+                    <p class="timeline-description">Developed multiple notable projects during undergraduate studies</p>
+                  </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                  <div class="timeline-marker">
+                    <span class="marker-icon">🧮</span>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4 class="timeline-title">Mathematical Olympiad</h4>
+                      <span class="timeline-period">2012, 2014</span>
+                    </div>
+                    <p class="timeline-role">National Round Participant • Bangladesh Mathematical Olympiad</p>
+                    <p class="timeline-description">Selected for national round twice in junior group from Chittagong Regionals</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Competitive Programming Section -->
+    <section id="competitive-programming" class="content-section">
+      <div class="cp">
+        <div class="container" style="padding-top: 100px;">
+          <div class="section-header">
+            <h2 class="section-title">Competitive Programming</h2>
+            <p class="section-subtitle">
+              My competitive programming profiles and achievements across various platforms and contests.
+            </p>
+          </div>
+
+          <div class="platforms-section">
+            <h3 class="subsection-title">Online Judge Profiles</h3>
+            <div class="platforms-grid">
+              <a href="https://codeforces.com/profile/SajidAbdullah" target="_blank" rel="noopener noreferrer" class="platform-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="platform-header">
+                  <div class="platform-icon" style="background: #1F8ACB;">C</div>
+                  <h4 class="platform-name">Codeforces</h4>
+                </div>
+                <div class="platform-info">
+                  <p class="platform-handle">@SajidAbdullah</p>
+                  <div class="platform-stats">
+                    <span class="stat-item">Rating: <strong>1613</strong></span>
+                    <span class="platform-title">Expert</span>
+                  </div>
+                </div>
+                <div class="platform-arrow"><i class="bx bx-right-arrow-alt"></i></div>
+              </a>
+              <a href="https://www.codechef.com/users/lawliet11235" target="_blank" rel="noopener noreferrer" class="platform-card" data-aos="fade-up" data-aos-delay="50">
+                <div class="platform-header">
+                  <div class="platform-icon" style="background: #5B4638;">C</div>
+                  <h4 class="platform-name">CodeChef</h4>
+                </div>
+                <div class="platform-info">
+                  <p class="platform-handle">@lawliet11235</p>
+                  <div class="platform-stats">
+                    <span class="stat-item">Rating: <strong>1886</strong></span>
+                    <span class="platform-title">4 Star</span>
+                  </div>
+                </div>
+                <div class="platform-arrow"><i class="bx bx-right-arrow-alt"></i></div>
+              </a>
+              <a href="https://www.hackerrank.com/profile/sajidabdullah729" target="_blank" rel="noopener noreferrer" class="platform-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="platform-header">
+                  <div class="platform-icon" style="background: #2EC866;">H</div>
+                  <h4 class="platform-name">HackerRank</h4>
+                </div>
+                <div class="platform-info">
+                  <p class="platform-handle">@sajidabdullah729</p>
+                </div>
+                <div class="platform-arrow"><i class="bx bx-right-arrow-alt"></i></div>
+              </a>
+              <a href="https://www.stopstalk.com/user/profile/SajidAbdullah" target="_blank" rel="noopener noreferrer" class="platform-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="platform-header">
+                  <div class="platform-icon" style="background: #FF6B6B;">S</div>
+                  <h4 class="platform-name">StopStalk</h4>
+                </div>
+                <div class="platform-info">
+                  <p class="platform-handle">@SajidAbdullah</p>
+                </div>
+                <div class="platform-arrow"><i class="bx bx-right-arrow-alt"></i></div>
+              </a>
+              <a href="https://lightoj.com/user/sajidabdullah" target="_blank" rel="noopener noreferrer" class="platform-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="platform-header">
+                  <div class="platform-icon" style="background: #4A90E2;">L</div>
+                  <h4 class="platform-name">LightOJ</h4>
+                </div>
+                <div class="platform-info">
+                  <p class="platform-handle">@sajidabdullah</p>
+                </div>
+                <div class="platform-arrow"><i class="bx bx-right-arrow-alt"></i></div>
+              </a>
+              <a href="https://toph.co/u/SajidAbdullah" target="_blank" rel="noopener noreferrer" class="platform-card" data-aos="fade-up" data-aos-delay="250">
+                <div class="platform-header">
+                  <div class="platform-icon" style="background: #FF9800;">T</div>
+                  <h4 class="platform-name">Toph</h4>
+                </div>
+                <div class="platform-info">
+                  <p class="platform-handle">@SajidAbdullah</p>
+                </div>
+                <div class="platform-arrow"><i class="bx bx-right-arrow-alt"></i></div>
+              </a>
+              <a href="https://vjudge.net/user/Lawliet112358" target="_blank" rel="noopener noreferrer" class="platform-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="platform-header">
+                  <div class="platform-icon" style="background: #9C27B0;">V</div>
+                  <h4 class="platform-name">Virtual Judge</h4>
+                </div>
+                <div class="platform-info">
+                  <p class="platform-handle">@Lawliet112358</p>
+                </div>
+                <div class="platform-arrow"><i class="bx bx-right-arrow-alt"></i></div>
+              </a>
+              <a href="https://cses.fi/user/54375" target="_blank" rel="noopener noreferrer" class="platform-card" data-aos="fade-up" data-aos-delay="350">
+                <div class="platform-header">
+                  <div class="platform-icon" style="background: #00BCD4;">C</div>
+                  <h4 class="platform-name">CSES</h4>
+                </div>
+                <div class="platform-info">
+                  <p class="platform-handle">@SajidAbdullah</p>
+                </div>
+                <div class="platform-arrow"><i class="bx bx-right-arrow-alt"></i></div>
+              </a>
+            </div>
+          </div>
+
+          <div class="contests-section">
+            <div class="contest-group">
+              <div class="contest-group-header">
+                <span class="contest-icon">🌍</span>
+                <h3 class="contest-group-title">ICPC Contests</h3>
+              </div>
+              <div class="contests-grid">
+                <a href="https://icpc.global/regionals/finder/ICPCKolkataKanpur-2023/standings" target="_blank" rel="noopener noreferrer" class="contest-card highlight" data-aos="fade-up" data-aos-delay="0">
+                  <div class="contest-header">
+                    <h4 class="contest-name">ACM-ICPC Asia-West Continent Final 2022</h4>
+                    <span class="contest-rank">🏅 Rank 51</span>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-team">AUST_CrackPlatoon</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+                <a href="https://web.archive.org/web/20230531214941/https://algo.codemarshal.org/contests/dhaka-22/standings" target="_blank" rel="noopener noreferrer" class="contest-card highlight" data-aos="fade-up" data-aos-delay="50">
+                  <div class="contest-header">
+                    <h4 class="contest-name">ACM-ICPC Dhaka Regional Contest 2022</h4>
+                    <span class="contest-rank">🏅 Rank 28</span>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-team">AUST_CrackPlatoon</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+                <a href="https://icpc.global/regionals/finder/Dhaka-2024/standings" target="_blank" rel="noopener noreferrer" class="contest-card highlight" data-aos="fade-up" data-aos-delay="100">
+                  <div class="contest-header">
+                    <h4 class="contest-name">ACM-ICPC Dhaka Regional Contest 2023</h4>
+                    <span class="contest-rank">🏅 Rank 54</span>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-team">AUST_Shunno7</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+                <a href="https://icpc.global/regionals/finder/Dhaka-Preliminary-2024/standings" target="_blank" rel="noopener noreferrer" class="contest-card" data-aos="fade-up" data-aos-delay="150">
+                  <div class="contest-header">
+                    <h4 class="contest-name">ACM-ICPC Dhaka Regional Preliminary 2023</h4>
+                    <span class="contest-rank">Rank 47</span>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-team">AUST_Shunno7</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+                <a href="https://web.archive.org/web/20230327143027/https://algo.codemarshal.org/contests/icpc-dhaka-22-preli/standings" target="_blank" rel="noopener noreferrer" class="contest-card" data-aos="fade-up" data-aos-delay="200">
+                  <div class="contest-header">
+                    <h4 class="contest-name">ACM-ICPC Dhaka Regional Preliminary 2022</h4>
+                    <span class="contest-rank">Rank 61</span>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-team">AUST_CrackPlatoon</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+                <a href="https://web.archive.org/web/20230531230959/https://algo.codemarshal.org/contests/icpc-dhaka-21-preli/standings" target="_blank" rel="noopener noreferrer" class="contest-card" data-aos="fade-up" data-aos-delay="250">
+                  <div class="contest-header">
+                    <h4 class="contest-name">ACM-ICPC Dhaka Regional Preliminary 2021</h4>
+                    <span class="contest-rank">Rank 72</span>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-team">AUST_SillyMistakes</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+              </div>
+            </div>
+
+            <div class="contest-group">
+              <div class="contest-group-header">
+                <span class="contest-icon">🏆</span>
+                <h3 class="contest-group-title">National Contests</h3>
+              </div>
+              <div class="contests-grid">
+                <a href="https://toph.co/c/iut-11th-national-ict-fest-2024/standings" target="_blank" rel="noopener noreferrer" class="contest-card highlight" data-aos="fade-up" data-aos-delay="0">
+                  <div class="contest-header">
+                    <h4 class="contest-name">IUT Inter University Programming Contest 2024</h4>
+                    <span class="contest-rank">🏅 Rank 14</span>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-team">AUST_RedX</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+                <a href="https://algo.codemarshal.org/contests/bio-nr-2014-j/standings" target="_blank" rel="noopener noreferrer" class="contest-card highlight" data-aos="fade-up" data-aos-delay="50">
+                  <div class="contest-header">
+                    <h4 class="contest-name">Bangladesh Informatics Olympiad 2014 National Round</h4>
+                    <span class="contest-rank">🏅 Rank 11</span>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-team">Junior Group</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+                <a href="https://bapsoj.org/contests/ncpc-preliminary-ju-2023/standings" target="_blank" rel="noopener noreferrer" class="contest-card highlight" data-aos="fade-up" data-aos-delay="100">
+                  <div class="contest-header">
+                    <h4 class="contest-name">NCPC JU 2023 Preliminary</h4>
+                    <span class="contest-rank">🏅 Rank 11</span>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-team">AUST_RedX</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+                <a href="https://toph.co/c/cuet-inter-university-codestorm-1-0/standings" target="_blank" rel="noopener noreferrer" class="contest-card" data-aos="fade-up" data-aos-delay="150">
+                  <div class="contest-header">
+                    <h4 class="contest-name">CUET Inter University Programming Contest 2024</h4>
+                    <span class="contest-rank">Rank 36</span>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-team">AUST_Shunno7</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+                <a href="https://bapsoj.org/contests/ncpc-onsite-2023-hosted-by-ju/standings" target="_blank" rel="noopener noreferrer" class="contest-card" data-aos="fade-up" data-aos-delay="200">
+                  <div class="contest-header">
+                    <h4 class="contest-name">NCPC JU 2023</h4>
+                    <span class="contest-rank">Rank 38</span>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-team">AUST_RedX</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+                <a href="https://web.archive.org/web/20221201173754/https://algo.codemarshal.org/contests/aust-2022/standings" target="_blank" rel="noopener noreferrer" class="contest-card" data-aos="fade-up" data-aos-delay="250">
+                  <div class="contest-header">
+                    <h4 class="contest-name">AUST Inter University Programming Contest 2022</h4>
+                    <span class="contest-rank">Rank 53</span>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-team">AUST_SLYTHERIN</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+                <a href="https://toph.co/c/buet-inter-university-2022/standings" target="_blank" rel="noopener noreferrer" class="contest-card" data-aos="fade-up" data-aos-delay="300">
+                  <div class="contest-header">
+                    <h4 class="contest-name">BUET Inter University Programming Contest 2022</h4>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-team">AUST_SillyMistakes</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+                <a href="https://toph.co/c/buet-inter-university-2023/standings" target="_blank" rel="noopener noreferrer" class="contest-card" data-aos="fade-up" data-aos-delay="350">
+                  <div class="contest-header">
+                    <h4 class="contest-name">BUET Inter University Programming Contest 2023</h4>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-team">AUST_Badamtola</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+                <a href="https://toph.co/c/inter-university-sust-cse-carnival-2024/standings" target="_blank" rel="noopener noreferrer" class="contest-card" data-aos="fade-up" data-aos-delay="400">
+                  <div class="contest-header">
+                    <h4 class="contest-name">SUST Inter University Programming Contest 2024</h4>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-team">AUST_Shunno7</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+              </div>
+            </div>
+
+            <div class="contest-group">
+              <div class="contest-group-header">
+                <span class="contest-icon">🎯</span>
+                <h3 class="contest-group-title">Intra University Contests</h3>
+              </div>
+              <div class="contests-grid">
+                <a href="https://toph.co/contests/training/g2jtqtr/standings" target="_blank" rel="noopener noreferrer" class="contest-card highlight" data-aos="fade-up" data-aos-delay="0">
+                  <div class="contest-header">
+                    <h4 class="contest-name">Intra AUST Programming Contest (CodeCombat 1.0)</h4>
+                    <span class="contest-rank">🏅 Rank 1st</span>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-team">AUST_CrackPlatoon</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+                <a href="https://toph.co/contests/training/6p8qhfa/standings" target="_blank" rel="noopener noreferrer" class="contest-card" data-aos="fade-up" data-aos-delay="50">
+                  <div class="contest-header">
+                    <h4 class="contest-name">Intra AUST Programming Contest - Spring 2021</h4>
+                    <span class="contest-rank">Rank 2nd</span>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-team">Individual</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+                <a href="https://toph.co/contests/training/ah224ff/standings" target="_blank" rel="noopener noreferrer" class="contest-card" data-aos="fade-up" data-aos-delay="100">
+                  <div class="contest-header">
+                    <h4 class="contest-name">Intra AUST Programming Contest (Cefalo Codefiesta)</h4>
+                    <span class="contest-rank">Rank 3rd</span>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-team">AUST_DA_VIN_C_CODE</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+                <a href="https://toph.co/contests/training/wph37wb/standings" target="_blank" rel="noopener noreferrer" class="contest-card" data-aos="fade-up" data-aos-delay="150">
+                  <div class="contest-header">
+                    <h4 class="contest-name">Intra AUST Programming Contest Fall 2021 (CodeClash21)</h4>
+                    <span class="contest-rank">Rank 4th</span>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-team">AUST_BITWISE</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+              </div>
+            </div>
+
+            <div class="contest-group">
+              <div class="contest-group-header">
+                <span class="contest-icon">⭐</span>
+                <h3 class="contest-group-title">Individual Contests</h3>
+              </div>
+              <div class="contests-grid">
+                <a href="https://www.facebook.com/codingcompetitions/hacker-cup/2023/round-1/scoreboard" target="_blank" rel="noopener noreferrer" class="contest-card" data-aos="fade-up" data-aos-delay="0">
+                  <div class="contest-header">
+                    <h4 class="contest-name">Meta Hacker Cup 2023 Round 1</h4>
+                    <span class="contest-rank">Rank 115</span>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-country">🇧🇩 Bangladesh</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+                <a href="https://www.facebook.com/codingcompetitions/hacker-cup/2023/round-2/scoreboard" target="_blank" rel="noopener noreferrer" class="contest-card highlight" data-aos="fade-up" data-aos-delay="50">
+                  <div class="contest-header">
+                    <h4 class="contest-name">Meta Hacker Cup 2023 Round 2</h4>
+                    <span class="contest-rank">🏅 Rank 154</span>
+                  </div>
+                  <div class="contest-meta">
+                    <span class="contest-country">🇧🇩 Bangladesh</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+                <a href="https://www.hackerrank.com/contests/srbd-code-contest-2023-round-2/leaderboard" target="_blank" rel="noopener noreferrer" class="contest-card" data-aos="fade-up" data-aos-delay="100">
+                  <div class="contest-header">
+                    <h4 class="contest-name">Samsung Research and Development Contest</h4>
+                    <span class="contest-rank">Rank 65</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+                <a href="https://toph.co/c/selise-coding-challenge-2023/standings" target="_blank" rel="noopener noreferrer" class="contest-card" data-aos="fade-up" data-aos-delay="150">
+                  <div class="contest-header">
+                    <h4 class="contest-name">Selise Coding Challenge 2023</h4>
+                    <span class="contest-rank">Rank 175</span>
+                  </div>
+                  <div class="contest-arrow"><i class="bx bx-link-external"></i></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="content-section">
+      <div class="portfolio section-bg">
+        <div class="container" style="padding-top: 100px;">
+          <div class="section-title">
+            <h2><span style="color: #ffffff; font-weight: bold;">Academic Projects</span></h2>
+          </div>
+
+          <div class="filters" data-aos="fade-up">
+            <button class="filter-btn active" data-filter="*">All</button>
+            <button class="filter-btn" data-filter=".filter-app">App</button>
+            <button class="filter-btn" data-filter=".filter-card">Game</button>
+          </div>
+
+          <div class="portfolio-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-item filter-card">
+              <div class="portfolio-wrap">
+                <img src="assets/projects/carmania/1.png" alt="Car Mania" class="portfolio-image">
+                <div class="portfolio-links">
+                  <a href="#portfolio-detail-carmania" class="portfolio-link">
+                    <i class="bx bx-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="assets/projects/medimart/1.png" alt="Medimart" class="portfolio-image">
+                <div class="portfolio-links">
+                  <a href="#portfolio-detail-medimart" class="portfolio-link">
+                    <i class="bx bx-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="assets/projects/nextgen/1.png" alt="NextGen Hospital Management Hub" class="portfolio-image">
+                <div class="portfolio-links">
+                  <a href="#portfolio-detail-nextgen" class="portfolio-link">
+                    <i class="bx bx-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="assets/projects/alaska/1.png" alt="AlaskaExpress" class="portfolio-image">
+                <div class="portfolio-links">
+                  <a href="#portfolio-detail-alaska" class="portfolio-link">
+                    <i class="bx bx-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="content-section">
+      <div class="skills">
+        <div class="container" style="padding-top: 100px;">
+          <div class="section-header">
+            <h2 class="section-title">Technical Skills</h2>
+            <p class="section-subtitle">
+              A comprehensive overview of my technical expertise and proficiency levels across various technologies and tools.
+            </p>
+          </div>
+
+          <div class="skills-grid" id="skillsGrid">
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="0">
+              <h3 class="category-title">
+                <span class="category-icon">P</span>
+                Programming Languages
+              </h3>
+              <div class="skills-list">
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">⚡</span>
+                    <span class="skill-name">C++</span>
+                    <span class="skill-percentage">90%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="90" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">⚡</span>
+                    <span class="skill-name">C</span>
+                    <span class="skill-percentage">90%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="90" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">📜</span>
+                    <span class="skill-name">JavaScript</span>
+                    <span class="skill-percentage">80%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="80" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">📘</span>
+                    <span class="skill-name">TypeScript</span>
+                    <span class="skill-percentage">80%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="80" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">🐍</span>
+                    <span class="skill-name">Python</span>
+                    <span class="skill-percentage">65%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="65" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">☕</span>
+                    <span class="skill-name">Java</span>
+                    <span class="skill-percentage">70%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="70" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="category-title">
+                <span class="category-icon">W</span>
+                Web Technologies
+              </h3>
+              <div class="skills-list">
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">▲</span>
+                    <span class="skill-name">Next.js</span>
+                    <span class="skill-percentage">60%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="60" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">⚛️</span>
+                    <span class="skill-name">React</span>
+                    <span class="skill-percentage">50%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="50" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">🎨</span>
+                    <span class="skill-name">HTML/CSS/Bootstrap</span>
+                    <span class="skill-percentage">65%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="65" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">🔷</span>
+                    <span class="skill-name">ASP.NET MVC</span>
+                    <span class="skill-percentage">60%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="60" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="category-title">
+                <span class="category-icon">B</span>
+                Backend & Databases
+              </h3>
+              <div class="skills-list">
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">🟢</span>
+                    <span class="skill-name">Node.js</span>
+                    <span class="skill-percentage">50%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="50" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">🎸</span>
+                    <span class="skill-name">Django</span>
+                    <span class="skill-percentage">50%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="50" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">🍾</span>
+                    <span class="skill-name">Flask</span>
+                    <span class="skill-percentage">50%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="50" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">🐘</span>
+                    <span class="skill-name">PostgreSQL</span>
+                    <span class="skill-percentage">70%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="70" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">🗄️</span>
+                    <span class="skill-name">Oracle PL/SQL</span>
+                    <span class="skill-percentage">80%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="80" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">🔴</span>
+                    <span class="skill-name">Redis</span>
+                    <span class="skill-percentage">60%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="60" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+              <h3 class="category-title">
+                <span class="category-icon">T</span>
+                Tools & Technologies
+              </h3>
+              <div class="skills-list">
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">🧮</span>
+                    <span class="skill-name">Data Structures & Algorithms</span>
+                    <span class="skill-percentage">95%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="95" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">🔀</span>
+                    <span class="skill-name">Git</span>
+                    <span class="skill-percentage">50%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="50" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">☁️</span>
+                    <span class="skill-name">AWS</span>
+                    <span class="skill-percentage">50%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="50" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">🤖</span>
+                    <span class="skill-name">Generative AI</span>
+                    <span class="skill-percentage">60%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="60" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">🐳</span>
+                    <span class="skill-name">Docker</span>
+                    <span class="skill-percentage">65%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="65" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-icon">🧠</span>
+                    <span class="skill-name">Large Language Model</span>
+                    <span class="skill-percentage">70%</span>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" data-value="70" style="width: 0%;">
+                      <span class="progress-glow"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" id="backToTop" data-section="hero">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
