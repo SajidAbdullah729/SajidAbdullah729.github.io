@@ -26,14 +26,14 @@
   <header class="header">
     <div class="header-container">
       <div class="profile">
-        <img src="assets/img/image2.jpg" alt="Abdullah-Al-Sajid" class="profile-img">
+        <img src="assets/img/image2.jpg" alt="Abdullah-Al-Sajid" class="profile-img" id="profileImage" style="cursor: pointer;">
         <a href="#" class="name" data-section="hero">Abdullah-Al-Sajid</a>
       </div>
 
       <nav class="nav" id="mainNav">
         <ul class="nav-list">
           <li><a href="#" class="nav-link active" data-section="hero"><i class="bx bx-home"></i><span>Home</span></a></li>
-          <li><a href="#" class="nav-link" data-section="about"><i class="bx bx-user"></i><span>About</span></a></li>
+          <li><a href="#" class="nav-link" data-section="about"><i class="bx bx-user"></i><span>Overview</span></a></li>
           <li><a href="#" class="nav-link" data-section="experience"><i class="bx bx-briefcase"></i><span>Experience</span></a></li>
           <li><a href="#" class="nav-link" data-section="competitive-programming"><i class="bx bx-trophy"></i><span>Achievements</span></a></li>
           <li><a href="#" class="nav-link" data-section="portfolio"><i class="bx bx-book-content"></i><span>Projects</span></a></li>
@@ -66,18 +66,24 @@
         </div>
       </div>
 
-      <div class="container" style="padding-top: 60px;">
-        <div class="bio-section">
-          <p class="bio-text">
-            I am a dedicated software engineer with a passion for solving complex problems and building innovative solutions. 
-            My journey in computer science has been marked by excellence in competitive programming, where I've represented 
-            my university in several national and international contests.
-          </p>
-          <p class="bio-text">
-            Beyond coding, I actively contribute to the programming community by judging, organizing, and testing 
-            various programming contests. My experience spans from machine learning research to full-stack web development, 
-            always staying current with the latest technologies and best practices.
-          </p>
+      <div class="container" style="padding-top: 30px;">
+        <div class="bio-section" data-aos="fade-up">
+          <div class="bio-header">
+            <i class="bx bx-user-circle"></i>
+            <h3 class="bio-title">About Me</h3>
+          </div>
+          <div class="bio-content">
+            <p class="bio-text">
+              I am a dedicated software engineer with a passion for solving complex problems and building innovative solutions. 
+              My journey in computer science has been marked by excellence in competitive programming, where I've represented 
+              my university in several national and international contests.
+            </p>
+            <p class="bio-text">
+              Beyond coding, I actively contribute to the programming community by judging, organizing, and testing 
+              various programming contests. My experience spans from machine learning research to full-stack web development, 
+              always staying current with the latest technologies and best practices.
+            </p>
+          </div>
         </div>
 
         <div class="contact-section">
@@ -117,7 +123,7 @@
       <div class="about">
       <div class="container" style="padding-top: 100px;">
         <div class="section-header">
-          <h2 class="section-title">About Me</h2>
+          <h2 class="section-title">Overview</h2>
           <p class="section-subtitle">
             Passionate Software Engineer with a strong foundation in computer science and a track record of excellence in competitive programming and software development.
           </p>
@@ -125,11 +131,6 @@
 
         <div class="main-content">
           <div class="image-section" data-aos="fade-right">
-            <div class="image-wrapper">
-              <div class="image-border"></div>
-              <img src="assets/img/image.jpg" alt="Abdullah-Al-Sajid" class="image">
-              <div class="image-overlay"></div>
-            </div>
             <div class="image-info">
               <h3 class="role-title">Software Engineer</h3>
               <div class="organization">
@@ -1161,6 +1162,12 @@
   <a href="#" class="back-to-top" id="backToTop" data-section="hero">
     <i class="bi bi-arrow-up"></i>
   </a>
+
+  <!-- Image Modal -->
+  <div class="image-modal" id="imageModal">
+    <span class="image-modal-close" id="imageModalClose">&times;</span>
+    <img class="image-modal-content" id="imageModalImg" src="" alt="Abdullah-Al-Sajid">
+  </div>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

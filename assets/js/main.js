@@ -162,4 +162,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
     observer.observe(skillsGrid);
   }
+
+  // Image Modal functionality
+  const profileImage = document.getElementById('profileImage');
+  const imageModal = document.getElementById('imageModal');
+  const imageModalImg = document.getElementById('imageModalImg');
+  const imageModalClose = document.getElementById('imageModalClose');
+
+  if (profileImage && imageModal && imageModalImg && imageModalClose) {
+    // Open modal when profile image is clicked
+    profileImage.addEventListener('click', function() {
+      imageModalImg.src = this.src;
+      imageModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    });
+
+    // Close modal when close button is clicked
+    imageModalClose.addEventListener('click', function() {
+      imageModal.classList.remove('active');
+      document.body.style.overflow = ''; // Restore scrolling
+    });
+
+    // Close modal when clicking outside the image
+    imageModal.addEventListener('click', function(e) {
+      if (e.target === imageModal) {
+        imageModal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+      }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && imageModal.classList.contains('active')) {
+        imageModal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+      }
+    });
+  }
 });
