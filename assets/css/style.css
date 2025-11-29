@@ -1339,16 +1339,16 @@ section {
 
 .timeline-item {
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   padding-left: 30px;
 }
 
 .timeline-marker {
   position: absolute;
-  left: -20px;
+  left: -18px;
   top: 0;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   background: rgba(20, 157, 221, 0.2);
   border: 2px solid #149ddd;
   border-radius: 50%;
@@ -1360,14 +1360,14 @@ section {
 }
 
 .marker-icon {
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .timeline-content {
   background: rgba(20, 157, 221, 0.08);
   border: 1px solid rgba(20, 157, 221, 0.2);
-  border-radius: 16px;
-  padding: 24px;
+  border-radius: 12px;
+  padding: 14px;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
 }
@@ -1383,18 +1383,18 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 12px;
-  gap: 16px;
+  margin-bottom: 6px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 .timeline-title {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
   flex: 1;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 .timeline-link {
@@ -1408,28 +1408,28 @@ section {
 }
 
 .timeline-period {
-  font-size: 14px;
+  font-size: 11px;
   color: #149ddd;
   font-weight: 600;
   white-space: nowrap;
   background: rgba(20, 157, 221, 0.2);
-  padding: 4px 12px;
-  border-radius: 20px;
+  padding: 3px 10px;
+  border-radius: 14px;
 }
 
 .timeline-institution,
 .timeline-role {
-  font-size: 15px;
+  font-size: 12px;
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   font-weight: 500;
 }
 
 .timeline-details,
 .timeline-description {
-  font-size: 14px;
+  font-size: 11px;
   color: rgba(255, 255, 255, 0.7);
-  line-height: 1.6;
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -1955,16 +1955,16 @@ section {
 
 .timeline-item {
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   padding-left: 30px;
 }
 
 .timeline-marker {
   position: absolute;
-  left: -20px;
+  left: -18px;
   top: 0;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   background: rgba(20, 157, 221, 0.2);
   border: 2px solid #149ddd;
   border-radius: 50%;
@@ -1976,14 +1976,14 @@ section {
 }
 
 .marker-icon {
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .timeline-content {
   background: rgba(20, 157, 221, 0.08);
   border: 1px solid rgba(20, 157, 221, 0.2);
-  border-radius: 16px;
-  padding: 24px;
+  border-radius: 12px;
+  padding: 14px;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
 }
@@ -1999,18 +1999,18 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 12px;
-  gap: 16px;
+  margin-bottom: 6px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 .timeline-title {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
   flex: 1;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 .timeline-link {
@@ -2024,28 +2024,28 @@ section {
 }
 
 .timeline-period {
-  font-size: 14px;
+  font-size: 11px;
   color: #149ddd;
   font-weight: 600;
   white-space: nowrap;
   background: rgba(20, 157, 221, 0.2);
-  padding: 4px 12px;
-  border-radius: 20px;
+  padding: 3px 10px;
+  border-radius: 14px;
 }
 
 .timeline-institution,
 .timeline-role {
-  font-size: 15px;
+  font-size: 12px;
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   font-weight: 500;
 }
 
 .timeline-details,
 .timeline-description {
-  font-size: 14px;
+  font-size: 11px;
   color: rgba(255, 255, 255, 0.7);
-  line-height: 1.6;
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -2433,9 +2433,9 @@ section {
 .platform-card {
   background: rgba(20, 157, 221, 0.1);
   border: 2px solid rgba(20, 157, 221, 0.2);
-  border-radius: 16px;
-  padding: 24px;
-  padding-right: 60px;
+  border-radius: 12px;
+  padding: 14px;
+  padding-right: 50px;
   text-decoration: none;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
@@ -2469,30 +2469,30 @@ section {
 .platform-header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .platform-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 20px;
   color: #ffffff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   flex-shrink: 0;
 }
 
 .platform-icon i {
-  font-size: 24px;
+  font-size: 20px;
   color: #ffffff;
 }
 
 .platform-name {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
@@ -2500,13 +2500,13 @@ section {
 }
 
 .platform-info {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .platform-handle {
-  font-size: 14px;
+  font-size: 12px;
   color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .platform-stats {
@@ -2516,7 +2516,7 @@ section {
 }
 
 .stat-item {
-  font-size: 13px;
+  font-size: 11px;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -2527,20 +2527,20 @@ section {
 
 .platform-title {
   display: inline-block;
-  font-size: 12px;
+  font-size: 10px;
   color: #149ddd;
   background: rgba(20, 157, 221, 0.2);
-  padding: 4px 10px;
-  border-radius: 12px;
+  padding: 3px 8px;
+  border-radius: 10px;
   font-weight: 600;
 }
 
 .platform-arrow {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 36px;
-  height: 36px;
+  bottom: 14px;
+  right: 14px;
+  width: 30px;
+  height: 30px;
   background: rgba(20, 157, 221, 0.2);
   border-radius: 50%;
   display: flex;
@@ -2557,7 +2557,7 @@ section {
 }
 
 .platform-arrow i {
-  font-size: 16px;
+  font-size: 14px;
   color: #149ddd;
   transition: color 0.3s ease;
 }
@@ -2611,9 +2611,9 @@ section {
 .contest-card {
   background: rgba(20, 157, 221, 0.08);
   border: 2px solid rgba(20, 157, 221, 0.2);
-  border-radius: 16px;
-  padding: 24px;
-  padding-bottom: 50px;
+  border-radius: 12px;
+  padding: 14px;
+  padding-bottom: 40px;
   text-decoration: none;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
@@ -2662,35 +2662,35 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 12px;
+  gap: 8px;
+  margin-bottom: 8px;
   padding-right: 0;
   position: relative;
   z-index: 0;
 }
 
 .contest-name {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
   flex: 1;
-  line-height: 1.4;
+  line-height: 1.3;
   min-width: 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
 
 .contest-rank {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
   color: #149ddd;
   background: rgba(20, 157, 221, 0.2);
-  padding: 4px 10px;
-  border-radius: 12px;
+  padding: 3px 8px;
+  border-radius: 10px;
   white-space: nowrap;
   flex-shrink: 0;
-  margin-left: 8px;
+  margin-left: 6px;
 }
 
 .contest-card.highlight .contest-rank {
@@ -2701,7 +2701,7 @@ section {
 .contest-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 8px;
   margin-bottom: 0;
   padding-right: 0;
   position: relative;
@@ -2710,19 +2710,19 @@ section {
 
 .contest-team,
 .contest-country {
-  font-size: 13px;
+  font-size: 11px;
   color: rgba(255, 255, 255, 0.7);
   background: rgba(255, 255, 255, 0.05);
-  padding: 4px 10px;
-  border-radius: 8px;
+  padding: 3px 8px;
+  border-radius: 6px;
 }
 
 .contest-arrow {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 36px;
-  height: 36px;
+  bottom: 14px;
+  right: 14px;
+  width: 30px;
+  height: 30px;
   background: rgba(20, 157, 221, 0.2);
   border-radius: 50%;
   display: flex;
@@ -2739,7 +2739,7 @@ section {
 }
 
 .contest-arrow i {
-  font-size: 16px;
+  font-size: 14px;
   color: #149ddd;
   transition: color 0.3s ease;
 }
