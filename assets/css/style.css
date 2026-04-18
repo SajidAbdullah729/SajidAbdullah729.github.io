@@ -2016,6 +2016,21 @@ section {
   line-height: 1.5;
 }
 
+/* Overview (#about): stronger list copy in light mode */
+html[data-theme="light"] #about .exp-page--overview .section-subtitle {
+  color: var(--text-soft);
+}
+
+html[data-theme="light"] #about .exp-page--overview .exp-row__sub {
+  color: var(--text-strong);
+}
+
+html[data-theme="light"] #about .exp-page--overview .exp-row__note {
+  color: var(--text-soft);
+  font-size: 0.875rem;
+  line-height: 1.58;
+}
+
 .timeline-link {
   color: inherit;
   text-decoration: none;
