@@ -1,8 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('portfolio-theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
   <title>Abdullah-Al-Sajid - Portfolio</title>
   <meta name="description" content="Software Engineer Portfolio">
   <link rel="icon" href="assets/img/image2.jpg">
@@ -49,6 +57,11 @@
           <i class="bx bxl-linkedin"></i>
         </a>
       </div>
+
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme" title="Theme">
+        <i class="bx bx-sun theme-toggle-icon theme-toggle-icon--light" aria-hidden="true"></i>
+        <i class="bx bx-moon theme-toggle-icon theme-toggle-icon--dark" aria-hidden="true"></i>
+      </button>
 
       <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
         <i class="bi bi-list"></i>
@@ -185,7 +198,7 @@
 
             <div class="about-content-wrapper" data-aos="fade-left">
             <div class="highlights-grid">
-              <div class="highlight-card" style="border: 2px solid rgba(20, 157, 221, 0.6); background: rgba(20, 157, 221, 0.15); box-shadow: 0 8px 30px rgba(20, 157, 221, 0.3);">
+              <div class="highlight-card highlight-card--featured">
                 <div class="highlight-icon">💼</div>
                 <h4 class="highlight-title">Current Role</h4>
                 <p class="highlight-description">Software Engineer at Pioneer Alpha, specializing in full-stack development and modern web technologies</p>
@@ -775,7 +788,7 @@
       <div class="portfolio section-bg">
         <div class="container" style="padding-top: 20px;">
           <div class="section-title">
-            <h2><span style="color: #ffffff; font-weight: bold;">Academic Projects</span></h2>
+            <h2><span class="portfolio-heading-accent">Academic Projects</span></h2>
           </div>
 
           <div class="filters" data-aos="fade-up">

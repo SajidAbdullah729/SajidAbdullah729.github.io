@@ -67,6 +67,25 @@ function buildPath(slug) {
 
 // Initialize AOS
 document.addEventListener('DOMContentLoaded', function() {
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    function syncThemeToggleLabel() {
+      const t = document.documentElement.getAttribute('data-theme') || 'dark';
+      themeToggle.setAttribute('aria-label', t === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
+      themeToggle.setAttribute('title', t === 'light' ? 'Dark mode' : 'Light mode');
+    }
+    syncThemeToggleLabel();
+    themeToggle.addEventListener('click', function () {
+      const t = document.documentElement.getAttribute('data-theme') || 'dark';
+      const next = t === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      try {
+        localStorage.setItem('portfolio-theme', next);
+      } catch (e) {}
+      syncThemeToggleLabel();
+    });
+  }
+
   AOS.init({
     duration: 1000,
     easing: 'ease-in-out',
