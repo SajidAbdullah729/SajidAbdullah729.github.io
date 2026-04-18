@@ -2,6 +2,7 @@
 const ROUTES = [
   { slug: '', section: 'hero' },
   { slug: 'about', section: 'about' },
+  { slug: 'education', section: 'education' },
   { slug: 'experience', section: 'experience' },
   { slug: 'achievements', section: 'competitive-programming' },
   { slug: 'projects', section: 'portfolio' },
