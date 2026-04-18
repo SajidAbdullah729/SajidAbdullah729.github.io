@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading…</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; text-align: center; color: #64748b; }
+  </style>
+  <script>
+    (function () {
+      var ROUTE_SEGMENTS = ['about', 'experience', 'achievements', 'projects', 'skills', 'hero', 'home'];
+      function indexUrl() {
+        var parts = location.pathname.split('/').filter(Boolean);
+        var last = (parts[parts.length - 1] || '').replace(/\.html$/i, '');
+        if (last.toLowerCase() === 'index') parts.pop();
+        else {
+          var seg = last.toLowerCase();
+          if (ROUTE_SEGMENTS.indexOf(seg) !== -1) parts.pop();
+        }
+        var base = parts.length ? '/' + parts.join('/') + '/' : '/';
+        return base + 'index.html';
+      }
+      var url = indexUrl();
+      fetch(url, { credentials: 'same-origin' })
+        .then(function (r) {
+          if (!r.ok) throw new Error(r.status);
+          return r.text();
+        })
+        .then(function (html) {
+          document.open();
+          document.write(html);
+          document.close();
+        })
+        .catch(function () {
+          document.body.innerHTML = '<p>Could not load the site. Open the <a href="' + url + '">home page</a>.</p>';
+        });
+    })();
+  </script>
+</head>
+<body>
+  <p>Loading…</p>
+</body>
+</html>
