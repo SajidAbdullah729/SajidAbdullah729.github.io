@@ -622,7 +622,7 @@ section {
 }
 
 .home-contact__lead {
-  margin: 0 0 0.35rem;
+  margin: 1rem 0 0;
   font-size: 0.875rem;
   color: var(--text-faint);
   line-height: 1.5;
