@@ -134,7 +134,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Tab-based section switching
   const navLinks = document.querySelectorAll('.nav-link[data-section]');
-  const nameLink = document.querySelector('.name[data-section]');
   const backToTopBtn = document.getElementById('backToTop');
   const contentSections = document.querySelectorAll('.content-section');
 
@@ -196,15 +195,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-
-  // Name link also switches to hero
-  if (nameLink) {
-    nameLink.addEventListener('click', function(e) {
-      if (!isPrimaryUnmodifiedClick(e)) return;
-      e.preventDefault();
-      switchSection('hero');
-    });
-  }
 
   // Back to top button
   if (backToTopBtn) {

@@ -360,19 +360,6 @@ section {
   object-fit: cover;
 }
 
-.name {
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--text-primary);
-  font-family: 'Poppins', sans-serif;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.name:hover {
-  color: var(--accent);
-}
-
 .nav {
   flex: 1;
   display: flex;
@@ -521,10 +508,6 @@ section {
 @media (max-width: 768px) {
   .profile {
     gap: 10px;
-  }
-
-  .name {
-    font-size: 16px;
   }
 
   .profile-img {
