@@ -1498,172 +1498,6 @@ section {
   font-size: 20px;
 }
 
-/* Education & Experience */
-.education-experience {
-  padding: 80px 0;
-  background: var(--app-bg);
-  position: relative;
-}
-
-.education-experience::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: var(--gradient-line);
-}
-
-.timeline-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.timeline-column {
-  position: relative;
-}
-
-.category-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 40px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid var(--accent-30);
-}
-
-.category-icon {
-  font-size: 32px;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--accent-20);
-  border-radius: 12px;
-}
-
-.category-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.timeline {
-  position: relative;
-  padding-left: 40px;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 15px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--gradient-timeline);
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 18px;
-  padding-left: 30px;
-}
-
-.timeline-marker {
-  position: absolute;
-  left: -18px;
-  top: 0;
-  width: 32px;
-  height: 32px;
-  background: var(--accent-20);
-  border: 2px solid var(--accent);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  backdrop-filter: blur(10px);
-}
-
-.marker-icon {
-  font-size: 14px;
-}
-
-.timeline-content {
-  background: var(--accent-08);
-  border: 1px solid var(--accent-20);
-  border-radius: 12px;
-  padding: 14px;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-}
-
-.timeline-content:hover {
-  border-color: var(--accent-40);
-  background: var(--accent-12);
-  transform: translateX(10px);
-  box-shadow: 0 10px 30px var(--accent-20);
-}
-
-.timeline-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 6px;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.timeline-title {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin: 0;
-  flex: 1;
-  line-height: 1.3;
-}
-
-.timeline-link {
-  color: var(--text-primary);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.timeline-link:hover {
-  color: var(--accent);
-}
-
-.timeline-period {
-  font-size: 11px;
-  color: var(--accent);
-  font-weight: 600;
-  white-space: nowrap;
-  background: var(--accent-20);
-  padding: 3px 10px;
-  border-radius: 14px;
-}
-
-.timeline-institution,
-.timeline-role {
-  font-size: 12px;
-  color: var(--text-strong);
-  margin-bottom: 5px;
-  font-weight: 500;
-}
-
-.timeline-details,
-.timeline-description {
-  font-size: 11px;
-  color: var(--text-muted);
-  line-height: 1.5;
-  margin: 0;
-}
-
 /* Certifications Section */
 .certifications-section {
   padding: 80px 0;
@@ -1949,17 +1783,6 @@ section {
   transform: translateX(5px);
 }
 
-@media (max-width: 1024px) {
-  .timeline-container {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-
-  .timeline {
-    padding-left: 30px;
-  }
-}
-
 @media (max-width: 768px) {
   .resume-card {
     flex-direction: column;
@@ -1969,15 +1792,6 @@ section {
 
   .category-title {
     font-size: 24px;
-  }
-
-  .timeline-header {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .timeline-period {
-    align-self: flex-start;
   }
 
   .cert-grid {
@@ -2114,7 +1928,7 @@ section {
   font-size: 20px;
 }
 
-/* Education & Experience Timeline */
+/* Education & Experience — simple list */
 .resume {
   padding: 80px 0;
   background: var(--app-bg);
@@ -2131,153 +1945,97 @@ section {
   background: var(--gradient-line);
 }
 
-.timeline-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  max-width: 1200px;
+.resume.exp-page {
+  padding: 56px 0 72px;
+}
+
+.resume.exp-page .exp-page__inner {
+  max-width: 720px;
   margin: 0 auto;
+  padding-top: 48px;
 }
 
-.timeline-column {
-  position: relative;
+.exp-page__block + .exp-page__block {
+  margin-top: 2.75rem;
 }
 
-.category-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 40px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid var(--accent-30);
-}
-
-.category-icon {
-  font-size: 32px;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--accent-20);
-  border-radius: 12px;
-}
-
-.category-title {
-  font-size: 28px;
+.exp-page__heading {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.0625rem;
   font-weight: 700;
   color: var(--text-primary);
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
 }
 
-.timeline {
-  position: relative;
-  padding-left: 40px;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 15px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--gradient-timeline);
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 18px;
-  padding-left: 30px;
-}
-
-.timeline-marker {
-  position: absolute;
-  left: -18px;
-  top: 0;
-  width: 32px;
-  height: 32px;
-  background: var(--accent-20);
-  border: 2px solid var(--accent);
-  border-radius: 50%;
+.exp-page__list {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  backdrop-filter: blur(10px);
+  flex-direction: column;
 }
 
-.marker-icon {
-  font-size: 14px;
+.exp-row {
+  display: grid;
+  grid-template-columns: 6.75rem minmax(0, 1fr);
+  gap: 0.25rem 1.25rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--accent-20);
 }
 
-.timeline-content {
-  background: var(--accent-08);
-  border: 1px solid var(--accent-20);
-  border-radius: 12px;
-  padding: 14px;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
+.exp-page__list .exp-row:first-of-type {
+  border-top: none;
+  padding-top: 0;
 }
 
-.timeline-content:hover {
-  border-color: var(--accent-40);
-  background: var(--accent-12);
-  transform: translateX(10px);
-  box-shadow: 0 10px 30px var(--accent-20);
-}
-
-.timeline-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 6px;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.timeline-title {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text-primary);
+.exp-row__period {
   margin: 0;
-  flex: 1;
-  line-height: 1.3;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1.45;
+}
+
+.exp-row__title {
+  margin: 0 0 0.35rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.exp-row__sub {
+  margin: 0 0 0.25rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.exp-row__note {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--text-faint);
+  line-height: 1.5;
 }
 
 .timeline-link {
-  color: var(--text-primary);
+  color: inherit;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 
 .timeline-link:hover {
   color: var(--accent);
 }
 
-.timeline-period {
-  font-size: 11px;
-  color: var(--accent);
-  font-weight: 600;
-  white-space: nowrap;
-  background: var(--accent-20);
-  padding: 3px 10px;
-  border-radius: 14px;
-}
+@media (max-width: 560px) {
+  .exp-row {
+    grid-template-columns: 1fr;
+    gap: 0.2rem 0;
+    padding: 1.1rem 0;
+  }
 
-.timeline-institution,
-.timeline-role {
-  font-size: 12px;
-  color: var(--text-strong);
-  margin-bottom: 5px;
-  font-weight: 500;
-}
-
-.timeline-details,
-.timeline-description {
-  font-size: 11px;
-  color: var(--text-muted);
-  line-height: 1.5;
-  margin: 0;
+  .exp-row__period {
+    margin-bottom: 0.15rem;
+  }
 }
 
 /* Certifications Section */
@@ -2565,17 +2323,6 @@ section {
   transform: translateX(5px);
 }
 
-@media (max-width: 1024px) {
-  .timeline-container {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-
-  .timeline {
-    padding-left: 30px;
-  }
-}
-
 @media (max-width: 768px) {
   .resume-card {
     flex-direction: column;
@@ -2585,15 +2332,6 @@ section {
 
   .category-title {
     font-size: 24px;
-  }
-
-  .timeline-header {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .timeline-period {
-    align-self: flex-start;
   }
 
   .cert-grid {
