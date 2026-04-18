@@ -87,6 +87,16 @@
   --mobile-toggle-hover-bg: var(--accent-30);
 
   --shimmer-line: rgba(255, 255, 255, 0.3);
+
+  /* Highlighted contest / rank (gold) — tuned for dark backgrounds */
+  --rank-highlight-border: rgba(255, 215, 0, 0.45);
+  --rank-highlight-bg: rgba(255, 215, 0, 0.08);
+  --rank-highlight-top: linear-gradient(90deg, #ffd700, #f59e0b);
+  --rank-highlight-hover-border: rgba(255, 224, 102, 0.65);
+  --rank-highlight-hover-shadow: rgba(255, 215, 0, 0.28);
+  --rank-highlight-hover-bg: rgba(255, 215, 0, 0.12);
+  --rank-highlight-rank-text: #fff3bf;
+  --rank-highlight-rank-bg: rgba(255, 215, 0, 0.22);
 }
 
 html[data-theme="light"] {
@@ -169,6 +179,16 @@ html[data-theme="light"] {
   --mobile-toggle-hover-bg: var(--accent-20);
 
   --shimmer-line: rgba(255, 255, 255, 0.45);
+
+  /* Highlighted contest / rank — deep amber for contrast on light UI */
+  --rank-highlight-border: rgba(180, 83, 9, 0.45);
+  --rank-highlight-bg: rgba(251, 191, 36, 0.2);
+  --rank-highlight-top: linear-gradient(90deg, #d97706, #b45309);
+  --rank-highlight-hover-border: rgba(120, 53, 15, 0.55);
+  --rank-highlight-hover-shadow: rgba(217, 119, 6, 0.35);
+  --rank-highlight-hover-bg: rgba(251, 191, 36, 0.32);
+  --rank-highlight-rank-text: #78350f;
+  --rank-highlight-rank-bg: rgba(245, 158, 11, 0.38);
 }
 
 /* Theme toggle (navbar) */
@@ -176,8 +196,8 @@ html[data-theme="light"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
   border-radius: 8px;
   border: 1px solid var(--mobile-toggle-border);
   background: var(--mobile-toggle-bg);
@@ -194,7 +214,7 @@ html[data-theme="light"] {
 }
 
 .theme-toggle-icon {
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1;
 }
 
@@ -319,29 +339,29 @@ section {
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
 }
 
 .profile {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .profile-img {
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  border: 3px solid var(--profile-ring);
+  border: 2px solid var(--profile-ring);
   object-fit: cover;
 }
 
 .name {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 600;
   color: var(--text-primary);
   font-family: 'Poppins', sans-serif;
@@ -364,20 +384,20 @@ section {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 5px;
-  flex-wrap: wrap;
+  gap: 0;
+  flex-wrap: nowrap;
   justify-content: center;
 }
 
 .nav-link {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   color: var(--nav-link-color);
-  padding: 10px 18px;
-  border-radius: 8px;
+  padding: 6px 8px;
+  border-radius: 6px;
   transition: all 0.3s ease;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 500;
   text-decoration: none;
   white-space: nowrap;
@@ -385,7 +405,8 @@ section {
 }
 
 .nav-link i {
-  font-size: 16px;
+  font-size: 14px;
+  flex-shrink: 0;
   color: var(--nav-link-icon);
   transition: color 0.3s ease;
 }
@@ -403,21 +424,21 @@ section {
 
 .social-links {
   display: flex;
-  gap: 10px;
+  gap: 6px;
 }
 
 .social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   background: var(--social-bg);
   color: var(--social-text);
   border-radius: 50%;
   transition: all 0.3s ease;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   border: 1px solid var(--social-border);
 }
 
@@ -471,13 +492,21 @@ section {
 
   .nav-list {
     flex-direction: column;
+    flex-wrap: nowrap;
     width: 100%;
     padding: 0 20px;
+    gap: 2px;
   }
 
   .nav-link {
     width: 100%;
     padding: 12px 15px;
+    font-size: 13px;
+    gap: 8px;
+  }
+
+  .nav-link i {
+    font-size: 16px;
   }
 
   .mobile-toggle {
@@ -2840,8 +2869,8 @@ section {
 }
 
 .contest-card.highlight {
-  border-color: rgba(255, 215, 0, 0.4);
-  background: rgba(255, 215, 0, 0.05);
+  border-color: var(--rank-highlight-border);
+  background: var(--rank-highlight-bg);
 }
 
 .contest-card::before {
@@ -2857,7 +2886,7 @@ section {
 }
 
 .contest-card.highlight::before {
-  background: linear-gradient(90deg, #FFD700, #FFA500);
+  background: var(--rank-highlight-top);
 }
 
 .contest-card:hover {
@@ -2868,8 +2897,9 @@ section {
 }
 
 .contest-card.highlight:hover {
-  border-color: rgba(255, 215, 0, 0.6);
-  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+  border-color: var(--rank-highlight-hover-border);
+  box-shadow: 0 10px 30px var(--rank-highlight-hover-shadow);
+  background: var(--rank-highlight-hover-bg);
 }
 
 .contest-card:hover::before {
@@ -2912,8 +2942,8 @@ section {
 }
 
 .contest-card.highlight .contest-rank {
-  color: #FFD700;
-  background: rgba(255, 215, 0, 0.2);
+  color: var(--rank-highlight-rank-text);
+  background: var(--rank-highlight-rank-bg);
 }
 
 .contest-meta {
