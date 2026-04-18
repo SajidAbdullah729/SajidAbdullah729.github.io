@@ -2501,6 +2501,10 @@ html[data-theme="light"] #about .exp-page--overview .exp-row__note {
   hyphens: auto;
 }
 
+.cp a.ach-profile-link.exp-row .exp-row__sub {
+  font-weight: 700;
+}
+
 .cp a.ach-profile-link.exp-row {
   display: grid;
   text-decoration: none;
