@@ -218,20 +218,21 @@ html[data-theme="light"] {
   line-height: 1;
 }
 
+/* Default UI is light: show moon (switch to dark); in dark mode show sun */
 .theme-toggle-icon--light {
-  display: block;
+  display: none;
 }
 
 .theme-toggle-icon--dark {
-  display: none;
-}
-
-html[data-theme="light"] .theme-toggle-icon--light {
-  display: none;
-}
-
-html[data-theme="light"] .theme-toggle-icon--dark {
   display: block;
+}
+
+html[data-theme="dark"] .theme-toggle-icon--light {
+  display: block;
+}
+
+html[data-theme="dark"] .theme-toggle-icon--dark {
+  display: none;
 }
 
 .highlight-card--featured {
