@@ -1,3 +1,70 @@
+// Path-based routes: URL segment <-> section id (single-page, History API)
+const ROUTES = [
+  { slug: '', section: 'hero' },
+  { slug: 'about', section: 'about' },
+  { slug: 'experience', section: 'experience' },
+  { slug: 'achievements', section: 'competitive-programming' },
+  { slug: 'projects', section: 'portfolio' },
+  { slug: 'skills', section: 'skills' },
+];
+
+function sectionToSlug(sectionId) {
+  const row = ROUTES.find((r) => r.section === sectionId);
+  return row ? row.slug : '';
+}
+
+function slugToSection(slug) {
+  const s = (slug || '').toLowerCase();
+  const row = ROUTES.find((r) => r.slug === s);
+  return row ? row.section : 'hero';
+}
+
+function isKnownSlug(segment) {
+  return ROUTES.some((r) => r.slug && r.slug === segment.toLowerCase());
+}
+
+function getPathParts() {
+  let parts = window.location.pathname.split('/').filter(Boolean);
+  const last = parts[parts.length - 1];
+  if (last && /\.html?$/i.test(last)) {
+    if (last.toLowerCase() === 'index.html') {
+      parts = parts.slice(0, -1);
+    }
+  }
+  return parts;
+}
+
+function getBasePrefix() {
+  const parts = getPathParts();
+  if (parts.length === 0) return '/';
+  const last = parts[parts.length - 1];
+  if (isKnownSlug(last)) {
+    const parent = parts.slice(0, -1);
+    return parent.length ? '/' + parent.join('/') + '/' : '/';
+  }
+  return '/' + parts.join('/') + '/';
+}
+
+function getSlugFromPathname() {
+  const parts = getPathParts();
+  if (parts.length === 0) return '';
+  const last = parts[parts.length - 1];
+  if (/\.html?$/i.test(last) && last.toLowerCase() !== 'index.html') {
+    return '';
+  }
+  if (last.toLowerCase() === 'index.html') return '';
+  if (isKnownSlug(last)) return last.toLowerCase();
+  return '';
+}
+
+function buildPath(slug) {
+  const base = getBasePrefix();
+  if (!slug) {
+    return base === '/' ? '/' : base;
+  }
+  return base.replace(/\/?$/, '/') + slug;
+}
+
 // Initialize AOS
 document.addEventListener('DOMContentLoaded', function() {
   AOS.init({
@@ -52,7 +119,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const backToTopBtn = document.getElementById('backToTop');
   const contentSections = document.querySelectorAll('.content-section');
 
-  function switchSection(sectionId) {
+  function switchSection(sectionId, options) {
+    const skipHistory = options && options.skipHistory;
     // Remove active class from all nav links and sections
     navLinks.forEach(l => l.classList.remove('active'));
     contentSections.forEach(s => s.classList.remove('active'));
@@ -70,10 +138,30 @@ document.addEventListener('DOMContentLoaded', function() {
       // Scroll to top
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    if (!skipHistory) {
+      const slug = sectionToSlug(sectionId);
+      const next = buildPath(slug);
+      const current = window.location.pathname;
+      if (next !== current) {
+        history.pushState({ section: sectionId }, '', next);
+      }
+    }
+  }
+
+  function isPrimaryUnmodifiedClick(e) {
+    return (
+      e.button === 0 &&
+      !e.metaKey &&
+      !e.ctrlKey &&
+      !e.shiftKey &&
+      !e.altKey
+    );
   }
 
   navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
+      if (!isPrimaryUnmodifiedClick(e)) return;
       e.preventDefault();
       const sectionId = this.getAttribute('data-section');
       switchSection(sectionId);
@@ -93,6 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Name link also switches to hero
   if (nameLink) {
     nameLink.addEventListener('click', function(e) {
+      if (!isPrimaryUnmodifiedClick(e)) return;
       e.preventDefault();
       switchSection('hero');
     });
@@ -101,13 +190,20 @@ document.addEventListener('DOMContentLoaded', function() {
   // Back to top button
   if (backToTopBtn) {
     backToTopBtn.addEventListener('click', function(e) {
+      if (!isPrimaryUnmodifiedClick(e)) return;
       e.preventDefault();
       switchSection('hero');
     });
   }
 
-  // Initialize: Show hero section by default
-  switchSection('hero');
+  window.addEventListener('popstate', function() {
+    const sectionId = slugToSection(getSlugFromPathname());
+    switchSection(sectionId, { skipHistory: true });
+  });
+
+  // Initialize from URL (supports deep links and GitHub Pages 404.html fallback)
+  const initialSection = slugToSection(getSlugFromPathname());
+  switchSection(initialSection, { skipHistory: true });
 
   // Back to top button visibility
   const backToTop = document.getElementById('backToTop');
