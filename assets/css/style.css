@@ -2772,6 +2772,15 @@ section {
   font-weight: 700;
 }
 
+/* Platform card stats: theme-aware (inline whites broke light mode) */
+.platform-card .stat-item {
+  color: var(--text-muted);
+}
+
+.platform-card .stat-item strong {
+  color: var(--accent);
+}
+
 .platform-title {
   display: inline-block;
   font-size: 10px;
@@ -2780,6 +2789,26 @@ section {
   padding: 3px 8px;
   border-radius: 10px;
   font-weight: 600;
+}
+
+.platform-title--codeforces {
+  color: #1e40af;
+  background: color-mix(in srgb, #3b82f6 22%, transparent);
+}
+
+html[data-theme="dark"] .platform-title--codeforces {
+  color: #bfdbfe;
+  background: color-mix(in srgb, #3b82f6 35%, transparent);
+}
+
+.platform-title--codechef {
+  color: #92400e;
+  background: color-mix(in srgb, #d97706 22%, transparent);
+}
+
+html[data-theme="dark"] .platform-title--codechef {
+  color: #fde68a;
+  background: color-mix(in srgb, #d97706 32%, transparent);
 }
 
 .platform-arrow {
