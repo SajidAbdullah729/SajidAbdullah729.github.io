@@ -1,4 +1,7 @@
+
+
 // Path-based routes: URL segment <-> section id (single-page, History API)
+
 const ROUTES = [
   { slug: '', section: 'hero' },
   { slug: 'about', section: 'about' },
