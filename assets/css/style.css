@@ -97,6 +97,12 @@
   --rank-highlight-hover-bg: rgba(255, 215, 0, 0.12);
   --rank-highlight-rank-text: #fff3bf;
   --rank-highlight-rank-bg: rgba(255, 215, 0, 0.22);
+
+  /* Overview (#about): contests / olympiads row accent */
+  --overview-highlight-bg: rgba(139, 92, 246, 0.14);
+  --overview-highlight-border: rgba(167, 139, 250, 0.4);
+  --overview-highlight-period: #e9d5fe;
+  --overview-highlight-shadow: rgba(139, 92, 246, 0.18);
 }
 
 html[data-theme="light"] {
@@ -189,6 +195,12 @@ html[data-theme="light"] {
   --rank-highlight-hover-bg: rgba(251, 191, 36, 0.32);
   --rank-highlight-rank-text: #78350f;
   --rank-highlight-rank-bg: rgba(245, 158, 11, 0.38);
+
+  /* Overview (#about): contests / olympiads row accent */
+  --overview-highlight-bg: rgba(124, 58, 237, 0.09);
+  --overview-highlight-border: rgba(91, 33, 182, 0.24);
+  --overview-highlight-period: #5b21b6;
+  --overview-highlight-shadow: rgba(91, 33, 182, 0.1);
 }
 
 /* Theme toggle (navbar) */
@@ -2100,6 +2112,27 @@ html[data-theme="light"] #about .exp-page--overview .exp-row__note {
   color: var(--text-soft);
   font-size: 0.875rem;
   line-height: 1.58;
+}
+
+/* Overview (#about): contests / olympiads — distinct card surface */
+#about .exp-page--overview .exp-row--overview-highlight {
+  border-top: none;
+  margin: 0.4rem 0 0.75rem;
+  padding: 1.15rem 1.25rem;
+  border-radius: 12px;
+  background: var(--overview-highlight-bg);
+  border: 1px solid var(--overview-highlight-border);
+  box-shadow: 0 2px 16px var(--overview-highlight-shadow);
+}
+
+#about .exp-page--overview .exp-row--overview-highlight .exp-row__period {
+  color: var(--overview-highlight-period);
+}
+
+@media (max-width: 560px) {
+  #about .exp-page--overview .exp-row--overview-highlight {
+    padding: 1.15rem 1rem;
+  }
 }
 
 .timeline-link {
