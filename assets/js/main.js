@@ -10,6 +10,7 @@ const ROUTES = [
   { slug: 'achievements', section: 'competitive-programming' },
   { slug: 'projects', section: 'portfolio' },
   { slug: 'skills', section: 'skills' },
+  { slug: 'problem_author_testing', section: 'problem-author-testing' },
 ];
 
 function sectionToSlug(sectionId) {
