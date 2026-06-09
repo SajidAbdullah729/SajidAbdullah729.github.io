@@ -2512,6 +2512,17 @@ html[data-theme="light"] #about .exp-page--overview .exp-row__note {
   border-radius: 2px;
 }
 
+/* Achievements: centered subsection / contest group titles */
+.cp .subsection-title.ach-section-title--center,
+.cp .contest-group-header.ach-section-title--center {
+  justify-content: center;
+  text-align: center;
+}
+
+.cp .subsection-title.ach-section-title--center::before {
+  display: none;
+}
+
 /* Achievements Step 1: Online judges as list rows (replaces platform-card grid) */
 .cp .ach-profiles-list {
   max-width: 720px;
