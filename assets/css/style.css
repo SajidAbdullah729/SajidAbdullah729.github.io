@@ -103,6 +103,11 @@
   --overview-highlight-border: rgba(167, 139, 250, 0.4);
   --overview-highlight-period: #e9d5fe;
   --overview-highlight-shadow: rgba(139, 92, 246, 0.18);
+
+  /* Achievements subsection titles (Online Judge, ICPC, etc.) */
+  --ach-subsection-title-gradient: none;
+  --ach-subsection-title-color: #ffffff;
+  --ach-subsection-icon-color: #e9d5ff;
 }
 
 html[data-theme="light"] {
@@ -201,6 +206,11 @@ html[data-theme="light"] {
   --overview-highlight-border: rgba(91, 33, 182, 0.24);
   --overview-highlight-period: #5b21b6;
   --overview-highlight-shadow: rgba(91, 33, 182, 0.1);
+
+  /* Achievements subsection titles (Online Judge, ICPC, etc.) */
+  --ach-subsection-title-gradient: linear-gradient(135deg, #5b21b6 0%, #7c3aed 42%, #2563eb 100%);
+  --ach-subsection-title-color: transparent;
+  --ach-subsection-icon-color: #6d28d9;
 }
 
 /* Theme toggle (navbar) */
@@ -2521,6 +2531,29 @@ html[data-theme="light"] #about .exp-page--overview .exp-row__note {
 
 .cp .subsection-title.ach-section-title--center::before {
   display: none;
+}
+
+/* Achievements: Online Judge Profiles, ICPC Contests, etc. */
+.cp .subsection-title,
+.cp .contest-group-title {
+  background: var(--ach-subsection-title-gradient);
+  color: var(--ach-subsection-title-color);
+  -webkit-text-fill-color: var(--ach-subsection-title-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+html[data-theme="light"] .cp .subsection-title,
+html[data-theme="light"] .cp .contest-group-title {
+  -webkit-text-fill-color: transparent;
+}
+
+.cp .subsection-title i {
+  background: none;
+  color: var(--ach-subsection-icon-color);
+  -webkit-text-fill-color: var(--ach-subsection-icon-color);
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
 }
 
 /* Achievements Step 1: Online judges as list rows (replaces platform-card grid) */
