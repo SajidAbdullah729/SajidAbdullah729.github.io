@@ -104,9 +104,6 @@
   --overview-highlight-period: #e9d5fe;
   --overview-highlight-shadow: rgba(139, 92, 246, 0.18);
 
-  /* Achievements subsection titles (Online Judge, ICPC, etc.) */
-  --ach-subsection-title-gradient: none;
-  --ach-subsection-title-color: #ffffff;
   --ach-subsection-icon-color: #e9d5ff;
 }
 
@@ -207,9 +204,6 @@ html[data-theme="light"] {
   --overview-highlight-period: #5b21b6;
   --overview-highlight-shadow: rgba(91, 33, 182, 0.1);
 
-  /* Achievements subsection titles (Online Judge, ICPC, etc.) */
-  --ach-subsection-title-gradient: linear-gradient(135deg, #5b21b6 0%, #7c3aed 42%, #2563eb 100%);
-  --ach-subsection-title-color: transparent;
   --ach-subsection-icon-color: #6d28d9;
 }
 
@@ -2533,27 +2527,13 @@ html[data-theme="light"] #about .exp-page--overview .exp-row__note {
   display: none;
 }
 
-/* Achievements: Online Judge Profiles, ICPC Contests, etc. */
-.cp .subsection-title,
-.cp .contest-group-title {
-  background: var(--ach-subsection-title-gradient);
-  color: var(--ach-subsection-title-color);
-  -webkit-text-fill-color: var(--ach-subsection-title-color);
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-html[data-theme="light"] .cp .subsection-title,
-html[data-theme="light"] .cp .contest-group-title {
-  -webkit-text-fill-color: transparent;
-}
-
+/* Achievements: Online Judge Profiles icon */
 .cp .subsection-title i {
-  background: none;
   color: var(--ach-subsection-icon-color);
-  -webkit-text-fill-color: var(--ach-subsection-icon-color);
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
+}
+
+.cp .ach-subsection-heading {
+  display: inline-block;
 }
 
 /* Achievements Step 1: Online judges as list rows (replaces platform-card grid) */
@@ -2846,7 +2826,23 @@ html[data-theme="dark"] .platform-title--codechef {
 .contest-group-title {
   font-size: 28px;
   font-weight: 700;
-  color: var(--text-primary);
+}
+
+/* Achievements subsection headings: purple-blue gradient (light), white (dark) */
+html[data-theme="light"] .cp .ach-subsection-heading,
+html[data-theme="light"] .cp .contest-group-title {
+  background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 42%, #2563eb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+html[data-theme="dark"] .cp .ach-subsection-heading,
+html[data-theme="dark"] .cp .contest-group-title {
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+  background: none;
 }
 
 .contests-grid {
