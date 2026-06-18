@@ -3121,105 +3121,79 @@ html[data-theme="dark"] .cp .contest-group-title {
 }
 
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 640px;
+  margin: 40px auto 0;
 }
 
 .skills-grid.core-tech-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  flex-direction: column;
 }
 
 .skill-category {
-  background: var(--accent-08);
-  border: 1px solid var(--accent-20);
-  border-radius: 12px;
-  padding: 20px;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--accent-20);
+  border-radius: 0;
+  padding: 0 0 28px;
+  backdrop-filter: none;
 }
 
-.web-tech-category {
-  max-width: 300px;
-  justify-self: start;
-}
-
-.skill-category:hover {
-  border-color: var(--accent-40);
-  background: var(--accent-12);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px var(--accent-20);
+.skill-category:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .category-title {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid var(--accent-30);
+  margin-bottom: 14px;
+  padding-bottom: 0;
+  border-bottom: none;
   line-height: 1.4;
 }
 
 .category-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  background: var(--gradient-accent);
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--on-accent);
-  flex-shrink: 0;
-  box-shadow: 0 4px 15px var(--accent-30);
+  display: none;
 }
 
 .skills-list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
 }
 
 .skill-card {
-  background: var(--skill-card-bg);
-  border: 1px solid var(--skill-card-border);
-  border-radius: 10px;
-  padding: 14px;
-  transition: all 0.3s ease;
-}
-
-.skill-card:hover {
-  background: var(--skill-card-hover-bg);
-  border-color: var(--accent-40);
-  transform: translateX(5px);
+  display: grid;
+  grid-template-columns: 1fr minmax(100px, 140px);
+  align-items: center;
+  gap: 16px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 4px 0;
 }
 
 .skill-header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
+  gap: 0;
+  margin-bottom: 0;
 }
 
 .skill-icon {
-  font-size: 20px;
-  width: 28px;
-  text-align: center;
+  display: none;
 }
 
 .skill-name {
   flex: 1;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-soft);
   font-family: 'Poppins', sans-serif;
 }
 
@@ -3229,47 +3203,29 @@ html[data-theme="dark"] .cp .contest-group-title {
 
 .progress-bar-wrap {
   background: var(--progress-track);
-  height: 8px;
-  border-radius: 10px;
+  height: 4px;
+  border-radius: 2px;
   overflow: hidden;
-  position: relative;
 }
 
 .progress-bar {
   height: 100%;
   width: 0%;
   min-width: 0;
-  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-  background: var(--gradient-progress);
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
+  transition: width 0.8s ease;
+  background: var(--accent);
+  border-radius: 2px;
   display: block;
 }
 
 .progress-glow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, transparent, var(--shimmer-line), transparent);
-  animation: shimmer 2s infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
+  display: none;
 }
 
 /* Responsive Styles for CP, Portfolio, Skills */
 @media (max-width: 1024px) {
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
   }
 }
 
@@ -3290,7 +3246,8 @@ html[data-theme="dark"] .cp .contest-group-title {
     grid-template-columns: 1fr;
   }
 
-  .skills-grid {
+  .skill-card {
     grid-template-columns: 1fr;
+    gap: 6px;
   }
 }
