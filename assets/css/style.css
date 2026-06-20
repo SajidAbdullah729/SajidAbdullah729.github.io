@@ -668,6 +668,29 @@ section {
   color: var(--accent);
 }
 
+.home-resume .home-resume-btn {
+  display: inline-flex;
+  margin-top: 0.25rem;
+  background: linear-gradient(135deg, #ea580c, #f97316);
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
+  color: #ffffff;
+}
+
+.home-resume .home-resume-btn:hover {
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.5);
+}
+
+html[data-theme="light"] .home-resume .home-resume-btn {
+  background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.35);
+}
+
+html[data-theme="light"] .home-resume .home-resume-btn:hover {
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.45);
+}
+
 @media (max-width: 768px) {
   .hero--simple {
     padding-top: 56px;
