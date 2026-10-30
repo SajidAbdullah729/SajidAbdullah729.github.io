@@ -207,7 +207,252 @@ html[data-theme="light"] {
   --ach-subsection-icon-color: #6d28d9;
 }
 
-/* Theme toggle (navbar) */
+/* Ocean theme */
+html[data-theme="ocean"] {
+  color-scheme: dark;
+  --app-bg: #0b1220;
+  --surface-header: rgba(11, 18, 32, 0.95);
+  --surface-overlay: rgba(11, 18, 32, 0.55);
+  --surface-nav-mobile: rgba(11, 18, 32, 0.98);
+  --text-primary: #e8f4fc;
+  --text-muted: color-mix(in srgb, var(--text-primary) 70%, transparent);
+  --text-soft: color-mix(in srgb, var(--text-primary) 80%, transparent);
+  --text-softer: color-mix(in srgb, var(--text-primary) 85%, transparent);
+  --text-faint: color-mix(in srgb, var(--text-primary) 60%, transparent);
+  --text-strong: color-mix(in srgb, var(--text-primary) 90%, transparent);
+  --hero-accent: #67e8f9;
+  --accent: #06b6d4;
+  --accent-hover: #22d3ee;
+  --accent-05: color-mix(in srgb, var(--accent) 5%, transparent);
+  --accent-08: color-mix(in srgb, var(--accent) 8%, transparent);
+  --accent-10: color-mix(in srgb, var(--accent) 10%, transparent);
+  --accent-12: color-mix(in srgb, var(--accent) 12%, transparent);
+  --accent-15: color-mix(in srgb, var(--accent) 15%, transparent);
+  --accent-20: color-mix(in srgb, var(--accent) 20%, transparent);
+  --accent-30: color-mix(in srgb, var(--accent) 30%, transparent);
+  --accent-40: color-mix(in srgb, var(--accent) 40%, transparent);
+  --accent-50: color-mix(in srgb, var(--accent) 50%, transparent);
+  --accent-90: color-mix(in srgb, var(--accent) 90%, transparent);
+  --accent-timeline-fade: color-mix(in srgb, var(--accent) 30%, transparent);
+  --link: #22d3ee;
+  --link-hover: #67e8f9;
+  --on-accent: #042f2e;
+  --profile-ring: #164e63;
+  --back-top-hover: #22d3ee;
+  --social-bg: color-mix(in srgb, var(--text-primary) 10%, transparent);
+  --social-text: color-mix(in srgb, var(--text-primary) 80%, transparent);
+  --social-border: color-mix(in srgb, var(--text-primary) 10%, transparent);
+  --nav-link-color: color-mix(in srgb, var(--text-primary) 70%, transparent);
+  --nav-link-icon: color-mix(in srgb, var(--text-primary) 60%, transparent);
+  --nav-active-text: #ffffff;
+  --nav-active-bg: var(--accent-15);
+  --shadow-elevated: rgba(0, 0, 0, 0.3);
+  --shadow-card: rgba(0, 0, 0, 0.2);
+  --shadow-deep: rgba(0, 0, 0, 0.5);
+  --border-header: var(--accent-20);
+  --gradient-title: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  --gradient-accent-90: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  --gradient-line: linear-gradient(90deg, transparent, var(--accent-50), transparent);
+  --gradient-timeline: linear-gradient(180deg, var(--accent), var(--accent-timeline-fade));
+  --gradient-progress: linear-gradient(90deg, var(--accent) 0%, var(--accent-hover) 50%, #67e8f9 100%);
+  --skill-card-bg: color-mix(in srgb, var(--text-primary) 3%, transparent);
+  --skill-card-border: color-mix(in srgb, var(--text-primary) 10%, transparent);
+  --skill-card-hover-bg: color-mix(in srgb, var(--text-primary) 5%, transparent);
+  --progress-track: color-mix(in srgb, var(--text-primary) 8%, transparent);
+  --chip-bg: color-mix(in srgb, var(--text-primary) 5%, transparent);
+  --mobile-toggle-bg: var(--accent-20);
+  --mobile-toggle-border: var(--accent-30);
+  --mobile-toggle-hover-bg: var(--accent-30);
+  --ach-subsection-icon-color: #67e8f9;
+}
+
+/* Forest theme */
+html[data-theme="forest"] {
+  color-scheme: dark;
+  --app-bg: #0c1410;
+  --surface-header: rgba(12, 20, 16, 0.95);
+  --surface-overlay: rgba(12, 20, 16, 0.55);
+  --surface-nav-mobile: rgba(12, 20, 16, 0.98);
+  --text-primary: #ecfdf5;
+  --text-muted: color-mix(in srgb, var(--text-primary) 70%, transparent);
+  --text-soft: color-mix(in srgb, var(--text-primary) 80%, transparent);
+  --text-softer: color-mix(in srgb, var(--text-primary) 85%, transparent);
+  --text-faint: color-mix(in srgb, var(--text-primary) 60%, transparent);
+  --text-strong: color-mix(in srgb, var(--text-primary) 90%, transparent);
+  --hero-accent: #86efac;
+  --accent: #22c55e;
+  --accent-hover: #4ade80;
+  --accent-05: color-mix(in srgb, var(--accent) 5%, transparent);
+  --accent-08: color-mix(in srgb, var(--accent) 8%, transparent);
+  --accent-10: color-mix(in srgb, var(--accent) 10%, transparent);
+  --accent-12: color-mix(in srgb, var(--accent) 12%, transparent);
+  --accent-15: color-mix(in srgb, var(--accent) 15%, transparent);
+  --accent-20: color-mix(in srgb, var(--accent) 20%, transparent);
+  --accent-30: color-mix(in srgb, var(--accent) 30%, transparent);
+  --accent-40: color-mix(in srgb, var(--accent) 40%, transparent);
+  --accent-50: color-mix(in srgb, var(--accent) 50%, transparent);
+  --accent-90: color-mix(in srgb, var(--accent) 90%, transparent);
+  --accent-timeline-fade: color-mix(in srgb, var(--accent) 30%, transparent);
+  --link: #4ade80;
+  --link-hover: #86efac;
+  --on-accent: #052e16;
+  --profile-ring: #14532d;
+  --back-top-hover: #4ade80;
+  --social-bg: color-mix(in srgb, var(--text-primary) 10%, transparent);
+  --social-text: color-mix(in srgb, var(--text-primary) 80%, transparent);
+  --social-border: color-mix(in srgb, var(--text-primary) 10%, transparent);
+  --nav-link-color: color-mix(in srgb, var(--text-primary) 70%, transparent);
+  --nav-link-icon: color-mix(in srgb, var(--text-primary) 60%, transparent);
+  --nav-active-text: #ffffff;
+  --nav-active-bg: var(--accent-15);
+  --shadow-elevated: rgba(0, 0, 0, 0.3);
+  --shadow-card: rgba(0, 0, 0, 0.2);
+  --shadow-deep: rgba(0, 0, 0, 0.5);
+  --border-header: var(--accent-20);
+  --gradient-title: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  --gradient-accent-90: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  --gradient-line: linear-gradient(90deg, transparent, var(--accent-50), transparent);
+  --gradient-timeline: linear-gradient(180deg, var(--accent), var(--accent-timeline-fade));
+  --gradient-progress: linear-gradient(90deg, var(--accent) 0%, var(--accent-hover) 50%, #86efac 100%);
+  --skill-card-bg: color-mix(in srgb, var(--text-primary) 3%, transparent);
+  --skill-card-border: color-mix(in srgb, var(--text-primary) 10%, transparent);
+  --skill-card-hover-bg: color-mix(in srgb, var(--text-primary) 5%, transparent);
+  --progress-track: color-mix(in srgb, var(--text-primary) 8%, transparent);
+  --chip-bg: color-mix(in srgb, var(--text-primary) 5%, transparent);
+  --mobile-toggle-bg: var(--accent-20);
+  --mobile-toggle-border: var(--accent-30);
+  --mobile-toggle-hover-bg: var(--accent-30);
+  --ach-subsection-icon-color: #86efac;
+}
+
+/* Sunset theme */
+html[data-theme="sunset"] {
+  color-scheme: dark;
+  --app-bg: #1a100c;
+  --surface-header: rgba(26, 16, 12, 0.95);
+  --surface-overlay: rgba(26, 16, 12, 0.55);
+  --surface-nav-mobile: rgba(26, 16, 12, 0.98);
+  --text-primary: #fff7ed;
+  --text-muted: color-mix(in srgb, var(--text-primary) 70%, transparent);
+  --text-soft: color-mix(in srgb, var(--text-primary) 80%, transparent);
+  --text-softer: color-mix(in srgb, var(--text-primary) 85%, transparent);
+  --text-faint: color-mix(in srgb, var(--text-primary) 60%, transparent);
+  --text-strong: color-mix(in srgb, var(--text-primary) 90%, transparent);
+  --hero-accent: #fdba74;
+  --accent: #f97316;
+  --accent-hover: #fb923c;
+  --accent-05: color-mix(in srgb, var(--accent) 5%, transparent);
+  --accent-08: color-mix(in srgb, var(--accent) 8%, transparent);
+  --accent-10: color-mix(in srgb, var(--accent) 10%, transparent);
+  --accent-12: color-mix(in srgb, var(--accent) 12%, transparent);
+  --accent-15: color-mix(in srgb, var(--accent) 15%, transparent);
+  --accent-20: color-mix(in srgb, var(--accent) 20%, transparent);
+  --accent-30: color-mix(in srgb, var(--accent) 30%, transparent);
+  --accent-40: color-mix(in srgb, var(--accent) 40%, transparent);
+  --accent-50: color-mix(in srgb, var(--accent) 50%, transparent);
+  --accent-90: color-mix(in srgb, var(--accent) 90%, transparent);
+  --accent-timeline-fade: color-mix(in srgb, var(--accent) 30%, transparent);
+  --link: #fb923c;
+  --link-hover: #fdba74;
+  --on-accent: #431407;
+  --profile-ring: #7c2d12;
+  --back-top-hover: #fb923c;
+  --social-bg: color-mix(in srgb, var(--text-primary) 10%, transparent);
+  --social-text: color-mix(in srgb, var(--text-primary) 80%, transparent);
+  --social-border: color-mix(in srgb, var(--text-primary) 10%, transparent);
+  --nav-link-color: color-mix(in srgb, var(--text-primary) 70%, transparent);
+  --nav-link-icon: color-mix(in srgb, var(--text-primary) 60%, transparent);
+  --nav-active-text: #ffffff;
+  --nav-active-bg: var(--accent-15);
+  --shadow-elevated: rgba(0, 0, 0, 0.3);
+  --shadow-card: rgba(0, 0, 0, 0.2);
+  --shadow-deep: rgba(0, 0, 0, 0.5);
+  --border-header: var(--accent-20);
+  --gradient-title: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  --gradient-accent-90: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  --gradient-line: linear-gradient(90deg, transparent, var(--accent-50), transparent);
+  --gradient-timeline: linear-gradient(180deg, var(--accent), var(--accent-timeline-fade));
+  --gradient-progress: linear-gradient(90deg, var(--accent) 0%, var(--accent-hover) 50%, #fdba74 100%);
+  --skill-card-bg: color-mix(in srgb, var(--text-primary) 3%, transparent);
+  --skill-card-border: color-mix(in srgb, var(--text-primary) 10%, transparent);
+  --skill-card-hover-bg: color-mix(in srgb, var(--text-primary) 5%, transparent);
+  --progress-track: color-mix(in srgb, var(--text-primary) 8%, transparent);
+  --chip-bg: color-mix(in srgb, var(--text-primary) 5%, transparent);
+  --mobile-toggle-bg: var(--accent-20);
+  --mobile-toggle-border: var(--accent-30);
+  --mobile-toggle-hover-bg: var(--accent-30);
+  --ach-subsection-icon-color: #fdba74;
+}
+
+/* Violet theme */
+html[data-theme="violet"] {
+  color-scheme: light;
+  --app-bg: #f5f3ff;
+  --surface-header: rgba(255, 255, 255, 0.92);
+  --surface-overlay: rgba(245, 243, 255, 0.94);
+  --surface-nav-mobile: rgba(255, 255, 255, 0.98);
+  --text-primary: #1e1b4b;
+  --text-muted: color-mix(in srgb, var(--text-primary) 88%, transparent);
+  --text-soft: color-mix(in srgb, var(--text-primary) 90%, transparent);
+  --text-softer: color-mix(in srgb, var(--text-primary) 85%, transparent);
+  --text-faint: color-mix(in srgb, var(--text-primary) 72%, transparent);
+  --text-strong: var(--text-primary);
+  --hero-accent: #6d28d9;
+  --accent: #7c3aed;
+  --accent-hover: #8b5cf6;
+  --accent-05: color-mix(in srgb, var(--accent) 6%, transparent);
+  --accent-08: color-mix(in srgb, var(--accent) 10%, transparent);
+  --accent-10: color-mix(in srgb, var(--accent) 12%, transparent);
+  --accent-12: color-mix(in srgb, var(--accent) 14%, transparent);
+  --accent-15: color-mix(in srgb, var(--accent) 16%, transparent);
+  --accent-20: color-mix(in srgb, var(--accent) 20%, transparent);
+  --accent-30: color-mix(in srgb, var(--accent) 28%, transparent);
+  --accent-40: color-mix(in srgb, var(--accent) 38%, transparent);
+  --accent-50: color-mix(in srgb, var(--accent) 48%, transparent);
+  --accent-90: color-mix(in srgb, var(--accent) 92%, transparent);
+  --accent-timeline-fade: color-mix(in srgb, var(--accent) 28%, transparent);
+  --link: #7c3aed;
+  --link-hover: #6d28d9;
+  --on-accent: #ffffff;
+  --profile-ring: #c4b5fd;
+  --back-top-hover: #8b5cf6;
+  --social-bg: rgba(76, 29, 149, 0.06);
+  --social-text: rgba(30, 27, 75, 0.92);
+  --social-border: rgba(76, 29, 149, 0.12);
+  --nav-link-color: color-mix(in srgb, var(--text-primary) 90%, transparent);
+  --nav-link-icon: color-mix(in srgb, var(--text-primary) 82%, transparent);
+  --nav-active-text: #1e1b4b;
+  --nav-active-bg: var(--accent-12);
+  --shadow-elevated: rgba(76, 29, 149, 0.1);
+  --shadow-card: rgba(76, 29, 149, 0.08);
+  --shadow-deep: rgba(49, 46, 129, 0.28);
+  --border-header: var(--accent-20);
+  --gradient-title: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  --gradient-accent-90: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  --gradient-line: linear-gradient(90deg, transparent, var(--accent-50), transparent);
+  --gradient-timeline: linear-gradient(180deg, var(--accent), var(--accent-timeline-fade));
+  --gradient-progress: linear-gradient(90deg, var(--accent) 0%, var(--accent-hover) 50%, #a78bfa 100%);
+  --skill-card-bg: rgba(76, 29, 149, 0.04);
+  --skill-card-border: rgba(76, 29, 149, 0.12);
+  --skill-card-hover-bg: rgba(124, 58, 237, 0.08);
+  --progress-track: rgba(76, 29, 149, 0.1);
+  --chip-bg: rgba(76, 29, 149, 0.06);
+  --mobile-toggle-bg: var(--accent-08);
+  --mobile-toggle-border: var(--accent-30);
+  --mobile-toggle-hover-bg: var(--accent-20);
+  --ach-subsection-icon-color: #6d28d9;
+}
+
+/* Theme picker (navbar dropdown) */
+.theme-picker {
+  position: relative;
+  flex-shrink: 0;
+}
+
 .theme-toggle {
   display: flex;
   align-items: center;
@@ -223,32 +468,153 @@ html[data-theme="light"] {
   flex-shrink: 0;
 }
 
-.theme-toggle:hover {
+.theme-toggle:hover,
+.theme-picker.is-open .theme-toggle {
   background: var(--mobile-toggle-hover-bg);
   border-color: var(--accent);
   color: var(--accent);
 }
 
-.theme-toggle-icon {
+.theme-toggle i {
   font-size: 18px;
   line-height: 1;
 }
 
-/* Default UI is light: show moon (switch to dark); in dark mode show sun */
-.theme-toggle-icon--light {
+.theme-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 168px;
+  padding: 6px;
+  border-radius: 12px;
+  border: 1px solid var(--accent-20);
+  background: var(--surface-header);
+  box-shadow: 0 12px 32px var(--shadow-deep);
+  backdrop-filter: blur(12px);
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.theme-dropdown[hidden] {
   display: none;
 }
 
-.theme-toggle-icon--dark {
-  display: block;
+.theme-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s ease;
 }
 
-html[data-theme="dark"] .theme-toggle-icon--light {
-  display: block;
+.theme-option:hover,
+.theme-option.is-active {
+  background: var(--accent-12);
 }
 
-html[data-theme="dark"] .theme-toggle-icon--dark {
-  display: none;
+.theme-option.is-active {
+  color: var(--accent);
+}
+
+.theme-swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--text-primary) 20%, transparent);
+  flex-shrink: 0;
+}
+
+.theme-swatch--light {
+  background: linear-gradient(135deg, #f1f5f9 50%, #0284c7 50%);
+}
+
+.theme-swatch--dark {
+  background: linear-gradient(135deg, #020617 50%, #149ddd 50%);
+}
+
+.theme-swatch--ocean {
+  background: linear-gradient(135deg, #0b1220 50%, #06b6d4 50%);
+}
+
+.theme-swatch--forest {
+  background: linear-gradient(135deg, #0c1410 50%, #22c55e 50%);
+}
+
+.theme-swatch--sunset {
+  background: linear-gradient(135deg, #1a100c 50%, #f97316 50%);
+}
+
+.theme-swatch--violet {
+  background: linear-gradient(135deg, #f5f3ff 50%, #7c3aed 50%);
+}
+
+/* Entity / brand icons for validity */
+.entity-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.15em;
+  height: 1.15em;
+  margin-right: 0.35em;
+  vertical-align: -0.12em;
+  font-size: 0.95em;
+  color: var(--accent);
+}
+
+.entity-icon--icpc { color: #2563eb; }
+.entity-icon--codeforces { color: #ef4444; }
+.entity-icon--codechef { color: #b45309; }
+.entity-icon--hackerrank { color: #059669; }
+.entity-icon--stopstalk { color: #0ea5e9; }
+.entity-icon--lightoj { color: #eab308; }
+.entity-icon--toph { color: #7c3aed; }
+.entity-icon--vjudge { color: #64748b; }
+.entity-icon--cses { color: #0284c7; }
+.entity-icon--university { color: #1d4ed8; }
+.entity-icon--company { color: #0f766e; }
+.entity-icon--scholar { color: #4285f4; }
+.entity-icon--github { color: inherit; }
+.entity-icon--linkedin { color: #0a66c2; }
+.entity-icon--email { color: #dc2626; }
+.entity-icon--trophy { color: #d97706; }
+.entity-icon--award { color: #ca8a04; }
+.entity-icon--research { color: #7c3aed; }
+.entity-icon--ieee { color: #00629b; }
+.entity-icon--study { color: #2563eb; }
+.entity-icon--focus { color: #db2777; }
+.entity-icon--skills { color: var(--accent); }
+.entity-icon--club { color: #0891b2; }
+
+.home-contact-list .exp-row__period {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.home-contact-list .exp-row {
+  grid-template-columns: minmax(7.5rem, 9.5rem) minmax(0, 1fr);
+}
+
+.contest-icon .entity-icon {
+  width: auto;
+  height: auto;
+  margin-right: 0;
+  font-size: 1.25rem;
+  vertical-align: middle;
 }
 
 .highlight-card--featured {
@@ -681,14 +1047,36 @@ section {
   box-shadow: 0 6px 20px rgba(249, 115, 22, 0.5);
 }
 
-html[data-theme="light"] .home-resume .home-resume-btn {
+html[data-theme="light"] .home-resume .home-resume-btn,
+html[data-theme="violet"] .home-resume .home-resume-btn {
   background: linear-gradient(135deg, #7c3aed, #8b5cf6);
   box-shadow: 0 4px 15px rgba(124, 58, 237, 0.35);
 }
 
-html[data-theme="light"] .home-resume .home-resume-btn:hover {
+html[data-theme="light"] .home-resume .home-resume-btn:hover,
+html[data-theme="violet"] .home-resume .home-resume-btn:hover {
   background: linear-gradient(135deg, #8b5cf6, #a78bfa);
   box-shadow: 0 6px 20px rgba(124, 58, 237, 0.45);
+}
+
+html[data-theme="ocean"] .home-resume .home-resume-btn {
+  background: linear-gradient(135deg, #0891b2, #06b6d4);
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
+}
+
+html[data-theme="ocean"] .home-resume .home-resume-btn:hover {
+  background: linear-gradient(135deg, #06b6d4, #22d3ee);
+  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.5);
+}
+
+html[data-theme="forest"] .home-resume .home-resume-btn {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+}
+
+html[data-theme="forest"] .home-resume .home-resume-btn:hover {
+  background: linear-gradient(135deg, #22c55e, #4ade80);
+  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.5);
 }
 
 @media (max-width: 768px) {
@@ -2770,7 +3158,10 @@ html[data-theme="light"] #about .exp-page--overview .exp-row__note {
   background: color-mix(in srgb, #3b82f6 22%, transparent);
 }
 
-html[data-theme="dark"] .platform-title--codeforces {
+html[data-theme="dark"] .platform-title--codeforces,
+html[data-theme="ocean"] .platform-title--codeforces,
+html[data-theme="forest"] .platform-title--codeforces,
+html[data-theme="sunset"] .platform-title--codeforces {
   color: #bfdbfe;
   background: color-mix(in srgb, #3b82f6 35%, transparent);
 }
@@ -2780,7 +3171,10 @@ html[data-theme="dark"] .platform-title--codeforces {
   background: color-mix(in srgb, #d97706 22%, transparent);
 }
 
-html[data-theme="dark"] .platform-title--codechef {
+html[data-theme="dark"] .platform-title--codechef,
+html[data-theme="ocean"] .platform-title--codechef,
+html[data-theme="forest"] .platform-title--codechef,
+html[data-theme="sunset"] .platform-title--codechef {
   color: #fde68a;
   background: color-mix(in srgb, #d97706 32%, transparent);
 }
@@ -2862,7 +3256,13 @@ html[data-theme="light"] .cp .contest-group-title {
 }
 
 html[data-theme="dark"] .cp .ach-subsection-heading,
-html[data-theme="dark"] .cp .contest-group-title {
+html[data-theme="dark"] .cp .contest-group-title,
+html[data-theme="ocean"] .cp .ach-subsection-heading,
+html[data-theme="ocean"] .cp .contest-group-title,
+html[data-theme="forest"] .cp .ach-subsection-heading,
+html[data-theme="forest"] .cp .contest-group-title,
+html[data-theme="sunset"] .cp .ach-subsection-heading,
+html[data-theme="sunset"] .cp .contest-group-title {
   color: #ffffff;
   -webkit-text-fill-color: #ffffff;
   background: none;

@@ -6,13 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
     (function () {
+      var allowed = ['light', 'dark', 'ocean', 'forest', 'sunset', 'violet'];
       try {
         var t = localStorage.getItem('portfolio-theme');
-        if (t === 'light' || t === 'dark') {
-          document.documentElement.setAttribute('data-theme', t);
-        } else {
-          document.documentElement.setAttribute('data-theme', 'light');
-        }
+        document.documentElement.setAttribute('data-theme', allowed.indexOf(t) !== -1 ? t : 'light');
       } catch (e) {
         document.documentElement.setAttribute('data-theme', 'light');
       }
@@ -79,11 +76,38 @@
         </a>
       </div>
 
-      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme"
-        title="Theme">
-        <i class="bx bx-sun theme-toggle-icon theme-toggle-icon--light" aria-hidden="true"></i>
-        <i class="bx bx-moon theme-toggle-icon theme-toggle-icon--dark" aria-hidden="true"></i>
-      </button>
+      <div class="theme-picker" id="themePicker">
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Choose theme" title="Theme"
+          aria-haspopup="listbox" aria-expanded="false">
+          <i class="bx bx-palette" aria-hidden="true"></i>
+        </button>
+        <div class="theme-dropdown" id="themeDropdown" role="listbox" aria-label="Theme options" hidden>
+          <button type="button" class="theme-option" role="option" data-theme="light">
+            <span class="theme-swatch theme-swatch--light" aria-hidden="true"></span>
+            Light
+          </button>
+          <button type="button" class="theme-option" role="option" data-theme="dark">
+            <span class="theme-swatch theme-swatch--dark" aria-hidden="true"></span>
+            Dark
+          </button>
+          <button type="button" class="theme-option" role="option" data-theme="ocean">
+            <span class="theme-swatch theme-swatch--ocean" aria-hidden="true"></span>
+            Ocean
+          </button>
+          <button type="button" class="theme-option" role="option" data-theme="forest">
+            <span class="theme-swatch theme-swatch--forest" aria-hidden="true"></span>
+            Forest
+          </button>
+          <button type="button" class="theme-option" role="option" data-theme="sunset">
+            <span class="theme-swatch theme-swatch--sunset" aria-hidden="true"></span>
+            Sunset
+          </button>
+          <button type="button" class="theme-option" role="option" data-theme="violet">
+            <span class="theme-swatch theme-swatch--violet" aria-hidden="true"></span>
+            Violet
+          </button>
+        </div>
+      </div>
 
       <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
         <i class="bi bi-list"></i>
@@ -125,21 +149,21 @@
           <div class="exp-page__list home-contact-list">
             <a href="https://icpc.global/ICPCID/O5VOX4CA0KRM" target="_blank" rel="noopener noreferrer"
               class="exp-row home-contact-link" data-aos="fade-up" data-aos-delay="0">
-              <p class="exp-row__period">ICPC Profile</p>
+              <p class="exp-row__period"><i class="bi bi-globe2 entity-icon entity-icon--icpc" aria-hidden="true"></i> ICPC Profile</p>
               <div class="exp-row__body">
                 <p class="exp-row__sub">Mohammad Abdullah-Al-Sajid Chowdhury</p>
               </div>
             </a>
             <a href="https://codeforces.com/profile/SajidAbdullah" target="_blank" rel="noopener noreferrer"
               class="exp-row home-contact-link" data-aos="fade-up" data-aos-delay="50">
-              <p class="exp-row__period">Codeforces Profile</p>
+              <p class="exp-row__period"><i class="bi bi-braces entity-icon entity-icon--codeforces" aria-hidden="true"></i> Codeforces Profile</p>
               <div class="exp-row__body">
                 <p class="exp-row__sub">SajidAbdullah</p>
               </div>
             </a>
             <a href="https://scholar.google.com/citations?user=nA0Bf6QAAAAJ&hl=en" target="_blank"
               rel="noopener noreferrer" class="exp-row home-contact-link" data-aos="fade-up" data-aos-delay="100">
-              <p class="exp-row__period">Google Scholar</p>
+              <p class="exp-row__period"><i class="bi bi-mortarboard-fill entity-icon entity-icon--scholar" aria-hidden="true"></i> Google Scholar</p>
               <div class="exp-row__body">
                 <p class="exp-row__sub">Mohammad Abdullah-Al-Sajid Chowdhury</p>
               </div>
@@ -161,21 +185,21 @@
           <div class="exp-page__list home-contact-list">
             <a href="mailto:sajidabdullah729@gmail.com" class="exp-row home-contact-link" data-aos="fade-up"
               data-aos-delay="0">
-              <p class="exp-row__period">Email</p>
+              <p class="exp-row__period"><i class="bi bi-envelope-fill entity-icon entity-icon--email" aria-hidden="true"></i> Email</p>
               <div class="exp-row__body">
                 <p class="exp-row__sub">sajidabdullah729@gmail.com</p>
               </div>
             </a>
             <a href="https://github.com/SajidAbdullah729" target="_blank" rel="noopener noreferrer"
               class="exp-row home-contact-link" data-aos="fade-up" data-aos-delay="50">
-              <p class="exp-row__period">GitHub</p>
+              <p class="exp-row__period"><i class="bi bi-github entity-icon entity-icon--github" aria-hidden="true"></i> GitHub</p>
               <div class="exp-row__body">
                 <p class="exp-row__sub">SajidAbdullah729</p>
               </div>
             </a>
             <a href="https://linkedin.com/in/mohammad-abdullah-al-sajid-chowdhury-software-engineer/" target="_blank"
               rel="noopener noreferrer" class="exp-row home-contact-link" data-aos="fade-up" data-aos-delay="100">
-              <p class="exp-row__period">LinkedIn</p>
+              <p class="exp-row__period"><i class="bi bi-linkedin entity-icon entity-icon--linkedin" aria-hidden="true"></i> LinkedIn</p>
               <div class="exp-row__body">
                 <p class="exp-row__sub">Mohammad Abdullah-Al-Sajid Chowdhury</p>
               </div>
@@ -200,55 +224,55 @@
 
           <div class="exp-page__list">
             <article class="exp-row exp-row--overview-highlight" data-aos="fade-up" data-aos-delay="50">
-              <p class="exp-row__period">Role</p>
+              <p class="exp-row__period"><i class="bi bi-buildings entity-icon entity-icon--company" aria-hidden="true"></i> Role</p>
               <div class="exp-row__body">
                 <h4 class="exp-row__title">Software Engineer</h4>
                 <p class="exp-row__sub">
                   <a href="https://pioneeralpha.com/" class="timeline-link" target="_blank"
-                    rel="noopener noreferrer">Pioneer Alpha</a>
+                    rel="noopener noreferrer"><i class="bi bi-buildings-fill entity-icon entity-icon--company" aria-hidden="true"></i> Pioneer Alpha</a>
                 </p>
               </div>
             </article>
             <article class="exp-row exp-row--overview-highlight" data-aos="fade-up" data-aos-delay="100">
-              <p class="exp-row__period">Problem Solving</p>
+              <p class="exp-row__period"><i class="bi bi-trophy-fill entity-icon entity-icon--trophy" aria-hidden="true"></i> Problem Solving</p>
               <div class="exp-row__body">
                 <h4 class="exp-row__title">Contests and Olympiads</h4>
                 <p class="exp-row__note">Finalist at <strong><a
                       href="https://icpc.global/regionals/finder/ICPCKolkataKanpur-2023/standings" class="timeline-link"
-                      target="_blank" rel="noopener noreferrer">ACM ICPC Asia-West Continent</a></strong>.</p>
+                      target="_blank" rel="noopener noreferrer"><i class="bi bi-globe2 entity-icon entity-icon--icpc" aria-hidden="true"></i> ACM ICPC Asia-West Continent</a></strong>.</p>
                 <p class="exp-row__note"> Selected for national rounds of the Mathematical and Informatics Olympiads.
                 </p>
               </div>
             </article>
             <article class="exp-row exp-row--overview-highlight" data-aos="fade-up" data-aos-delay="150">
-              <p class="exp-row__period">Research</p>
+              <p class="exp-row__period"><i class="bi bi-journal-richtext entity-icon entity-icon--research" aria-hidden="true"></i> Research</p>
               <div class="exp-row__body">
                 <h4 class="exp-row__title">
                   <a href="https://ieeexplore.ieee.org/document/10499631" class="timeline-link" target="_blank"
                     rel="noopener noreferrer">A Deep Neural Network Approach with Pioneering Local Dataset to Recognize
                     Doctor's Handwritten Prescription in Bangladesh</a>
                 </h4>
-                <p class="exp-row__sub">IEEE Xplore · Deep learning · Healthcare digitization</p>
+                <p class="exp-row__sub"><i class="bi bi-book entity-icon entity-icon--ieee" aria-hidden="true"></i> IEEE Xplore · Deep learning · Healthcare digitization</p>
                 <p class="exp-row__note">Published work on recognizing handwritten prescriptions using a local dataset.
                 </p>
               </div>
             </article>
             <article class="exp-row exp-row--overview-highlight" data-aos="fade-up" data-aos-delay="200">
-              <p class="exp-row__period">Degree</p>
+              <p class="exp-row__period"><i class="bi bi-mortarboard-fill entity-icon entity-icon--university" aria-hidden="true"></i> Degree</p>
               <div class="exp-row__body">
                 <h4 class="exp-row__title">B.Sc. in Computer Science and Engineering</h4>
-                <p class="exp-row__sub">Ahsanullah University of Science and Technology</p>
+                <p class="exp-row__sub"><i class="bi bi-building entity-icon entity-icon--university" aria-hidden="true"></i> Ahsanullah University of Science and Technology</p>
               </div>
             </article>
             <article class="exp-row exp-row--overview-highlight" data-aos="fade-up" data-aos-delay="250">
-              <p class="exp-row__period">Focus</p>
+              <p class="exp-row__period"><i class="bi bi-bullseye entity-icon entity-icon--focus" aria-hidden="true"></i> Focus</p>
               <div class="exp-row__body">
                 <p class="exp-row__note">Artificial intelligence, Software Engineering Fundamentals,Competitive
                   Programming and Problem Solving.</p>
               </div>
             </article>
             <article class="exp-row exp-row--overview-highlight" data-aos="fade-up" data-aos-delay="300">
-              <p class="exp-row__period">Technical Skills</p>
+              <p class="exp-row__period"><i class="bi bi-code-slash entity-icon entity-icon--skills" aria-hidden="true"></i> Technical Skills</p>
               <div class="exp-row__body">
                 <p class="exp-row__note">
                   Full-stack development, TypeScript, Generative AI, LLMs, RAG, AI agents, Python, JavaScript, Next.js,
@@ -276,24 +300,24 @@
             <article class="exp-row" data-aos="fade-up" data-aos-delay="0">
               <p class="exp-row__period">2019 – 2023</p>
               <div class="exp-row__body">
-                <h4 class="exp-row__title">Bachelor of Science in Computer Science and Engineering</h4>
-                <p class="exp-row__sub">Ahsanullah University of Science and Technology</p>
+                <h4 class="exp-row__title"><i class="bi bi-mortarboard-fill entity-icon entity-icon--university" aria-hidden="true"></i> Bachelor of Science in Computer Science and Engineering</h4>
+                <p class="exp-row__sub"><i class="bi bi-building entity-icon entity-icon--university" aria-hidden="true"></i> Ahsanullah University of Science and Technology</p>
                 <p class="exp-row__note">CGPA: 3.316/4.000</p>
               </div>
             </article>
             <article class="exp-row" data-aos="fade-up" data-aos-delay="50">
               <p class="exp-row__period">2016 – 2018</p>
               <div class="exp-row__body">
-                <h4 class="exp-row__title">Higher Secondary Certificate</h4>
-                <p class="exp-row__sub">Chittagong College</p>
+                <h4 class="exp-row__title"><i class="bi bi-book-fill entity-icon entity-icon--study" aria-hidden="true"></i> Higher Secondary Certificate</h4>
+                <p class="exp-row__sub"><i class="bi bi-building entity-icon entity-icon--university" aria-hidden="true"></i> Chittagong College</p>
                 <p class="exp-row__note">GPA: 5.00/5.00</p>
               </div>
             </article>
             <article class="exp-row" data-aos="fade-up" data-aos-delay="100">
               <p class="exp-row__period">2014 – 2016</p>
               <div class="exp-row__body">
-                <h4 class="exp-row__title">Secondary School Certificate</h4>
-                <p class="exp-row__sub">Chittagong Collegiate School</p>
+                <h4 class="exp-row__title"><i class="bi bi-book entity-icon entity-icon--study" aria-hidden="true"></i> Secondary School Certificate</h4>
+                <p class="exp-row__sub"><i class="bi bi-building entity-icon entity-icon--university" aria-hidden="true"></i> Chittagong Collegiate School</p>
                 <p class="exp-row__note">GPA: 5.00/5.00</p>
               </div>
             </article>
@@ -319,9 +343,9 @@
               <div class="exp-row__body">
                 <h4 class="exp-row__title">
                   <a href="https://pioneeralpha.com/" target="_blank" rel="noopener noreferrer"
-                    class="timeline-link">Software Engineer</a>
+                    class="timeline-link"><i class="bi bi-buildings-fill entity-icon entity-icon--company" aria-hidden="true"></i> Software Engineer</a>
                 </h4>
-
+                <p class="exp-row__sub"><i class="bi bi-buildings entity-icon entity-icon--company" aria-hidden="true"></i> Pioneer Alpha</p>
                 <p class="exp-row__note">Worked as an AI-FullStack Software Engineer at Pioneer Alpha.</p>
               </div>
             </article>
@@ -330,9 +354,9 @@
               <div class="exp-row__body">
                 <h4 class="exp-row__title">
                   <a href="https://codeforces.com/blog/entry/131368" target="_blank" rel="noopener noreferrer"
-                    class="timeline-link">Problem Tester</a>
+                    class="timeline-link"><i class="bi bi-braces entity-icon entity-icon--codeforces" aria-hidden="true"></i> Problem Tester</a>
                 </h4>
-
+                <p class="exp-row__sub"><i class="bi bi-braces entity-icon entity-icon--codeforces" aria-hidden="true"></i> Codeforces</p>
                 <p class="exp-row__note">Tested problems for Codeforces Round #957 (Div.3)</p>
               </div>
             </article>
@@ -341,9 +365,9 @@
               <div class="exp-row__body">
                 <h4 class="exp-row__title">
                   <a href="https://toph.co/u/SajidAbdullah" target="_blank" rel="noopener noreferrer"
-                    class="timeline-link">Problem Author</a>
+                    class="timeline-link"><i class="bi bi-pencil-square entity-icon entity-icon--toph" aria-hidden="true"></i> Problem Author</a>
                 </h4>
-                <p class="exp-row__sub">Toph</p>
+                <p class="exp-row__sub"><i class="bi bi-lightning-charge-fill entity-icon entity-icon--toph" aria-hidden="true"></i> Toph</p>
                 <p class="exp-row__note">Authoring problems for competitive programming contests.</p>
               </div>
             </article>
@@ -352,17 +376,17 @@
               <div class="exp-row__body">
                 <h4 class="exp-row__title">
                   <a href="https://toph.co/contests/training/rfbblek" target="_blank" rel="noopener noreferrer"
-                    class="timeline-link">Problem Setter, Tester, Judge, Organizer</a>
+                    class="timeline-link"><i class="bi bi-people-fill entity-icon entity-icon--club" aria-hidden="true"></i> Problem Setter, Tester, Judge, Organizer</a>
                 </h4>
-                <p class="exp-row__sub"> • AUST CSE Society & AUST Programming and Informatics Club</p>
+                <p class="exp-row__sub"><i class="bi bi-building entity-icon entity-icon--university" aria-hidden="true"></i> AUST CSE Society & AUST Programming and Informatics Club</p>
                 <p class="exp-row__note">Organized and managed multiple programming contests for university students</p>
               </div>
             </article>
             <article class="exp-row" data-aos="fade-up" data-aos-delay="100">
               <p class="exp-row__period">2023 - 2024</p>
               <div class="exp-row__body">
-                <h4 class="exp-row__title">Machine Learning Research</h4>
-                <p class="exp-row__sub">Thesis Research • AUST</p>
+                <h4 class="exp-row__title"><i class="bi bi-cpu-fill entity-icon entity-icon--research" aria-hidden="true"></i> Machine Learning Research</h4>
+                <p class="exp-row__sub"><i class="bi bi-mortarboard-fill entity-icon entity-icon--university" aria-hidden="true"></i> Thesis Research · AUST</p>
                 <p class="exp-row__note">Conducted research on Machine Learning Models for thesis project</p>
               </div>
             </article>
@@ -371,17 +395,17 @@
               <div class="exp-row__body">
                 <h4 class="exp-row__title">
                   <a href="https://github.com/SajidAbdullah729?tab=repositories" target="_blank"
-                    rel="noopener noreferrer" class="timeline-link">Project Development</a>
+                    rel="noopener noreferrer" class="timeline-link"><i class="bi bi-github entity-icon entity-icon--github" aria-hidden="true"></i> Project Development</a>
                 </h4>
-                <p class="exp-row__sub">Full-Stack Developer • Personal & Team Projects</p>
+                <p class="exp-row__sub"><i class="bi bi-code-slash entity-icon entity-icon--skills" aria-hidden="true"></i> Full-Stack Developer · Personal & Team Projects</p>
                 <p class="exp-row__note">Developed multiple notable projects during undergraduate studies</p>
               </div>
             </article>
             <article class="exp-row" data-aos="fade-up" data-aos-delay="200">
               <p class="exp-row__period">2012, 2014</p>
               <div class="exp-row__body">
-                <h4 class="exp-row__title">Mathematical Olympiad</h4>
-                <p class="exp-row__sub">National Round Participant • Bangladesh Mathematical Olympiad</p>
+                <h4 class="exp-row__title"><i class="bi bi-trophy-fill entity-icon entity-icon--trophy" aria-hidden="true"></i> Mathematical Olympiad</h4>
+                <p class="exp-row__sub"><i class="bi bi-award-fill entity-icon entity-icon--award" aria-hidden="true"></i> National Round Participant · Bangladesh Mathematical Olympiad</p>
                 <p class="exp-row__note">Selected for national round twice in junior group from Chittagong Regionals</p>
               </div>
             </article>
@@ -407,7 +431,7 @@
             <div class="exp-page__list ach-profiles-list">
               <a href="https://codeforces.com/profile/SajidAbdullah" target="_blank" rel="noopener noreferrer"
                 class="exp-row ach-profile-link" data-aos="fade-up" data-aos-delay="0">
-                <p class="exp-row__period">Codeforces</p>
+                <p class="exp-row__period"><i class="bi bi-braces entity-icon entity-icon--codeforces" aria-hidden="true"></i> Codeforces</p>
                 <div class="exp-row__body">
                   <p class="exp-row__sub">@SajidAbdullah</p>
                   <p class="exp-row__note">Rating: <strong>1613</strong> · <span
@@ -416,7 +440,7 @@
               </a>
               <a href="https://www.codechef.com/users/lawliet11235" target="_blank" rel="noopener noreferrer"
                 class="exp-row ach-profile-link" data-aos="fade-up" data-aos-delay="50">
-                <p class="exp-row__period">CodeChef</p>
+                <p class="exp-row__period"><i class="bi bi-cup-hot-fill entity-icon entity-icon--codechef" aria-hidden="true"></i> CodeChef</p>
                 <div class="exp-row__body">
                   <p class="exp-row__sub">@lawliet11235</p>
                   <p class="exp-row__note">Rating: <strong>1886</strong> · <span
@@ -425,42 +449,42 @@
               </a>
               <a href="https://www.hackerrank.com/profile/sajidabdullah729" target="_blank" rel="noopener noreferrer"
                 class="exp-row ach-profile-link" data-aos="fade-up" data-aos-delay="100">
-                <p class="exp-row__period">HackerRank</p>
+                <p class="exp-row__period"><i class="bi bi-terminal-fill entity-icon entity-icon--hackerrank" aria-hidden="true"></i> HackerRank</p>
                 <div class="exp-row__body">
                   <p class="exp-row__sub">@sajidabdullah729</p>
                 </div>
               </a>
               <a href="https://www.stopstalk.com/user/profile/SajidAbdullah" target="_blank" rel="noopener noreferrer"
                 class="exp-row ach-profile-link" data-aos="fade-up" data-aos-delay="150">
-                <p class="exp-row__period">StopStalk</p>
+                <p class="exp-row__period"><i class="bi bi-graph-up-arrow entity-icon entity-icon--stopstalk" aria-hidden="true"></i> StopStalk</p>
                 <div class="exp-row__body">
                   <p class="exp-row__sub">@SajidAbdullah</p>
                 </div>
               </a>
               <a href="https://lightoj.com/user/sajidabdullah" target="_blank" rel="noopener noreferrer"
                 class="exp-row ach-profile-link" data-aos="fade-up" data-aos-delay="200">
-                <p class="exp-row__period">LightOJ</p>
+                <p class="exp-row__period"><i class="bi bi-lightbulb-fill entity-icon entity-icon--lightoj" aria-hidden="true"></i> LightOJ</p>
                 <div class="exp-row__body">
                   <p class="exp-row__sub">@sajidabdullah</p>
                 </div>
               </a>
               <a href="https://toph.co/u/SajidAbdullah" target="_blank" rel="noopener noreferrer"
                 class="exp-row ach-profile-link" data-aos="fade-up" data-aos-delay="250">
-                <p class="exp-row__period">Toph</p>
+                <p class="exp-row__period"><i class="bi bi-lightning-charge-fill entity-icon entity-icon--toph" aria-hidden="true"></i> Toph</p>
                 <div class="exp-row__body">
                   <p class="exp-row__sub">@SajidAbdullah</p>
                 </div>
               </a>
               <a href="https://vjudge.net/user/Lawliet112358" target="_blank" rel="noopener noreferrer"
                 class="exp-row ach-profile-link" data-aos="fade-up" data-aos-delay="300">
-                <p class="exp-row__period">Virtual Judge</p>
+                <p class="exp-row__period"><i class="bi bi-pc-display entity-icon entity-icon--vjudge" aria-hidden="true"></i> Virtual Judge</p>
                 <div class="exp-row__body">
                   <p class="exp-row__sub">@Lawliet112358</p>
                 </div>
               </a>
               <a href="https://cses.fi/user/54375" target="_blank" rel="noopener noreferrer"
                 class="exp-row ach-profile-link" data-aos="fade-up" data-aos-delay="350">
-                <p class="exp-row__period">CSES</p>
+                <p class="exp-row__period"><i class="bi bi-list-check entity-icon entity-icon--cses" aria-hidden="true"></i> CSES</p>
                 <div class="exp-row__body">
                   <p class="exp-row__sub">@SajidAbdullah</p>
                 </div>
@@ -471,7 +495,7 @@
           <div class="contests-section">
             <div class="contest-group">
               <div class="contest-group-header ach-section-title--center">
-                <span class="contest-icon">🌍</span>
+                <span class="contest-icon"><i class="bi bi-globe2 entity-icon entity-icon--icpc" aria-hidden="true"></i></span>
                 <h3 class="contest-group-title">ICPC Contests</h3>
               </div>
               <div class="exp-page__list ach-contests-list">
@@ -533,7 +557,7 @@
 
             <div class="contest-group">
               <div class="contest-group-header ach-section-title--center">
-                <span class="contest-icon">🏆</span>
+                <span class="contest-icon"><i class="bi bi-trophy-fill entity-icon entity-icon--trophy" aria-hidden="true"></i></span>
                 <h3 class="contest-group-title">National Contests</h3>
               </div>
               <div class="exp-page__list ach-contests-list">
@@ -618,7 +642,7 @@
 
             <div class="contest-group">
               <div class="contest-group-header ach-section-title--center">
-                <span class="contest-icon">🎯</span>
+                <span class="contest-icon"><i class="bi bi-building entity-icon entity-icon--university" aria-hidden="true"></i></span>
                 <h3 class="contest-group-title">Intra University Contests</h3>
               </div>
               <div class="exp-page__list ach-contests-list">
@@ -659,7 +683,7 @@
 
             <div class="contest-group">
               <div class="contest-group-header ach-section-title--center">
-                <span class="contest-icon">⭐</span>
+                <span class="contest-icon"><i class="bi bi-person-fill entity-icon entity-icon--award" aria-hidden="true"></i></span>
                 <h3 class="contest-group-title">Individual Contests</h3>
               </div>
               <div class="exp-page__list ach-contests-list">
