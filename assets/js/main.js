@@ -159,7 +159,12 @@ document.addEventListener('DOMContentLoaded', function() {
   // Typed.js initialization
   if (document.getElementById('typed')) {
     const typed = new Typed('#typed', {
-      strings: ['Software Engineer'],
+      strings: [
+        'Software Engineer',
+        'RAG Systems Builder',
+        'AI Full-Stack Engineer',
+        'Competitive Programmer',
+      ],
       typeSpeed: 100,
       backSpeed: 50,
       backDelay: 2000,
