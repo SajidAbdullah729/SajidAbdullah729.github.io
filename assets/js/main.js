@@ -6,6 +6,7 @@ const ROUTES = [
   { slug: '', section: 'hero' },
   { slug: 'about', section: 'about' },
   { slug: 'education', section: 'education' },
+  { slug: 'research', section: 'research' },
   { slug: 'experience', section: 'experience' },
   { slug: 'achievements', section: 'competitive-programming' },
   { slug: 'projects', section: 'portfolio' },
@@ -261,6 +262,17 @@ document.addEventListener('DOMContentLoaded', function() {
           icon.classList.remove('bi-x');
         }
       }
+    });
+  });
+
+  // In-page links that switch tabs (e.g. Overview → Research)
+  document.querySelectorAll('a[data-section]:not(.nav-link)').forEach((link) => {
+    link.addEventListener('click', function (e) {
+      if (!isPrimaryUnmodifiedClick(e)) return;
+      const sectionId = this.getAttribute('data-section');
+      if (!sectionId || !document.getElementById(sectionId)) return;
+      e.preventDefault();
+      switchSection(sectionId);
     });
   });
 

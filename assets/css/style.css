@@ -577,12 +577,27 @@ html[data-theme="violet"] {
   height: 22px;
 }
 
-/* GitHub Simple Icon is dark; lighten on dark themes */
-html[data-theme="dark"] .brand-icon[src*="github"],
-html[data-theme="ocean"] .brand-icon[src*="github"],
-html[data-theme="forest"] .brand-icon[src*="github"],
-html[data-theme="sunset"] .brand-icon[src*="github"] {
-  filter: invert(1);
+.brand-glyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.4em;
+  font-size: 1.05em;
+  vertical-align: -0.1em;
+  line-height: 1;
+}
+
+.brand-glyph--linkedin {
+  color: #0a66c2;
+}
+
+.brand-glyph--github {
+  color: inherit;
+}
+
+.social-link i {
+  font-size: 18px;
+  line-height: 1;
 }
 
 .entity-icon {
