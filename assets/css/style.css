@@ -560,7 +560,31 @@ html[data-theme="violet"] {
   background: linear-gradient(135deg, #f5f3ff 50%, #7c3aed 50%);
 }
 
-/* Entity / brand icons for validity */
+/* Real brand / site icons */
+.brand-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 0.4em;
+  vertical-align: -0.2em;
+  object-fit: contain;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.brand-icon--lg {
+  width: 22px;
+  height: 22px;
+}
+
+/* GitHub Simple Icon is dark; lighten on dark themes */
+html[data-theme="dark"] .brand-icon[src*="github"],
+html[data-theme="ocean"] .brand-icon[src*="github"],
+html[data-theme="forest"] .brand-icon[src*="github"],
+html[data-theme="sunset"] .brand-icon[src*="github"] {
+  filter: invert(1);
+}
+
 .entity-icon {
   display: inline-flex;
   align-items: center;
@@ -573,29 +597,16 @@ html[data-theme="violet"] {
   color: var(--accent);
 }
 
-.entity-icon--icpc { color: #2563eb; }
-.entity-icon--codeforces { color: #ef4444; }
-.entity-icon--codechef { color: #b45309; }
-.entity-icon--hackerrank { color: #059669; }
-.entity-icon--stopstalk { color: #0ea5e9; }
-.entity-icon--lightoj { color: #eab308; }
-.entity-icon--toph { color: #7c3aed; }
-.entity-icon--vjudge { color: #64748b; }
-.entity-icon--cses { color: #0284c7; }
-.entity-icon--university { color: #1d4ed8; }
-.entity-icon--company { color: #0f766e; }
-.entity-icon--scholar { color: #4285f4; }
-.entity-icon--github { color: inherit; }
-.entity-icon--linkedin { color: #0a66c2; }
 .entity-icon--email { color: #dc2626; }
 .entity-icon--trophy { color: #d97706; }
 .entity-icon--award { color: #ca8a04; }
 .entity-icon--research { color: #7c3aed; }
-.entity-icon--ieee { color: #00629b; }
 .entity-icon--study { color: #2563eb; }
 .entity-icon--focus { color: #db2777; }
 .entity-icon--skills { color: var(--accent); }
 .entity-icon--club { color: #0891b2; }
+.entity-icon--university { color: #1d4ed8; }
+.entity-icon--company { color: #0f766e; }
 
 .home-contact-list .exp-row__period {
   display: flex;
@@ -607,6 +618,12 @@ html[data-theme="violet"] {
 
 .home-contact-list .exp-row {
   grid-template-columns: minmax(7.5rem, 9.5rem) minmax(0, 1fr);
+}
+
+.contest-icon .brand-icon {
+  margin-right: 0;
+  width: 22px;
+  height: 22px;
 }
 
 .contest-icon .entity-icon {
