@@ -37,175 +37,170 @@
 </head>
 
 <body>
-  <!-- Header Navigation -->
-  <header class="header">
-    <div class="header-container">
-      <div class="profile">
-        <img src="assets/img/image2.jpg" alt="Abdullah-Al-Sajid" class="profile-img" id="profileImage"
-          style="cursor: pointer;">
-      </div>
+  <!-- Top navigation (routes) -->
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a href="./" class="topbar__brand" data-section="hero" aria-label="Home">
+        <img src="assets/img/image2.jpg" alt="" class="topbar__brand-img" width="28" height="28">
+      </a>
 
-      <nav class="nav" id="mainNav">
+      <nav class="nav" id="mainNav" aria-label="Primary">
         <ul class="nav-list">
-          <li><a href="./" class="nav-link active" data-section="hero"><i class="bx bx-home"></i><span>Home</span></a>
-          </li>
-          <li><a href="about" class="nav-link" data-section="about"><i class="bx bx-user"></i><span>Overview</span></a>
-          </li>
-          <li><a href="education" class="nav-link" data-section="education"><i
-                class="bx bx-book-open"></i><span>Education</span></a></li>
-          <li><a href="research" class="nav-link" data-section="research"><i
-                class="bx bx-news"></i><span>Research</span></a></li>
-          <li><a href="experience" class="nav-link" data-section="experience"><i
-                class="bx bx-briefcase"></i><span>Experience</span></a></li>
-          <li><a href="achievements" class="nav-link" data-section="competitive-programming"><i
-                class="bx bx-trophy"></i><span>Achievements</span></a></li>
-          <li><a href="projects" class="nav-link" data-section="portfolio"><i
-                class="bx bx-book-content"></i><span>Projects</span></a></li>
-          <li><a href="skills" class="nav-link" data-section="skills"><i
-                class="bx bx-code-alt"></i><span>Skills</span></a></li>
-          <li><a href="problem-setting" class="nav-link" data-section="problem-author-testing"><i
-                class="bx bx-edit-alt"></i><span>Problem Setting</span></a></li>
+          <li><a href="./" class="nav-link active" data-section="hero"><i class="bx bx-home"></i><span>Home</span></a></li>
+          <li><a href="about" class="nav-link" data-section="about"><i class="bx bx-user"></i><span>Overview</span></a></li>
+          <li><a href="education" class="nav-link" data-section="education"><i class="bx bx-book-open"></i><span>Education</span></a></li>
+          <li><a href="research" class="nav-link" data-section="research"><i class="bx bx-news"></i><span>Research</span></a></li>
+          <li><a href="experience" class="nav-link" data-section="experience"><i class="bx bx-briefcase"></i><span>Experience</span></a></li>
+          <li><a href="achievements" class="nav-link" data-section="competitive-programming"><i class="bx bx-trophy"></i><span>Achievements</span></a></li>
+          <li><a href="projects" class="nav-link" data-section="portfolio"><i class="bx bx-book-content"></i><span>Projects</span></a></li>
+          <li><a href="skills" class="nav-link" data-section="skills"><i class="bx bx-code-alt"></i><span>Skills</span></a></li>
+          <li><a href="problem-setting" class="nav-link" data-section="problem-author-testing"><i class="bx bx-edit-alt"></i><span>Problem Setting</span></a></li>
         </ul>
       </nav>
 
-      <div class="social-links">
-        <a href="https://github.com/SajidAbdullah729" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="bi bi-github" aria-hidden="true"></i>
-        </a>
-        <a href="https://linkedin.com/in/mohammad-abdullah-al-sajid-chowdhury-software-engineer/" class="social-link"
-          target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <i class="bi bi-linkedin" aria-hidden="true"></i>
-        </a>
-      </div>
-
-      <div class="theme-picker" id="themePicker">
-        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Choose theme" title="Theme"
-          aria-haspopup="listbox" aria-expanded="false">
-          <i class="bx bx-palette" aria-hidden="true"></i>
-        </button>
-        <div class="theme-dropdown" id="themeDropdown" role="listbox" aria-label="Theme options" hidden>
-          <button type="button" class="theme-option" role="option" data-theme="light">
-            <span class="theme-swatch theme-swatch--light" aria-hidden="true"></span>
-            Light
+      <div class="topbar__actions">
+        <div class="theme-picker" id="themePicker">
+          <button type="button" class="theme-toggle" id="themeToggle" aria-label="Choose theme" title="Theme"
+            aria-haspopup="listbox" aria-expanded="false">
+            <i class="bx bx-palette" aria-hidden="true"></i>
           </button>
-          <button type="button" class="theme-option" role="option" data-theme="dark">
-            <span class="theme-swatch theme-swatch--dark" aria-hidden="true"></span>
-            Dark
-          </button>
-          <button type="button" class="theme-option" role="option" data-theme="ocean">
-            <span class="theme-swatch theme-swatch--ocean" aria-hidden="true"></span>
-            Ocean
-          </button>
-          <button type="button" class="theme-option" role="option" data-theme="forest">
-            <span class="theme-swatch theme-swatch--forest" aria-hidden="true"></span>
-            Forest
-          </button>
-          <button type="button" class="theme-option" role="option" data-theme="sunset">
-            <span class="theme-swatch theme-swatch--sunset" aria-hidden="true"></span>
-            Sunset
-          </button>
-          <button type="button" class="theme-option" role="option" data-theme="violet">
-            <span class="theme-swatch theme-swatch--violet" aria-hidden="true"></span>
-            Violet
-          </button>
+          <div class="theme-dropdown" id="themeDropdown" role="listbox" aria-label="Theme options" hidden>
+            <button type="button" class="theme-option" role="option" data-theme="light">
+              <span class="theme-swatch theme-swatch--light" aria-hidden="true"></span> Light
+            </button>
+            <button type="button" class="theme-option" role="option" data-theme="dark">
+              <span class="theme-swatch theme-swatch--dark" aria-hidden="true"></span> Dark
+            </button>
+            <button type="button" class="theme-option" role="option" data-theme="ocean">
+              <span class="theme-swatch theme-swatch--ocean" aria-hidden="true"></span> Ocean
+            </button>
+            <button type="button" class="theme-option" role="option" data-theme="forest">
+              <span class="theme-swatch theme-swatch--forest" aria-hidden="true"></span> Forest
+            </button>
+            <button type="button" class="theme-option" role="option" data-theme="sunset">
+              <span class="theme-swatch theme-swatch--sunset" aria-hidden="true"></span> Sunset
+            </button>
+            <button type="button" class="theme-option" role="option" data-theme="violet">
+              <span class="theme-swatch theme-swatch--violet" aria-hidden="true"></span> Violet
+            </button>
+          </div>
         </div>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <i class="bi bi-list"></i>
+        </button>
       </div>
-
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
-        <i class="bi bi-list"></i>
-      </button>
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section id="hero" class="content-section active">
-      <div class="hero hero--simple">
-        <div class="hero-container">
-          <h1>Mohammad Abdullah-Al-Sajid Chowdhury</h1>
-          <p class="hero-tagline">I'm a <span id="typed"></span></p>
-        </div>
-      </div>
+  <div class="page-shell">
+    <!-- Constant left profile (GitHub-style) -->
+    <aside class="profile-sidebar" aria-label="Profile">
+      <button type="button" class="profile-avatar-wrap" id="profileImage" aria-label="View profile photo">
+        <img src="assets/img/image2.jpg" alt="Mohammad Abdullah-Al-Sajid Chowdhury" class="profile-avatar">
+      </button>
 
+      <h1 class="profile-name">Mohammad Abdullah-Al-Sajid Chowdhury</h1>
+      <p class="profile-handle">SajidAbdullah</p>
+      <p class="profile-status">I'm a <span id="typed"></span></p>
+      <p class="profile-bio">
+        Finalist @ACM ICPC Asia-West Finalist | Expert @Codeforces | Software Engineer | MultiModal RAG
+      </p>
+
+      <a href="https://drive.google.com/file/d/1nImcSui94ymyFG0E5P0Q76W5KqKYfKSB/view?usp=sharing" target="_blank"
+        rel="noopener noreferrer" class="profile-cta">
+        <i class="bx bx-download" aria-hidden="true"></i> Download Resume
+      </a>
+
+      <ul class="profile-meta">
+        <li>
+          <i class="bi bi-buildings" aria-hidden="true"></i>
+          <a href="https://pioneeralpha.com/" target="_blank" rel="noopener noreferrer">Pioneer Alpha</a>
+        </li>
+        <li>
+          <i class="bi bi-mortarboard" aria-hidden="true"></i>
+          <span>AUST · CSE</span>
+        </li>
+        <li>
+          <i class="bi bi-envelope" aria-hidden="true"></i>
+          <a href="mailto:sajidabdullah729@gmail.com">sajidabdullah729@gmail.com</a>
+        </li>
+        <li>
+          <i class="bi bi-github" aria-hidden="true"></i>
+          <a href="https://github.com/SajidAbdullah729" target="_blank" rel="noopener noreferrer">SajidAbdullah729</a>
+        </li>
+        <li>
+          <i class="bi bi-linkedin" aria-hidden="true"></i>
+          <a href="https://linkedin.com/in/mohammad-abdullah-al-sajid-chowdhury-software-engineer/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </li>
+      </ul>
+
+      <div class="profile-divider"></div>
+      <h2 class="profile-section-title">Profiles</h2>
+      <ul class="profile-meta">
+        <li>
+          <img class="brand-icon" src="https://www.google.com/s2/favicons?domain=icpc.global&sz=64" alt="" width="18" height="18" loading="lazy" decoding="async">
+          <a href="https://icpc.global/ICPCID/O5VOX4CA0KRM" target="_blank" rel="noopener noreferrer">ICPC Profile</a>
+        </li>
+        <li>
+          <img class="brand-icon" src="https://cdn.simpleicons.org/codeforces" alt="" width="18" height="18" loading="lazy" decoding="async">
+          <a href="https://codeforces.com/profile/SajidAbdullah" target="_blank" rel="noopener noreferrer">Codeforces · SajidAbdullah</a>
+        </li>
+        <li>
+          <img class="brand-icon" src="https://cdn.simpleicons.org/googlescholar" alt="" width="18" height="18" loading="lazy" decoding="async">
+          <a href="https://scholar.google.com/citations?user=nA0Bf6QAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        </li>
+      </ul>
+
+      <p class="profile-footnote">Open to new projects, ideas, and opportunities.</p>
+    </aside>
+
+    <main class="page-main">
+    <!-- Home Section -->
+    <section id="hero" class="content-section active">
       <div class="container home-simple">
         <div class="home-intro" data-aos="fade-up">
           <h2 class="home-heading">About me</h2>
           <div class="home-intro__text">
             <p>
-              I am a software engineer focused on production AI systems—<strong>RAG platforms</strong>,
-              <strong>agentic workflows</strong>, and <strong>scalable backends</strong>—built for reliability and low latency.
-              I also excel in <strong>competitive programming</strong> and have represented my university in
-              <strong>several national and international contests</strong>.
+              I am a software engineer who builds <strong>production RAG systems</strong>,
+              <strong>agentic workflows</strong>, and <strong>scalable backends</strong> meant to ship -
+              not just demos. My day-to-day work centers on retrieval quality, multimodal grounding,
+              orchestration of AI agents, and the infrastructure around them: async APIs, caching,
+              message queues, observability, and deployment patterns that keep latency and cost under control.
             </p>
             <p>
-              Beyond coding, I support the programming community by judging, organizing, and testing contests.
-              From machine learning research to full-stack delivery, I keep pace with modern engineering practice.
+              That systems focus sits on a strong competitive programming foundation. I am an
+              <strong>ACM ICPC Asia-West Continent finalist</strong> and an
+              <strong>Expert-rated Codeforces</strong> competitor. I have competed in
+              <strong>ICPC</strong> regionals and continent finals,
+              <strong>NCPC</strong>, and <strong>IUPC</strong> events representing my university,
+              and I have also participated in <strong>Meta Hacker Cup</strong>, qualifying for <strong>Round 2</strong>.
+              The same habits that win contests - clear problem decomposition, careful edge-case thinking,
+              and disciplined implementation - shape how I design services and debug production issues.
+            </p>
+            <p>
+              In research, I worked on recognizing doctors’ handwritten prescriptions in Bangladesh -
+              where most prescriptions are still handwritten and illegibility can lead to medication errors.
+              We built a pioneering local dataset of pharmaceutical word images and applied a
+              <strong>VGG16 deep neural network</strong> to digitize medical handwriting. The work was
+              published at <strong>IEEE iCACCESS 2024</strong> and released the dataset publicly, with the
+              goal of improving prescription clarity, patient safety, and safer healthcare digitization
+              in developing settings.
+            </p>
+            <p>
+              Beyond competing, I give back to the programming community through
+              <strong>judging, organizing, and contest testing</strong>. That includes serving as a
+              <strong>problem tester for Codeforces Round #957 (Div. 3)</strong> on
+              <strong>Codeforces</strong> - one of the world’s largest competitive programming platforms,
+              with a global audience of hundreds of thousands of contestants. My role was to stress-test
+              statements, samples, and edge cases before release so the round stayed fair, clear, and
+              technically sound for that international community.
+            </p>
+            <p>
+              Across machine learning research and full-stack delivery, I aim for reliable engineering:
+              readable systems, measurable quality, and solutions that hold up under real load.
             </p>
           </div>
-        </div>
-
-        <div class="home-contact" data-aos="fade-up" data-aos-delay="40">
-          <h2 class="home-heading">Profile</h2>
-          <div class="exp-page__list home-contact-list">
-            <a href="https://icpc.global/ICPCID/O5VOX4CA0KRM" target="_blank" rel="noopener noreferrer"
-              class="exp-row home-contact-link" data-aos="fade-up" data-aos-delay="0">
-              <p class="exp-row__period"><img class="brand-icon" src="https://www.google.com/s2/favicons?domain=icpc.global&sz=64" alt="" width="18" height="18" loading="lazy" decoding="async"> ICPC Profile</p>
-              <div class="exp-row__body">
-                <p class="exp-row__sub">Mohammad Abdullah-Al-Sajid Chowdhury</p>
-              </div>
-            </a>
-            <a href="https://codeforces.com/profile/SajidAbdullah" target="_blank" rel="noopener noreferrer"
-              class="exp-row home-contact-link" data-aos="fade-up" data-aos-delay="50">
-              <p class="exp-row__period"><img class="brand-icon" src="https://cdn.simpleicons.org/codeforces" alt="" width="18" height="18" loading="lazy" decoding="async"> Codeforces Profile</p>
-              <div class="exp-row__body">
-                <p class="exp-row__sub">SajidAbdullah</p>
-              </div>
-            </a>
-            <a href="https://scholar.google.com/citations?user=nA0Bf6QAAAAJ&hl=en" target="_blank"
-              rel="noopener noreferrer" class="exp-row home-contact-link" data-aos="fade-up" data-aos-delay="100">
-              <p class="exp-row__period"><img class="brand-icon" src="https://cdn.simpleicons.org/googlescholar" alt="" width="18" height="18" loading="lazy" decoding="async"> Google Scholar</p>
-              <div class="exp-row__body">
-                <p class="exp-row__sub">Mohammad Abdullah-Al-Sajid Chowdhury</p>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="home-contact home-resume" data-aos="fade-up" data-aos-delay="60">
-          <h2 class="home-heading">Resume</h2>
-          <a href="https://drive.google.com/file/d/1nImcSui94ymyFG0E5P0Q76W5KqKYfKSB/view?usp=sharing" target="_blank"
-            rel="noopener noreferrer" class="download-btn home-resume-btn" data-aos="fade-up" data-aos-delay="0">
-            <i class="bx bx-download"></i>
-            Download Resume
-          </a>
-        </div>
-
-        <div class="home-contact" data-aos="fade-up" data-aos-delay="80">
-          <h2 class="home-heading">Contact</h2>
-          <div class="exp-page__list home-contact-list">
-            <a href="mailto:sajidabdullah729@gmail.com" class="exp-row home-contact-link" data-aos="fade-up"
-              data-aos-delay="0">
-              <p class="exp-row__period"><i class="bi bi-envelope-fill entity-icon entity-icon--email" aria-hidden="true"></i> Email</p>
-              <div class="exp-row__body">
-                <p class="exp-row__sub">sajidabdullah729@gmail.com</p>
-              </div>
-            </a>
-            <a href="https://github.com/SajidAbdullah729" target="_blank" rel="noopener noreferrer"
-              class="exp-row home-contact-link" data-aos="fade-up" data-aos-delay="50">
-              <p class="exp-row__period"><i class="bi bi-github brand-glyph brand-glyph--github" aria-hidden="true"></i> GitHub</p>
-              <div class="exp-row__body">
-                <p class="exp-row__sub">SajidAbdullah729</p>
-              </div>
-            </a>
-            <a href="https://linkedin.com/in/mohammad-abdullah-al-sajid-chowdhury-software-engineer/" target="_blank"
-              rel="noopener noreferrer" class="exp-row home-contact-link" data-aos="fade-up" data-aos-delay="100">
-              <p class="exp-row__period"><i class="bi bi-linkedin brand-glyph brand-glyph--linkedin" aria-hidden="true"></i> LinkedIn</p>
-              <div class="exp-row__body">
-                <p class="exp-row__sub">Mohammad Abdullah-Al-Sajid Chowdhury</p>
-              </div>
-            </a>
-          </div>
-          <p class="home-contact__lead">Open to new projects, ideas, and opportunities.</p>
         </div>
       </div>
     </section>
@@ -223,7 +218,7 @@
 
           <div class="exp-page__list">
             <article class="exp-row exp-row--overview-highlight" data-aos="fade-up" data-aos-delay="50">
-              <p class="exp-row__period">Role</p>
+              <p class="exp-row__period"><i class="bi bi-briefcase-fill entity-icon entity-icon--company" aria-hidden="true"></i> Role</p>
               <div class="exp-row__body">
                 <h4 class="exp-row__title">Software Engineer</h4>
                 <p class="exp-row__sub">
@@ -255,11 +250,11 @@
                   <a href="research" class="timeline-link" data-section="research">Handwritten Prescription Recognition</a>
                 </h4>
                 <p class="exp-row__sub"><img class="brand-icon" src="https://cdn.simpleicons.org/ieee" alt="" width="18" height="18" loading="lazy" decoding="async"> IEEE Xplore · Deep learning</p>
-                <p class="exp-row__note">IEEE iCACCESS 2024 — VGG16-based recognition of doctors’ handwritten prescriptions using a local BD dataset.</p>
+                <p class="exp-row__note">IEEE iCACCESS 2024 - VGG16-based recognition of doctors’ handwritten prescriptions using a local BD dataset.</p>
               </div>
             </article>
             <article class="exp-row exp-row--overview-highlight" data-aos="fade-up" data-aos-delay="200">
-              <p class="exp-row__period">Degree</p>
+              <p class="exp-row__period"><i class="bi bi-mortarboard-fill entity-icon entity-icon--university" aria-hidden="true"></i> Degree</p>
               <div class="exp-row__body">
                 <h4 class="exp-row__title">B.Sc. in Computer Science and Engineering</h4>
                 <p class="exp-row__sub"><img class="brand-icon" src="https://www.google.com/s2/favicons?domain=aust.edu&sz=64" alt="" width="18" height="18" loading="lazy" decoding="async"> Ahsanullah University of Science and Technology</p>
@@ -299,7 +294,7 @@
 
           <div class="exp-page__list">
             <article class="exp-row" data-aos="fade-up" data-aos-delay="0">
-              <p class="exp-row__period">2019 – 2023</p>
+              <p class="exp-row__period">2019 - 2023</p>
               <div class="exp-row__body">
                 <h4 class="exp-row__title">Bachelor of Science in Computer Science and Engineering</h4>
                 <p class="exp-row__sub"><img class="brand-icon" src="https://www.google.com/s2/favicons?domain=aust.edu&sz=64" alt="" width="18" height="18" loading="lazy" decoding="async"> Ahsanullah University of Science and Technology</p>
@@ -307,7 +302,7 @@
               </div>
             </article>
             <article class="exp-row" data-aos="fade-up" data-aos-delay="50">
-              <p class="exp-row__period">2016 – 2018</p>
+              <p class="exp-row__period">2016 - 2018</p>
               <div class="exp-row__body">
                 <h4 class="exp-row__title">Higher Secondary Certificate</h4>
                 <p class="exp-row__sub"><img class="brand-icon" src="https://www.google.com/s2/favicons?domain=ctgcollege.gov.bd&sz=64" alt="" width="18" height="18" loading="lazy" decoding="async"> Chittagong College</p>
@@ -315,7 +310,7 @@
               </div>
             </article>
             <article class="exp-row" data-aos="fade-up" data-aos-delay="100">
-              <p class="exp-row__period">2014 – 2016</p>
+              <p class="exp-row__period">2014 - 2016</p>
               <div class="exp-row__body">
                 <h4 class="exp-row__title">Secondary School Certificate</h4>
                 <p class="exp-row__sub"><img class="brand-icon" src="https://www.google.com/s2/favicons?domain=ccs.edu.bd&sz=64" alt="" width="18" height="18" loading="lazy" decoding="async"> Chittagong Collegiate School</p>
@@ -415,7 +410,7 @@
               </div>
             </article>
             <article class="exp-row" data-aos="fade-up" data-aos-delay="50">
-              <p class="exp-row__period">2023 – Present</p>
+              <p class="exp-row__period">2023 - Present</p>
               <div class="exp-row__body">
                 <h4 class="exp-row__title">
                   <a href="https://toph.co/contests/training/rfbblek" target="_blank" rel="noopener noreferrer"
@@ -434,7 +429,7 @@
               </div>
             </article>
             <article class="exp-row" data-aos="fade-up" data-aos-delay="150">
-              <p class="exp-row__period">2020 – 2023</p>
+              <p class="exp-row__period">2020 - 2023</p>
               <div class="exp-row__body">
                 <h4 class="exp-row__title">
                   <a href="https://github.com/SajidAbdullah729?tab=repositories" target="_blank"
@@ -461,17 +456,74 @@
     <!-- Achievements Section -->
     <section id="competitive-programming" class="content-section">
       <div class="cp">
-        <div class="container" style="padding-top: 20px;">
+        <div class="container">
           <div class="section-header">
             <h2 class="section-title">Achievements</h2>
             <p class="section-subtitle">
-              My competitive programming profiles and achievements across various platforms and contests.
+              From ICPC Asia-West finals and national IUPCs to Meta Hacker Cup Round 2 and Expert-rated online judges -
+              a record of contested problem-solving under pressure.
             </p>
           </div>
 
-          <div class="platforms-section ach-profiles">
-            <h3 class="subsection-title ach-section-title--center"><i class="bx bx-code-block"></i><span
-                class="ach-subsection-heading">Online Judge Profiles</span></h3>
+          <nav class="ach-index" aria-label="Achievement sections">
+            <a href="#ach-highlights" class="ach-index__link">Highlights</a>
+            <a href="#ach-profiles" class="ach-index__link">Online Judges <span class="ach-index__count">8</span></a>
+            <a href="#ach-icpc" class="ach-index__link">ICPC <span class="ach-index__count">6</span></a>
+            <a href="#ach-national" class="ach-index__link">National &amp; IUPC <span class="ach-index__count">9</span></a>
+            <a href="#ach-individual" class="ach-index__link">Individual <span class="ach-index__count">6</span></a>
+            <a href="#ach-intra" class="ach-index__link">Intra University <span class="ach-index__count">4</span></a>
+          </nav>
+
+          <div class="ach-block" id="ach-highlights">
+            <div class="ach-block__header">
+              <h3 class="ach-block__title"><i class="bx bx-star" aria-hidden="true"></i> Highlights</h3>
+              <p class="ach-block__hint">Quick scan of the strongest results - full lists follow.</p>
+            </div>
+            <ul class="ach-highlights">
+              <li>
+                <span class="ach-hl__event">ICPC Asia-West Continent Final 2022</span>
+                <span class="ach-hl__result">Honorable Mention</span>
+                <span class="ach-hl__meta">Team AUST_CrackPlatoon</span>
+              </li>
+              <li>
+                <span class="ach-hl__event">ICPC Dhaka Regional 2022</span>
+                <span class="ach-hl__result">Rank #28</span>
+                <span class="ach-hl__meta">Team AUST_CrackPlatoon</span>
+              </li>
+              <li>
+                <span class="ach-hl__event">Meta Hacker Cup</span>
+                <span class="ach-hl__result">Qualified for Round 2</span>
+                <span class="ach-hl__meta">2023 &amp; 2025</span>
+              </li>
+              <li>
+                <span class="ach-hl__event">Codeforces</span>
+                <span class="ach-hl__result">Expert · Rating 1613</span>
+                <span class="ach-hl__meta">@SajidAbdullah</span>
+              </li>
+              <li>
+                <span class="ach-hl__event">IUT IUPC 2024</span>
+                <span class="ach-hl__result">Rank #14</span>
+                <span class="ach-hl__meta">Team AUST_RedX</span>
+              </li>
+              <li>
+                <span class="ach-hl__event">NCPC JU 2023 Preliminary</span>
+                <span class="ach-hl__result">Rank #11</span>
+                <span class="ach-hl__meta">Team AUST_RedX</span>
+              </li>
+              <li>
+                <span class="ach-hl__event">Intra AUST Programming Contest (CodeCombat 1.0)</span>
+                <span class="ach-hl__result">1st Place</span>
+                <span class="ach-hl__meta">Team AUST_CrackPlatoon</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="platforms-section ach-profiles ach-block" id="ach-profiles">
+            <div class="ach-block__header">
+              <h3 class="subsection-title ach-section-title--center"><i class="bx bx-code-block"></i><span
+                  class="ach-subsection-heading">1 · Online Judge Profiles</span></h3>
+              <span class="ach-block__count">8 profiles</span>
+            </div>
             <div class="exp-page__list ach-profiles-list">
               <a href="https://codeforces.com/profile/SajidAbdullah" target="_blank" rel="noopener noreferrer"
                 class="exp-row ach-profile-link" data-aos="fade-up" data-aos-delay="0">
@@ -537,19 +589,20 @@
           </div>
 
           <div class="contests-section">
-            <div class="contest-group">
-              <div class="contest-group-header ach-section-title--center">
+            <div class="contest-group ach-block" id="ach-icpc">
+              <div class="ach-block__header contest-group-header">
                 <span class="contest-icon"><img class="brand-icon" src="https://www.google.com/s2/favicons?domain=icpc.global&sz=64" alt="" width="18" height="18" loading="lazy" decoding="async"></span>
-                <h3 class="contest-group-title">ICPC Contests</h3>
+                <h3 class="contest-group-title">2 · ICPC Contests</h3>
+                <span class="ach-block__count">6 contests</span>
               </div>
               <div class="exp-page__list ach-contests-list">
                 <a href="https://icpc.global/regionals/finder/ICPCKolkataKanpur-2023/standings" target="_blank"
                   rel="noopener noreferrer" class="exp-row ach-contest-link ach-contest-link--featured"
                   data-aos="fade-up" data-aos-delay="0">
-                  <p class="exp-row__period">#51</p>
+                  <p class="exp-row__period">HM</p>
                   <div class="exp-row__body">
                     <h4 class="exp-row__title">ACM-ICPC Asia-West Continent Final 2022</h4>
-                    <p class="exp-row__sub">AUST_CrackPlatoon</p>
+                    <p class="exp-row__sub">Team AUST_CrackPlatoon · Honorable Mention</p>
                   </div>
                 </a>
                 <a href="https://web.archive.org/web/20230531214941/https://algo.codemarshal.org/contests/dhaka-22/standings"
@@ -599,10 +652,11 @@
               </div>
             </div>
 
-            <div class="contest-group">
-              <div class="contest-group-header ach-section-title--center">
+            <div class="contest-group ach-block" id="ach-national">
+              <div class="ach-block__header contest-group-header">
                 <span class="contest-icon"><i class="bi bi-trophy-fill entity-icon entity-icon--trophy" aria-hidden="true"></i></span>
-                <h3 class="contest-group-title">National Contests</h3>
+                <h3 class="contest-group-title">3 · National Contests &amp; IUPC</h3>
+                <span class="ach-block__count">9 contests</span>
               </div>
               <div class="exp-page__list ach-contests-list">
                 <a href="https://toph.co/c/iut-11th-national-ict-fest-2024/standings" target="_blank"
@@ -659,7 +713,7 @@
                 </a>
                 <a href="https://toph.co/c/buet-inter-university-2022/standings" target="_blank"
                   rel="noopener noreferrer" class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="300">
-                  <p class="exp-row__period">—</p>
+                  <p class="exp-row__period">-</p>
                   <div class="exp-row__body">
                     <h4 class="exp-row__title">BUET Inter University Programming Contest 2022</h4>
                     <p class="exp-row__sub">AUST_SillyMistakes</p>
@@ -667,7 +721,7 @@
                 </a>
                 <a href="https://toph.co/c/buet-inter-university-2023/standings" target="_blank"
                   rel="noopener noreferrer" class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="350">
-                  <p class="exp-row__period">—</p>
+                  <p class="exp-row__period">-</p>
                   <div class="exp-row__body">
                     <h4 class="exp-row__title">BUET Inter University Programming Contest 2023</h4>
                     <p class="exp-row__sub">AUST_Badamtola</p>
@@ -675,7 +729,7 @@
                 </a>
                 <a href="https://toph.co/c/inter-university-sust-cse-carnival-2024/standings" target="_blank"
                   rel="noopener noreferrer" class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="400">
-                  <p class="exp-row__period">—</p>
+                  <p class="exp-row__period">-</p>
                   <div class="exp-row__body">
                     <h4 class="exp-row__title">SUST Inter University Programming Contest 2024</h4>
                     <p class="exp-row__sub">AUST_Shunno7</p>
@@ -684,10 +738,69 @@
               </div>
             </div>
 
-            <div class="contest-group">
-              <div class="contest-group-header ach-section-title--center">
+            <div class="contest-group ach-block" id="ach-individual">
+              <div class="ach-block__header contest-group-header">
+                <span class="contest-icon"><i class="bi bi-person-fill entity-icon entity-icon--award" aria-hidden="true"></i></span>
+                <h3 class="contest-group-title">4 · Individual Contests</h3>
+                <span class="ach-block__count">6 contests</span>
+              </div>
+              <div class="exp-page__list ach-contests-list">
+                <a href="https://www.facebook.com/codingcompetitions/hacker-cup/2023/round-1/scoreboard" target="_blank"
+                  rel="noopener noreferrer" class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="0">
+                  <p class="exp-row__period">#115</p>
+                  <div class="exp-row__body">
+                    <h4 class="exp-row__title">Meta Hacker Cup 2023 Round 1</h4>
+                    <p class="exp-row__sub">Bangladesh</p>
+                  </div>
+                </a>
+                <a href="https://www.facebook.com/codingcompetitions/hacker-cup/2023/round-2/scoreboard" target="_blank"
+                  rel="noopener noreferrer" class="exp-row ach-contest-link ach-contest-link--featured"
+                  data-aos="fade-up" data-aos-delay="50">
+                  <p class="exp-row__period">#154</p>
+                  <div class="exp-row__body">
+                    <h4 class="exp-row__title">Meta Hacker Cup 2023 Round 2</h4>
+                    <p class="exp-row__sub">Bangladesh · Qualified for Round 2</p>
+                  </div>
+                </a>
+                <a href="https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-1/scoreboard" target="_blank"
+                  rel="noopener noreferrer" class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="100">
+                  <p class="exp-row__period">#188</p>
+                  <div class="exp-row__body">
+                    <h4 class="exp-row__title">Meta Hacker Cup 2025 Round 1</h4>
+                    <p class="exp-row__sub">Bangladesh</p>
+                  </div>
+                </a>
+                <a href="https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/scoreboard" target="_blank"
+                  rel="noopener noreferrer" class="exp-row ach-contest-link ach-contest-link--featured"
+                  data-aos="fade-up" data-aos-delay="150">
+                  <p class="exp-row__period">#105</p>
+                  <div class="exp-row__body">
+                    <h4 class="exp-row__title">Meta Hacker Cup 2025 Round 2</h4>
+                    <p class="exp-row__sub">Bangladesh · Qualified for Round 2</p>
+                  </div>
+                </a>
+                <a href="https://www.hackerrank.com/contests/srbd-code-contest-2023-round-2/leaderboard" target="_blank"
+                  rel="noopener noreferrer" class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="200">
+                  <p class="exp-row__period">#65</p>
+                  <div class="exp-row__body">
+                    <h4 class="exp-row__title">Samsung Research and Development Contest</h4>
+                  </div>
+                </a>
+                <a href="https://toph.co/c/selise-coding-challenge-2023/standings" target="_blank"
+                  rel="noopener noreferrer" class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="250">
+                  <p class="exp-row__period">#175</p>
+                  <div class="exp-row__body">
+                    <h4 class="exp-row__title">Selise Coding Challenge 2023</h4>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="contest-group ach-block" id="ach-intra">
+              <div class="ach-block__header contest-group-header">
                 <span class="contest-icon"><img class="brand-icon brand-icon--lg" src="https://www.google.com/s2/favicons?domain=aust.edu&sz=64" alt="" width="22" height="22" loading="lazy" decoding="async"></span>
-                <h3 class="contest-group-title">Intra University Contests</h3>
+                <h3 class="contest-group-title">5 · Intra University Contests</h3>
+                <span class="ach-block__count">4 contests</span>
               </div>
               <div class="exp-page__list ach-contests-list">
                 <a href="https://toph.co/contests/training/g2jtqtr/standings" target="_blank" rel="noopener noreferrer"
@@ -724,63 +837,6 @@
                 </a>
               </div>
             </div>
-
-            <div class="contest-group">
-              <div class="contest-group-header ach-section-title--center">
-                <span class="contest-icon"><i class="bi bi-person-fill entity-icon entity-icon--award" aria-hidden="true"></i></span>
-                <h3 class="contest-group-title">Individual Contests</h3>
-              </div>
-              <div class="exp-page__list ach-contests-list">
-                <a href="https://www.facebook.com/codingcompetitions/hacker-cup/2023/round-1/scoreboard" target="_blank"
-                  rel="noopener noreferrer" class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="0">
-                  <p class="exp-row__period">#115</p>
-                  <div class="exp-row__body">
-                    <h4 class="exp-row__title">Meta Hacker Cup 2023 Round 1</h4>
-                    <p class="exp-row__sub">Bangladesh</p>
-                  </div>
-                </a>
-                <a href="https://www.facebook.com/codingcompetitions/hacker-cup/2023/round-2/scoreboard" target="_blank"
-                  rel="noopener noreferrer" class="exp-row ach-contest-link ach-contest-link--featured"
-                  data-aos="fade-up" data-aos-delay="50">
-                  <p class="exp-row__period">#154</p>
-                  <div class="exp-row__body">
-                    <h4 class="exp-row__title">Meta Hacker Cup 2023 Round 2</h4>
-                    <p class="exp-row__sub">Bangladesh</p>
-                  </div>
-                </a>
-                <a href="https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-1/scoreboard" target="_blank"
-                  rel="noopener noreferrer" class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="100">
-                  <p class="exp-row__period">#188</p>
-                  <div class="exp-row__body">
-                    <h4 class="exp-row__title">Meta Hacker Cup 2025 Round 1</h4>
-                    <p class="exp-row__sub">Bangladesh</p>
-                  </div>
-                </a>
-                <a href="https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/scoreboard" target="_blank"
-                  rel="noopener noreferrer" class="exp-row ach-contest-link ach-contest-link--featured"
-                  data-aos="fade-up" data-aos-delay="150">
-                  <p class="exp-row__period">#105</p>
-                  <div class="exp-row__body">
-                    <h4 class="exp-row__title">Meta Hacker Cup 2025 Round 2</h4>
-                    <p class="exp-row__sub">Bangladesh</p>
-                  </div>
-                </a>
-                <a href="https://www.hackerrank.com/contests/srbd-code-contest-2023-round-2/leaderboard" target="_blank"
-                  rel="noopener noreferrer" class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="200">
-                  <p class="exp-row__period">#65</p>
-                  <div class="exp-row__body">
-                    <h4 class="exp-row__title">Samsung Research and Development Contest</h4>
-                  </div>
-                </a>
-                <a href="https://toph.co/c/selise-coding-challenge-2023/standings" target="_blank"
-                  rel="noopener noreferrer" class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="250">
-                  <p class="exp-row__period">#175</p>
-                  <div class="exp-row__body">
-                    <h4 class="exp-row__title">Selise Coding Challenge 2023</h4>
-                  </div>
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -788,99 +844,109 @@
 
     <!-- Problem setting experience: authored problems + testing -->
     <section id="problem-author-testing" class="content-section">
-      <div class="resume exp-page">
+      <div class="resume exp-page ps-page">
         <div class="container exp-page__inner">
           <div class="section-header">
             <h2 class="section-title">Problem Setting</h2>
             <p class="section-subtitle">
-              Problems I authored on Toph and contests where I contributed in a testing role.
+              Contest testing for Codeforces and original problems authored on Toph for the programming community.
             </p>
           </div>
 
-          <div class="platforms-section ach-profiles" style="margin-bottom: 2rem;">
-            <h3 class="subsection-title"><i class="bx bx-check-circle"></i> Programming Contest Testing</h3>
-            <div class="exp-page__list">
+          <nav class="ach-index" aria-label="Problem setting sections">
+            <a href="#ps-testing" class="ach-index__link">Contest Testing <span class="ach-index__count">1</span></a>
+            <a href="#ps-authored" class="ach-index__link">Problems Authored <span class="ach-index__count">8</span></a>
+          </nav>
+
+          <div class="ach-block" id="ps-testing">
+            <div class="ach-block__header">
+              <h3 class="ach-block__title"><i class="bx bx-check-circle" aria-hidden="true"></i> 1 · Contest Testing</h3>
+              <span class="ach-block__count">1 contest</span>
+            </div>
+            <p class="ps-block__desc">Validated statements, samples, and edge cases before contest release.</p>
+            <div class="exp-page__list ach-contests-list">
               <a href="https://codeforces.com/blog/entry/131368" target="_blank" rel="noopener noreferrer"
-                class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="0">
-                <p class="exp-row__period">Codeforces</p>
+                class="exp-row ach-contest-link ach-contest-link--featured" data-aos="fade-up" data-aos-delay="0">
+                <p class="exp-row__period"><img class="brand-icon" src="https://cdn.simpleicons.org/codeforces" alt="" width="18" height="18" loading="lazy" decoding="async"> Codeforces</p>
                 <div class="exp-row__body">
                   <h4 class="exp-row__title">Codeforces Round #957 (Div. 3)</h4>
-                  <p class="exp-row__sub">Announcement · codeforces.com/blog/entry/131368</p>
+                  <p class="exp-row__sub">Problem Tester · Official Announcement</p>
                 </div>
               </a>
             </div>
           </div>
 
-          <div class="platforms-section ach-profiles">
-            <h3 class="subsection-title"><i class="bx bx-edit-alt"></i> Problems I Created</h3>
-            <div class="exp-page__list">
+          <div class="ach-block" id="ps-authored">
+            <div class="ach-block__header">
+              <h3 class="ach-block__title"><i class="bx bx-edit-alt" aria-hidden="true"></i> 2 · Problems Authored</h3>
+              <span class="ach-block__count">8 problems</span>
+            </div>
+            <p class="ps-block__desc">Original problems published on Toph for practice and contest use.</p>
+            <div class="exp-page__list ach-contests-list">
               <a href="https://toph.co/p/jump-game-of-badamtola" target="_blank" rel="noopener noreferrer"
-                class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="100">
-                <p class="exp-row__period">Toph</p>
+                class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="0">
+                <p class="exp-row__period"><img class="brand-icon" src="https://www.google.com/s2/favicons?domain=toph.co&sz=64" alt="" width="18" height="18" loading="lazy" decoding="async"> Toph</p>
                 <div class="exp-row__body">
                   <h4 class="exp-row__title">Jump Game of Badamtola</h4>
-                  <p class="exp-row__sub">toph.co/p/jump-game-of-badamtola</p>
+                  <p class="exp-row__sub">Author · View problem</p>
                 </div>
               </a>
               <a href="https://toph.co/p/last-digit-string" target="_blank" rel="noopener noreferrer"
-                class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="150">
-                <p class="exp-row__period">Toph</p>
+                class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="40">
+                <p class="exp-row__period"><img class="brand-icon" src="https://www.google.com/s2/favicons?domain=toph.co&sz=64" alt="" width="18" height="18" loading="lazy" decoding="async"> Toph</p>
                 <div class="exp-row__body">
                   <h4 class="exp-row__title">Last Digit String</h4>
-                  <p class="exp-row__sub">toph.co/p/last-digit-string</p>
+                  <p class="exp-row__sub">Author · View problem</p>
                 </div>
               </a>
               <a href="https://toph.co/p/shunno7" target="_blank" rel="noopener noreferrer"
-                class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="300">
-                <p class="exp-row__period">Toph</p>
+                class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="80">
+                <p class="exp-row__period"><img class="brand-icon" src="https://www.google.com/s2/favicons?domain=toph.co&sz=64" alt="" width="18" height="18" loading="lazy" decoding="async"> Toph</p>
                 <div class="exp-row__body">
                   <h4 class="exp-row__title">Shunno7</h4>
-                  <p class="exp-row__sub">toph.co/p/shunno7</p>
+                  <p class="exp-row__sub">Author · View problem</p>
                 </div>
               </a>
               <a href="https://toph.co/p/solo-improvement" target="_blank" rel="noopener noreferrer"
-                class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="350">
-                <p class="exp-row__period">Toph</p>
+                class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="120">
+                <p class="exp-row__period"><img class="brand-icon" src="https://www.google.com/s2/favicons?domain=toph.co&sz=64" alt="" width="18" height="18" loading="lazy" decoding="async"> Toph</p>
                 <div class="exp-row__body">
                   <h4 class="exp-row__title">Solo Improvement</h4>
-                  <p class="exp-row__sub">toph.co/p/solo-improvement</p>
+                  <p class="exp-row__sub">Author · View problem</p>
                 </div>
               </a>
-
               <a href="https://toph.co/p/greed-island-easy-version" target="_blank" rel="noopener noreferrer"
-                class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="0">
-                <p class="exp-row__period">Toph</p>
+                class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="160">
+                <p class="exp-row__period"><img class="brand-icon" src="https://www.google.com/s2/favicons?domain=toph.co&sz=64" alt="" width="18" height="18" loading="lazy" decoding="async"> Toph</p>
                 <div class="exp-row__body">
                   <h4 class="exp-row__title">Greed Island (Easy)</h4>
-                  <p class="exp-row__sub">toph.co/p/greed-island-easy-version</p>
+                  <p class="exp-row__sub">Author · View problem</p>
                 </div>
               </a>
               <a href="https://toph.co/p/greed-island-hard-version" target="_blank" rel="noopener noreferrer"
-                class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="50">
-                <p class="exp-row__period">Toph</p>
+                class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="200">
+                <p class="exp-row__period"><img class="brand-icon" src="https://www.google.com/s2/favicons?domain=toph.co&sz=64" alt="" width="18" height="18" loading="lazy" decoding="async"> Toph</p>
                 <div class="exp-row__body">
                   <h4 class="exp-row__title">Greed Island (Hard)</h4>
-                  <p class="exp-row__sub">toph.co/p/greed-island-hard-version</p>
+                  <p class="exp-row__sub">Author · View problem</p>
                 </div>
               </a>
-
               <a href="https://toph.co/p/network-within-networks" target="_blank" rel="noopener noreferrer"
-                class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="200">
-                <p class="exp-row__period">Toph</p>
+                class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="240">
+                <p class="exp-row__period"><img class="brand-icon" src="https://www.google.com/s2/favicons?domain=toph.co&sz=64" alt="" width="18" height="18" loading="lazy" decoding="async"> Toph</p>
                 <div class="exp-row__body">
                   <h4 class="exp-row__title">Network Within Networks</h4>
-                  <p class="exp-row__sub">toph.co/p/network-within-networks</p>
+                  <p class="exp-row__sub">Author · View problem</p>
                 </div>
               </a>
               <a href="https://toph.co/p/redx-chess" target="_blank" rel="noopener noreferrer"
-                class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="250">
-                <p class="exp-row__period">Toph</p>
+                class="exp-row ach-contest-link" data-aos="fade-up" data-aos-delay="280">
+                <p class="exp-row__period"><img class="brand-icon" src="https://www.google.com/s2/favicons?domain=toph.co&sz=64" alt="" width="18" height="18" loading="lazy" decoding="async"> Toph</p>
                 <div class="exp-row__body">
                   <h4 class="exp-row__title">RedX Chess</h4>
-                  <p class="exp-row__sub">toph.co/p/redx-chess</p>
+                  <p class="exp-row__sub">Author · View problem</p>
                 </div>
               </a>
-              
             </div>
           </div>
         </div>
@@ -889,8 +955,8 @@
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="content-section">
-      <div class="portfolio section-bg">
-        <div class="container" style="padding-top: 20px;">
+      <div class="portfolio">
+        <div class="container">
           <div class="section-header">
             <h2 class="section-title">Projects</h2>
             <p class="section-subtitle">
@@ -959,579 +1025,159 @@
     <!-- Skills Section -->
     <section id="skills" class="content-section">
       <div class="skills">
-        <div class="container" style="padding-top: 20px;">
+        <div class="container">
           <div class="section-header">
             <h2 class="section-title">Technical Skills</h2>
             <p class="section-subtitle">
-              From languages and CS fundamentals to RAG systems, agentic workflows, and production infrastructure.
+              Production RAG and agentic systems, backed by strong CS fundamentals and full-stack delivery.
             </p>
           </div>
 
+          <nav class="skills-index" aria-label="Skill categories">
+            <a href="#skill-languages" class="skills-index__link">Languages</a>
+            <a href="#skill-ai" class="skills-index__link">AI &amp; ML</a>
+            <a href="#skill-cs" class="skills-index__link">CS Fundamentals</a>
+            <a href="#skill-se" class="skills-index__link">Engineering</a>
+            <a href="#skill-frontend" class="skills-index__link">Frontend</a>
+            <a href="#skill-fullstack" class="skills-index__link">Full Stack</a>
+            <a href="#skill-backend" class="skills-index__link">Backend</a>
+            <a href="#skill-data" class="skills-index__link">Databases</a>
+            <a href="#skill-devops" class="skills-index__link">DevOps</a>
+          </nav>
+
           <div class="skills-grid" id="skillsGrid">
-            <div class="skill-category">
-              <h3 class="category-title">Programming Languages</h3>
-              <div class="skills-list">
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">⚡</span>
-                    <span class="skill-name">C</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="95" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">⚡</span>
-                    <span class="skill-name">C++</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="95" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🐍</span>
-                    <span class="skill-name">Python</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="85" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">📜</span>
-                    <span class="skill-name">JavaScript</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="85" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">📘</span>
-                    <span class="skill-name">TypeScript</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="85" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">☕</span>
-                    <span class="skill-name">Java</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="80" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🔷</span>
-                    <span class="skill-name">C#</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="75" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
+            <div class="skill-category" id="skill-languages">
+              <div class="skill-category__header">
+                <h3 class="category-title">Programming Languages</h3>
+                <p class="skill-category__desc">Core languages used for systems, contests, and product work.</p>
               </div>
+              <ul class="skill-tags">
+                <li>C</li>
+                <li>C++</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>Java</li>
+                <li>C#</li>
+              </ul>
             </div>
 
-            <div class="skill-category">
-              <h3 class="category-title">AI & Machine Learning</h3>
-              <div class="skills-list">
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🤖</span>
-                    <span class="skill-name">Generative AI</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="95" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🧠</span>
-                    <span class="skill-name">Large Language Models</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="95" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">📚</span>
-                    <span class="skill-name">RAG</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="95" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🔎</span>
-                    <span class="skill-name">Vector Search</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="95" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🎭</span>
-                    <span class="skill-name">Multimodal AI</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="90" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🤖</span>
-                    <span class="skill-name">AI Agents</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="95" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🧭</span>
-                    <span class="skill-name">Workflow Orchestration</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="90" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
+            <div class="skill-category" id="skill-ai">
+              <div class="skill-category__header">
+                <h3 class="category-title">AI &amp; Machine Learning</h3>
+                <p class="skill-category__desc">RAG, multimodal models, agents, and orchestration in production.</p>
               </div>
+              <ul class="skill-tags">
+                <li>Generative AI</li>
+                <li>Large Language Models</li>
+                <li>RAG</li>
+                <li>Vector Search</li>
+                <li>Multimodal AI</li>
+                <li>AI Agents</li>
+                <li>Workflow Orchestration</li>
+              </ul>
             </div>
 
-            <div class="skill-category">
-              <h3 class="category-title">Computer Science Fundamentals</h3>
-              <div class="skills-list">
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🧮</span>
-                    <span class="skill-name">Data Structures & Algorithms</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="95" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">💻</span>
-                    <span class="skill-name">Operating System</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="75" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🌐</span>
-                    <span class="skill-name">Networking</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="65" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
+            <div class="skill-category" id="skill-cs">
+              <div class="skill-category__header">
+                <h3 class="category-title">Computer Science Fundamentals</h3>
+                <p class="skill-category__desc">Algorithms and systems foundations from competitive programming and coursework.</p>
               </div>
+              <ul class="skill-tags">
+                <li>Data Structures &amp; Algorithms</li>
+                <li>Operating Systems</li>
+                <li>Networking</li>
+              </ul>
             </div>
 
-            <div class="skill-category">
-              <h3 class="category-title">Software Engineering Practices</h3>
-              <div class="skills-list">
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🏗️</span>
-                    <span class="skill-name">Object-Oriented Programming (OOP)</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="90" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">📐</span>
-                    <span class="skill-name">SOLID Principles</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="90" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🧩</span>
-                    <span class="skill-name">Design Patterns</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="70" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🗺️</span>
-                    <span class="skill-name">System Design</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="90" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">📬</span>
-                    <span class="skill-name">Message Queues</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="90" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">💾</span>
-                    <span class="skill-name">Caching</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="80" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">⏱️</span>
-                    <span class="skill-name">Task Scheduling</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="90" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">☁️</span>
-                    <span class="skill-name">Cloud Deployment</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="90" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
+            <div class="skill-category" id="skill-se">
+              <div class="skill-category__header">
+                <h3 class="category-title">Software Engineering Practices</h3>
+                <p class="skill-category__desc">Design, architecture, and runtime patterns for maintainable services.</p>
               </div>
+              <ul class="skill-tags">
+                <li>Object-Oriented Programming (OOP)</li>
+                <li>SOLID Principles</li>
+                <li>Design Patterns</li>
+                <li>System Design</li>
+                <li>Message Queues</li>
+                <li>Caching</li>
+                <li>Task Scheduling</li>
+                <li>Cloud Deployment</li>
+              </ul>
             </div>
 
-            <div class="skill-category">
-              <h3 class="category-title">Frontend Development</h3>
-              <div class="skills-list">
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">⚛️</span>
-                    <span class="skill-name">React</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="75" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🎨</span>
-                    <span class="skill-name">HTML/CSS</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="80" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🎨</span>
-                    <span class="skill-name">Bootstrap</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="65" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
+            <div class="skill-category" id="skill-frontend">
+              <div class="skill-category__header">
+                <h3 class="category-title">Frontend Development</h3>
+                <p class="skill-category__desc">UI building blocks for web applications.</p>
               </div>
+              <ul class="skill-tags">
+                <li>React</li>
+                <li>HTML/CSS</li>
+                <li>Bootstrap</li>
+              </ul>
             </div>
 
-            <div class="skill-category">
-              <h3 class="category-title">Full Stack Development</h3>
-              <div class="skills-list">
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">▲</span>
-                    <span class="skill-name">Next.js</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="90" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
+            <div class="skill-category" id="skill-fullstack">
+              <div class="skill-category__header">
+                <h3 class="category-title">Full Stack Development</h3>
+                <p class="skill-category__desc">End-to-end app delivery with modern frameworks.</p>
               </div>
+              <ul class="skill-tags">
+                <li>Next.js</li>
+              </ul>
             </div>
 
-            <div class="skill-category">
-              <h3 class="category-title">Backend Development</h3>
-              <div class="skills-list">
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🟢</span>
-                    <span class="skill-name">Node.js</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="90" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🎸</span>
-                    <span class="skill-name">FastAPI</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="90" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🍾</span>
-                    <span class="skill-name">Flask</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="50" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🔷</span>
-                    <span class="skill-name">ASP.NET MVC</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="60" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🔗</span>
-                    <span class="skill-name">REST APIs</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="95" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">⚡</span>
-                    <span class="skill-name">Async APIs</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="90" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🕸️</span>
-                    <span class="skill-name">Web Scraping</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="85" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">💳</span>
-                    <span class="skill-name">Payment Gateways</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="80" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
+            <div class="skill-category" id="skill-backend">
+              <div class="skill-category__header">
+                <h3 class="category-title">Backend Development</h3>
+                <p class="skill-category__desc">APIs, services, integrations, and async workloads.</p>
               </div>
+              <ul class="skill-tags">
+                <li>Node.js</li>
+                <li>FastAPI</li>
+                <li>Flask</li>
+                <li>ASP.NET MVC</li>
+                <li>REST APIs</li>
+                <li>Async APIs</li>
+                <li>Web Scraping</li>
+                <li>Payment Gateways</li>
+              </ul>
             </div>
 
-            <div class="skill-category">
-              <h3 class="category-title">Databases & Caching</h3>
-              <div class="skills-list">
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🐘</span>
-                    <span class="skill-name">PostgreSQL</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="90" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🐬</span>
-                    <span class="skill-name">MySQL</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="85" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🗃️</span>
-                    <span class="skill-name">MSSQL</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="85" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🗄️</span>
-                    <span class="skill-name">Oracle PL/SQL</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="80" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">💧</span>
-                    <span class="skill-name">Drizzle ORM</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="90" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🔴</span>
-                    <span class="skill-name">Redis</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="90" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
+            <div class="skill-category" id="skill-data">
+              <div class="skill-category__header">
+                <h3 class="category-title">Databases &amp; Caching</h3>
+                <p class="skill-category__desc">Relational stores, ORMs, and cache layers for scale.</p>
               </div>
+              <ul class="skill-tags">
+                <li>PostgreSQL</li>
+                <li>MySQL</li>
+                <li>MSSQL</li>
+                <li>Oracle PL/SQL</li>
+                <li>Drizzle ORM</li>
+                <li>Redis</li>
+              </ul>
             </div>
 
-            <div class="skill-category">
-              <h3 class="category-title">DevOps & Cloud</h3>
-              <div class="skills-list">
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🔀</span>
-                    <span class="skill-name">Git</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="90" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">🐳</span>
-                    <span class="skill-name">Docker</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="90" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-icon">☁️</span>
-                    <span class="skill-name">AWS</span>
-                  </div>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" data-value="80" style="width: 0%;">
-                      <span class="progress-glow"></span>
-                    </div>
-                  </div>
-                </div>
+            <div class="skill-category" id="skill-devops">
+              <div class="skill-category__header">
+                <h3 class="category-title">DevOps &amp; Cloud</h3>
+                <p class="skill-category__desc">Version control, containers, and cloud deployment.</p>
               </div>
+              <ul class="skill-tags">
+                <li>Git</li>
+                <li>Docker</li>
+                <li>AWS</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
-  </main>
+    </main>
+  </div>
 
   <!-- Back to Top Button -->
   <a href="./" class="back-to-top" id="backToTop" data-section="hero">

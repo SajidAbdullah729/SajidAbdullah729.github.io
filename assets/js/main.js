@@ -276,6 +276,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // In-page jump indexes (Achievements / Skills)
+  document.querySelectorAll('.ach-index__link, .skills-index__link').forEach((link) => {
+    link.addEventListener('click', function (e) {
+      if (!isPrimaryUnmodifiedClick(e)) return;
+      const href = this.getAttribute('href') || '';
+      if (!href.startsWith('#')) return;
+      const target = document.querySelector(href);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
   // Back to top button
   if (backToTopBtn) {
     backToTopBtn.addEventListener('click', function(e) {
@@ -333,65 +346,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Portfolio links now point directly to GitHub repositories
   // No additional JavaScript handling needed - links will open in new tab
 
-  // Skills progress bar animation
-  const skillsGrid = document.getElementById('skillsGrid');
-  const skillsSection = document.getElementById('skills');
-  
-  function animateProgressBars() {
-    if (skillsGrid) {
-      const progressBars = skillsGrid.querySelectorAll('[data-value]');
-      progressBars.forEach((bar) => {
-        const value = bar.getAttribute('data-value');
-        if (value && (bar.style.width === '0%' || !bar.style.width || bar.style.width === '')) {
-          setTimeout(() => {
-            bar.style.width = value + '%';
-          }, 100);
-        }
-      });
-    }
-  }
-  
-  if (skillsGrid) {
-    // Use IntersectionObserver for scroll-based animation
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            animateProgressBars();
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '50px' }
-    );
-
-    observer.observe(skillsGrid);
-    
-    // Also trigger animation when skills section is shown via tab switching
-    if (skillsSection) {
-      const sectionObserver = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-            if (skillsSection.classList.contains('active')) {
-              // Reset and animate when section becomes active
-              const progressBars = skillsGrid.querySelectorAll('[data-value]');
-              progressBars.forEach((bar) => {
-                bar.style.width = '0%';
-              });
-              setTimeout(() => {
-                animateProgressBars();
-              }, 200);
-            }
-          }
-        });
-      });
-      
-      sectionObserver.observe(skillsSection, {
-        attributes: true,
-        attributeFilter: ['class']
-      });
-    }
-  }
-
   // Image Modal functionality
   const profileImage = document.getElementById('profileImage');
   const imageModal = document.getElementById('imageModal');
@@ -401,7 +355,8 @@ document.addEventListener('DOMContentLoaded', function() {
   if (profileImage && imageModal && imageModalImg && imageModalClose) {
     // Open modal when profile image is clicked
     profileImage.addEventListener('click', function() {
-      imageModalImg.src = this.src;
+      const avatar = profileImage.querySelector('img') || profileImage;
+      imageModalImg.src = avatar.src;
       imageModal.classList.add('active');
       document.body.style.overflow = 'hidden'; // Prevent background scrolling
     });
