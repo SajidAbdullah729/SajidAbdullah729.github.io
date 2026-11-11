@@ -755,11 +755,12 @@ section {
   font-weight: 700;
   font-size: 14px;
   flex-shrink: 0;
+  margin-right: 40px;
 }
 
 .topbar__brand-img {
-  width: 28px;
-  height: 28px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid var(--profile-ring);
@@ -866,7 +867,7 @@ section {
   margin: 0 auto;
   padding: 24px 20px 48px;
   display: grid;
-  grid-template-columns: 296px minmax(0, 1fr);
+  grid-template-columns: 240px minmax(0, 1fr);
   gap: 28px;
   align-items: start;
 }
@@ -877,12 +878,31 @@ section {
   padding-bottom: 24px;
 }
 
+.profile-sidebar__bar {
+  display: block;
+}
+
+.profile-sidebar__bar-main {
+  min-width: 0;
+}
+
+.profile-sidebar__toggle {
+  display: none;
+}
+
+/* Desktop: never keep the mobile collapsed state */
+@media (min-width: 1011px) {
+  .profile-sidebar.profile-sidebar--collapsed .profile-sidebar__details {
+    display: block;
+  }
+}
+
 .profile-avatar-wrap {
   display: block;
-  width: 100%;
-  max-width: 296px;
+  width: 160px;
+  max-width: 160px;
   padding: 0;
-  margin: 0 0 16px;
+  margin: 0 0 14px;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -903,7 +923,7 @@ section {
 .profile-name {
   margin: 0 0 2px;
   font-family: 'Raleway', sans-serif;
-  font-size: 1.375rem;
+  font-size: 1.2rem;
   font-weight: 700;
   line-height: 1.25;
   color: var(--text-primary);
@@ -1077,50 +1097,84 @@ section {
 @media (max-width: 1010px) {
   .page-shell {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
     padding-top: 16px;
   }
 
   .profile-sidebar {
     position: static;
+    display: block;
+    padding: 10px 12px 12px;
+    border: 1px solid var(--accent-20);
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--surface-header) 75%, transparent);
+    margin-bottom: 4px;
+  }
+
+  .profile-sidebar__bar {
     display: grid;
-    grid-template-columns: 120px minmax(0, 1fr);
-    column-gap: 16px;
-    row-gap: 8px;
-    align-items: start;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--accent-20);
-    margin-bottom: 8px;
+    grid-template-columns: 64px minmax(0, 1fr);
+    column-gap: 12px;
+    align-items: center;
   }
 
   .profile-avatar-wrap {
-    grid-row: 1 / span 4;
-    max-width: 120px;
-    margin-bottom: 0;
+    width: 64px;
+    max-width: 64px;
+    margin: 0;
   }
 
-  .profile-name,
-  .profile-handle,
-  .profile-status,
-  .profile-bio {
-    grid-column: 2;
-  }
-
-  .profile-cta,
-  .profile-meta,
-  .profile-divider,
-  .profile-section-title,
-  .profile-footnote {
-    grid-column: 1 / -1;
+  .profile-sidebar__bar-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
   }
 
   .profile-name {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    margin: 0;
   }
 
-  .profile-handle {
-    font-size: 1rem;
-    margin-bottom: 6px;
+  .profile-sidebar__toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    border: 1px solid var(--accent-20);
+    background: var(--accent-05);
+    color: var(--text-soft);
+    font-size: 0.75rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  }
+
+  .profile-sidebar__toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-08);
+  }
+
+  .profile-sidebar__toggle i {
+    font-size: 0.85rem;
+    line-height: 1;
+  }
+
+  .profile-sidebar__details {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--accent-20);
+  }
+
+  .profile-sidebar--collapsed .profile-sidebar__details {
+    display: none;
+  }
+
+  .profile-sidebar--collapsed {
+    padding-bottom: 10px;
   }
 }
 
@@ -1185,26 +1239,17 @@ section {
     padding: 16px 12px 40px;
   }
 
-  .profile-sidebar {
-    grid-template-columns: 1fr;
+  .profile-sidebar__bar {
+    grid-template-columns: 56px minmax(0, 1fr);
   }
 
   .profile-avatar-wrap {
-    grid-row: auto;
-    max-width: 160px;
-    margin: 0 auto 12px;
-  }
-
-  .profile-name,
-  .profile-handle,
-  .profile-status,
-  .profile-bio {
-    grid-column: 1;
-    text-align: left;
+    width: 56px;
+    max-width: 56px;
   }
 
   .profile-name {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
   }
 }
 

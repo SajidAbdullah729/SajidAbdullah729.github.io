@@ -41,7 +41,7 @@
   <header class="topbar">
     <div class="topbar__inner">
       <a href="./" class="topbar__brand" data-section="hero" aria-label="Home">
-        <img src="assets/img/image2.jpg" alt="" class="topbar__brand-img" width="28" height="28">
+        <img src="assets/img/image2.jpg" alt="" class="topbar__brand-img" width="34" height="34">
       </a>
 
       <nav class="nav" id="mainNav" aria-label="Primary">
@@ -94,64 +94,74 @@
 
   <div class="page-shell">
     <!-- Constant left profile (GitHub-style) -->
-    <aside class="profile-sidebar" aria-label="Profile">
-      <button type="button" class="profile-avatar-wrap" id="profileImage" aria-label="View profile photo">
-        <img src="assets/img/image2.jpg" alt="Mohammad Abdullah-Al-Sajid Chowdhury" class="profile-avatar">
-      </button>
+    <aside class="profile-sidebar profile-sidebar--collapsed" id="profileSidebar" aria-label="Profile">
+      <div class="profile-sidebar__bar">
+        <button type="button" class="profile-avatar-wrap" id="profileImage" aria-label="View profile photo">
+          <img src="assets/img/image2.jpg" alt="Mohammad Abdullah-Al-Sajid Chowdhury" class="profile-avatar">
+        </button>
+        <div class="profile-sidebar__bar-main">
+          <h1 class="profile-name">Mohammad Abdullah-Al-Sajid Chowdhury</h1>
+          <button type="button" class="profile-sidebar__toggle" id="profileSidebarToggle"
+            aria-controls="profileSidebarDetails" aria-expanded="false">
+            <span class="profile-sidebar__toggle-text">Show profile</span>
+            <i class="bi bi-chevron-down" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
 
-      <h1 class="profile-name">Mohammad Abdullah-Al-Sajid Chowdhury</h1>
-      <p class="profile-handle">SajidAbdullah</p>
-      <p class="profile-status">I'm a <span id="typed"></span></p>
-      <p class="profile-bio">
-        Finalist @ACM ICPC Asia-West Finalist | Expert @Codeforces | Software Engineer | MultiModal RAG
-      </p>
+      <div class="profile-sidebar__details" id="profileSidebarDetails">
+        <p class="profile-status">I'm a <span id="typed"></span></p>
+        <p class="profile-bio">
+          Finalist @ACM ICPC Asia-West Finalist | Expert @Codeforces | Software Engineer | MultiModal RAG
+        </p>
 
-      <a href="https://drive.google.com/file/d/1nImcSui94ymyFG0E5P0Q76W5KqKYfKSB/view?usp=sharing" target="_blank"
-        rel="noopener noreferrer" class="profile-cta">
-        <i class="bx bx-download" aria-hidden="true"></i> Download Resume
-      </a>
+        <a href="https://drive.google.com/file/d/1nImcSui94ymyFG0E5P0Q76W5KqKYfKSB/view?usp=sharing" target="_blank"
+          rel="noopener noreferrer" class="profile-cta">
+          <i class="bx bx-download" aria-hidden="true"></i> Download Resume
+        </a>
 
-      <ul class="profile-meta">
-        <li>
-          <i class="bi bi-buildings" aria-hidden="true"></i>
-          <a href="https://pioneeralpha.com/" target="_blank" rel="noopener noreferrer">Pioneer Alpha</a>
-        </li>
-        <li>
-          <i class="bi bi-mortarboard" aria-hidden="true"></i>
-          <span>AUST · CSE</span>
-        </li>
-        <li>
-          <i class="bi bi-envelope" aria-hidden="true"></i>
-          <a href="mailto:sajidabdullah729@gmail.com">sajidabdullah729@gmail.com</a>
-        </li>
-        <li>
-          <i class="bi bi-github" aria-hidden="true"></i>
-          <a href="https://github.com/SajidAbdullah729" target="_blank" rel="noopener noreferrer">SajidAbdullah729</a>
-        </li>
-        <li>
-          <i class="bi bi-linkedin" aria-hidden="true"></i>
-          <a href="https://linkedin.com/in/mohammad-abdullah-al-sajid-chowdhury-software-engineer/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </li>
-      </ul>
+        <ul class="profile-meta">
+          <li>
+            <i class="bi bi-buildings" aria-hidden="true"></i>
+            <a href="https://pioneeralpha.com/" target="_blank" rel="noopener noreferrer">Pioneer Alpha</a>
+          </li>
+          <li>
+            <i class="bi bi-mortarboard" aria-hidden="true"></i>
+            <span>AUST · CSE</span>
+          </li>
+          <li>
+            <i class="bi bi-envelope" aria-hidden="true"></i>
+            <a href="mailto:sajidabdullah729@gmail.com">sajidabdullah729@gmail.com</a>
+          </li>
+          <li>
+            <i class="bi bi-github" aria-hidden="true"></i>
+            <a href="https://github.com/SajidAbdullah729" target="_blank" rel="noopener noreferrer">SajidAbdullah729</a>
+          </li>
+          <li>
+            <i class="bi bi-linkedin" aria-hidden="true"></i>
+            <a href="https://linkedin.com/in/mohammad-abdullah-al-sajid-chowdhury-software-engineer/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </li>
+        </ul>
 
-      <div class="profile-divider"></div>
-      <h2 class="profile-section-title">Profiles</h2>
-      <ul class="profile-meta">
-        <li>
-          <img class="brand-icon" src="https://www.google.com/s2/favicons?domain=icpc.global&sz=64" alt="" width="18" height="18" loading="lazy" decoding="async">
-          <a href="https://icpc.global/ICPCID/O5VOX4CA0KRM" target="_blank" rel="noopener noreferrer">ICPC Profile</a>
-        </li>
-        <li>
-          <img class="brand-icon" src="https://cdn.simpleicons.org/codeforces" alt="" width="18" height="18" loading="lazy" decoding="async">
-          <a href="https://codeforces.com/profile/SajidAbdullah" target="_blank" rel="noopener noreferrer">Codeforces · SajidAbdullah</a>
-        </li>
-        <li>
-          <img class="brand-icon" src="https://cdn.simpleicons.org/googlescholar" alt="" width="18" height="18" loading="lazy" decoding="async">
-          <a href="https://scholar.google.com/citations?user=nA0Bf6QAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-        </li>
-      </ul>
+        <div class="profile-divider"></div>
+        <h2 class="profile-section-title">Profiles</h2>
+        <ul class="profile-meta">
+          <li>
+            <img class="brand-icon" src="https://www.google.com/s2/favicons?domain=icpc.global&sz=64" alt="" width="18" height="18" loading="lazy" decoding="async">
+            <a href="https://icpc.global/ICPCID/O5VOX4CA0KRM" target="_blank" rel="noopener noreferrer">ICPC Profile</a>
+          </li>
+          <li>
+            <img class="brand-icon" src="https://cdn.simpleicons.org/codeforces" alt="" width="18" height="18" loading="lazy" decoding="async">
+            <a href="https://codeforces.com/profile/SajidAbdullah" target="_blank" rel="noopener noreferrer">Codeforces · SajidAbdullah</a>
+          </li>
+          <li>
+            <img class="brand-icon" src="https://cdn.simpleicons.org/googlescholar" alt="" width="18" height="18" loading="lazy" decoding="async">
+            <a href="https://scholar.google.com/citations?user=nA0Bf6QAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          </li>
+        </ul>
 
-      <p class="profile-footnote">Open to new projects, ideas, and opportunities.</p>
+        <p class="profile-footnote">Open to new projects, ideas, and opportunities.</p>
+      </div>
     </aside>
 
     <main class="page-main">

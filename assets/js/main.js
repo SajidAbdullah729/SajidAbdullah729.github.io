@@ -205,6 +205,54 @@ document.addEventListener('DOMContentLoaded', function() {
   const navLinks = document.querySelectorAll('.nav-link[data-section]');
   const backToTopBtn = document.getElementById('backToTop');
   const contentSections = document.querySelectorAll('.content-section');
+  const profileSidebar = document.getElementById('profileSidebar');
+  const profileSidebarToggle = document.getElementById('profileSidebarToggle');
+  const profileSidebarToggleText = profileSidebarToggle
+    ? profileSidebarToggle.querySelector('.profile-sidebar__toggle-text')
+    : null;
+  const profileSidebarToggleIcon = profileSidebarToggle
+    ? profileSidebarToggle.querySelector('i')
+    : null;
+  const mobileSidebarQuery = window.matchMedia('(max-width: 1010px)');
+
+  function setProfileSidebarCollapsed(collapsed) {
+    if (!profileSidebar) return;
+    profileSidebar.classList.toggle('profile-sidebar--collapsed', collapsed);
+    if (profileSidebarToggle) {
+      profileSidebarToggle.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+    }
+    if (profileSidebarToggleText) {
+      profileSidebarToggleText.textContent = collapsed ? 'Show profile' : 'Hide profile';
+    }
+    if (profileSidebarToggleIcon) {
+      profileSidebarToggleIcon.classList.toggle('bi-chevron-down', collapsed);
+      profileSidebarToggleIcon.classList.toggle('bi-chevron-up', !collapsed);
+    }
+  }
+
+  function syncProfileSidebarForSection() {
+    if (!profileSidebar) return;
+    if (!mobileSidebarQuery.matches) {
+      setProfileSidebarCollapsed(false);
+      return;
+    }
+    // Mobile: keep profile collapsed on every page until user expands it
+    setProfileSidebarCollapsed(true);
+  }
+
+  if (profileSidebarToggle) {
+    profileSidebarToggle.addEventListener('click', function () {
+      if (!mobileSidebarQuery.matches) return;
+      const collapsed = !profileSidebar.classList.contains('profile-sidebar--collapsed');
+      setProfileSidebarCollapsed(collapsed);
+    });
+  }
+
+  if (typeof mobileSidebarQuery.addEventListener === 'function') {
+    mobileSidebarQuery.addEventListener('change', function () {
+      syncProfileSidebarForSection();
+    });
+  }
 
   function switchSection(sectionId, options) {
     const skipHistory = options && options.skipHistory;
@@ -225,6 +273,8 @@ document.addEventListener('DOMContentLoaded', function() {
       // Scroll to top
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    syncProfileSidebarForSection();
 
     if (!skipHistory) {
       const slug = sectionToSlug(sectionId);
