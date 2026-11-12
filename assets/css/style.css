@@ -98,13 +98,13 @@
   --rank-highlight-rank-text: #fff3bf;
   --rank-highlight-rank-bg: rgba(255, 215, 0, 0.22);
 
-  /* Overview (#about): contests / olympiads row accent */
-  --overview-highlight-bg: rgba(139, 92, 246, 0.14);
-  --overview-highlight-border: rgba(167, 139, 250, 0.4);
-  --overview-highlight-period: #e9d5fe;
-  --overview-highlight-shadow: rgba(139, 92, 246, 0.18);
+  /* Overview (#about): highlight cards follow active theme accent */
+  --overview-highlight-bg: var(--accent-08);
+  --overview-highlight-border: var(--accent-20);
+  --overview-highlight-period: var(--accent);
+  --overview-highlight-shadow: var(--accent-15);
 
-  --ach-subsection-icon-color: #e9d5ff;
+  --ach-subsection-icon-color: var(--accent);
 }
 
 html[data-theme="light"] {
@@ -199,12 +199,12 @@ html[data-theme="light"] {
   --rank-highlight-rank-bg: rgba(245, 158, 11, 0.38);
 
   /* Overview (#about): contests / olympiads row accent */
-  --overview-highlight-bg: rgba(124, 58, 237, 0.09);
-  --overview-highlight-border: rgba(91, 33, 182, 0.24);
-  --overview-highlight-period: #5b21b6;
-  --overview-highlight-shadow: rgba(91, 33, 182, 0.1);
+  --overview-highlight-bg: var(--accent-08);
+  --overview-highlight-border: var(--accent-20);
+  --overview-highlight-period: var(--accent);
+  --overview-highlight-shadow: var(--accent-15);
 
-  --ach-subsection-icon-color: #6d28d9;
+  --ach-subsection-icon-color: var(--accent);
 }
 
 /* Ocean theme */
@@ -3394,6 +3394,13 @@ html[data-theme="light"] #about .exp-page--overview .exp-row__note {
 }
 
 .ach-highlights li {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.ach-hl__link {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(7.5rem, 0.9fr) minmax(7rem, 0.85fr);
   gap: 0.35rem 1rem;
@@ -3404,7 +3411,15 @@ html[data-theme="light"] #about .exp-page--overview .exp-row__note {
   border-radius: 0 8px 8px 0;
   font-size: 0.875rem;
   line-height: 1.4;
-  color: var(--text-muted);
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.ach-hl__link:hover {
+  background: var(--accent-08);
+  border-left-color: var(--accent);
+  color: inherit;
 }
 
 .ach-hl__event {
@@ -3425,7 +3440,7 @@ html[data-theme="light"] #about .exp-page--overview .exp-row__note {
 }
 
 @media (max-width: 720px) {
-  .ach-highlights li {
+  .ach-hl__link {
     grid-template-columns: 1fr;
     gap: 0.2rem;
   }
@@ -3546,12 +3561,12 @@ html[data-theme="light"] #about .exp-page--overview .exp-row__note {
 }
 
 .cp a.ach-contest-link--featured.exp-row {
-  background: var(--rank-highlight-bg);
+  background: transparent;
 }
 
 .cp a.ach-contest-link--featured.exp-row:hover {
-  background: var(--rank-highlight-hover-bg);
-  border-color: var(--rank-highlight-hover-border);
+  background: var(--accent-08);
+  border-color: var(--accent-40);
 }
 
 .contest-group + .contest-group .ach-contests-list .exp-row:first-of-type {
@@ -3780,27 +3795,11 @@ html[data-theme="sunset"] .platform-title--codechef {
   margin: 0;
 }
 
-/* Achievements subsection headings: purple-blue gradient (light), white (dark) */
-html[data-theme="light"] .cp .ach-subsection-heading,
-html[data-theme="light"] .cp .contest-group-title {
-  background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 42%, #2563eb 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-
-html[data-theme="dark"] .cp .ach-subsection-heading,
-html[data-theme="dark"] .cp .contest-group-title,
-html[data-theme="ocean"] .cp .ach-subsection-heading,
-html[data-theme="ocean"] .cp .contest-group-title,
-html[data-theme="forest"] .cp .ach-subsection-heading,
-html[data-theme="forest"] .cp .contest-group-title,
-html[data-theme="sunset"] .cp .ach-subsection-heading,
-html[data-theme="sunset"] .cp .contest-group-title {
-  color: #ffffff;
-  -webkit-text-fill-color: #ffffff;
+.cp .ach-subsection-heading,
+.cp .contest-group-title {
+  color: var(--text-primary);
   background: none;
+  -webkit-text-fill-color: unset;
 }
 
 .contests-grid {
